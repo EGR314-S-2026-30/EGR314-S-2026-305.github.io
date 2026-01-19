@@ -42,6 +42,8 @@ Roles were initially assigned based on each member's strengths, interests, and a
 
 ## Meeting Schedule and Coordination
 
+The team discussed and created a project schedule, which can be found [here](../../TeamFiles/updated_schedule_v2%20(1).xlsx).
+
 **Availability:** We identified that everyone is generally available on weekends and weekdays after 7:00 PM.
 
 **Weekly Slot:** Our standing weekly meeting will be Tuesdays at 7:30 PM.
