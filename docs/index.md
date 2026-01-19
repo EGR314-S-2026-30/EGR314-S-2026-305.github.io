@@ -27,6 +27,6 @@ Dr. Kevin Nichols<br>
 | **Team Member**        |**Individual Datasheet Links** |
 | ---------------------- | -----------------------|
 | Christo Jomon Joseph               | [Christo.Github](https://chvisto.github.io/) |
-| Name #2                | link |
+| Ragul Raj RG                | [Crrangasa.Github](https://github.com/rrangasa) |
 | Name #3                | link |
 | Name #4                | link |
