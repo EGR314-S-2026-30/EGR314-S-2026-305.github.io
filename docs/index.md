@@ -1,17 +1,17 @@
 ---
-title: Welcome
+title: Team 305 DataSheet
 tags:
 - tag1
 - tag2
 ---
 <center>
 <font size="8">Project Name<br>
-<font size="5">Team ###<br>
-**Submission: month, DD, YYYY**<br>
-Spring - 202x<br>
+<font size="5">Team 305<br>
+**Submission: January, 18, 2025**<br>
+Spring - 2026<br>
 <font size="4">Arizona State University<br>
 **EGR 314**<br>
-Professor Name<br>
+Dr. Kevin Nichols<br>
   
 
 </center>
@@ -24,9 +24,9 @@ Professor Name<br>
 
 ## Team Members Datasheet links
 
-| **Team Member**        |**Ind Datasheet Links** |
+| **Team Member**        |**Individual Datasheet Links** |
 | ---------------------- | -----------------------|
-| Name #1                | [JohnDoe.GitHub](https://embedded-systems-design.github.io/EGR314DataSheetTemplate/) |
+| Christo Jomon Joseph               | [Christo.Github](https://chvisto.github.io/) |
 | Name #2                | link |
 | Name #3                | link |
 | Name #4                | link |
