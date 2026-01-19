@@ -27,7 +27,7 @@ Dr. Kevin Nichols<br>
 | **Team Member**        |**Individual Datasheet Links** |
 | ---------------------- | -----------------------|
 | Christo Jomon Joseph               | [Christo.Github](https://chvisto.github.io/) |
-| Ragul Raj RG                | [rrangasa.Github](https://github.com/rrangasa) |
+| Ragul Raj RG                | [rrangasa.Github](https://rrangasa.github.io/EGR314raj.github.io/) |
 | Damian Novgorodov                | [Damian.Github](https://dnovgorodov.github.io/dnovgorodov1.github.io/) |
 | Isaiah Lacombe           | [Isaiah.Github](https://isaiahelixir1.github.io/isaiahelixer1.github.io/) |
 | Liam Mabbutt         | [Liam.Github](https://lmabbutt.github.io/lmabbutt1.github.io/) |
