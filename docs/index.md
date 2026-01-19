@@ -29,7 +29,7 @@ Dr. Kevin Nichols<br>
 | Christo Jomon Joseph               | [Christo.Github](https://chvisto.github.io/) |
 | Ragul Raj RG                | [Crrangasa.Github](https://github.com/rrangasa) |
 | Damian Novgorodov                | [Damian.Github](https://dnovgorodov.github.io/dnovgorodov1.github.io/) |
-| Isaiah Lacombe           | link |
+| Isaiah Lacombe           | [Isaiah.Github](https://isaiahelixir1.github.io/isaiahelixer1.github.io/) |
 | Liam Mabbutt         | link |
 | Myles White          | link |
 | Arianna Lazaritt         | link |
