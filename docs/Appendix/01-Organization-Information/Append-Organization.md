@@ -19,48 +19,25 @@ _Table #: Project Roles and Duties_
 
 ### Team Communication Method
 
->This is an area where teams often get into trouble. You should specific the channel(s)/method(s) for the team communication along with notes on the expectation in responce time.
+# Team Member Info
 
-*Table #: Team Members' Prefered Communication Modes*
+| Team Member | First Choice Communication | Second Choice Communication | Third Choice Communication |
+|------------|----------------------------|-----------------------------|----------------------------|
+| Damian     | Text                       | Zoom/Call                   | Email                      |
+| Miles      | Text                       | Zoom/Call                   | Email                      |
+| Isaiah     | Text                       | Zoom/Call                   | Email                      |
+| Arianna   | Text                       | Zoom/Call                   | Email                      |
+| Raj        | Text                       | Zoom/Call                   | Email                      |
+| Christo   | Text                       | Zoom/Call                   | Email                      |
+| Liam       | Text                       | Zoom/Call                   | Email                      |
 
-| **Name** | **First Choice Communication** | **Second Choice Communication** | **Third Choice Communication** |
-| :------- | :----------------------------- | :------------------------------ | :----------------------------- |
-| Member 1 |                                |                                 |                                |
-| Member 2 |                                |                                 |                                |
-| Member 3 |                                |                                 |                                |
-| Member 4 |                                |                                 |                                |
+# Team Accountability and Coordination
 
-### Communication Procedures
+For availability, everyone has agreed that they are more or less always available to work on weekends and later on in the day (starting around 7:00PM - 7:30PM).
+As for the method we will use to remind everyone of meetings, we will just text in the group chats. If any changes need to be made, we are all adults and will be able to just communicate it and will make adjustments accordinly.
 
-Then, answer the following question as a team:
+For coordination, we have a group chat on Discord and will likely set one up over text messages to better be able to reach each other.
 
-* Discord was the agreed .....
-* It is expected a responce of ... on the agreed timeframe of ....
-* John Doe with be the point of contact for instructor correspondence? Who is responsible?
-  * Will that be communicated with ... back to the group.
+For accountability, if a team member repeatedly skips out on contributing, we will first begin by trying to remind them to get back on track. If they need help, we can try to help them and catch them up on anything they may have missed that would help them contribute. If that does not work, we will ultimately have to resort to a pink slip.
 
-### Meeting Schedule and Coordiation
-
->Your team should identify common times for meeting every week. If you are not meeting weekly, your team's chances of success this semester are low
-
-* Team will meet ...
-* It with be a ...(face-to-face or virtually)... type of meeting.
-* Reminders for the meetings will be by ....
-* Changes to this schedule will be ....
-* Accountability issuse will .....
-* For records of accountablity will be noted in the minutes... 
-
-### Team Coordination & Accountability
-
-* Assignments are submitted ....
-* To Ensure that each team member has the knowledge and skill required, the team will ......
-* Feedback is to and acted on ....
-* Missed contributions/assignments/actions will be ...
-* Hold one another accountable to the expectations described in this charter.
-* Recognize that a team member is underperforming.
-* Help an underperforming team member improve.
-* What are the consequences if an underperforming team member does not improve (e.g., pink slip)?
-
-#### Conflict Recognition & Resolution
-
-> List the steps and means of documenting issuses that lead to involving the instructor in a "Pink Slip" processor. It is best to be **proactive** in resolving these issues early in the semester!
+For conflicts, if the team appears to be divided over doing something or how to do something, we will just go by a majority vote (and possibly followed by a discussion).
