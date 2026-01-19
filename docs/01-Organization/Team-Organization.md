@@ -6,16 +6,13 @@ tags:
 
 ## Team Charter
 
-> "ASU is a comprehensive public research university, measured not by whom it excludes, but by whom it includes and how they succeed; advancing research and discovery of public value; and assuming fundamental responsibility for the economic, social, cultural and overall health of the communities it serves." (ASU's Charter)
-
-The team came about this team charter ....(add in your words datails on why this is your team's charter)
+We are here to build a solid project that actually works. We agree to split the work evenly, listen to everyone's ideas, and help each other out when things get stuck. Our goal is to finish with a rover we are proud of and learn good habits that will help us become better engineers.
 
 ## Product Mission Statement
 
-Describe the distilled purpose, function, or reason for your product to exist. From this form a team mission statement. Google's mission statement is:
+Our goal is to prototype a Mars Scout Rover designed to navigate a simulated Martian surface. The system uses a network of custom boards to detect obstacles (like craters or rocks) and automatically adjust speed to avoid collisions, while allowing us to wirelessly steer the rover and view mission data from a laptop base station.
 
- > "Google's mission is to organize the world's information and make it universally accessible and useful."
 
 ## Other Organizational Information
 
-Other details about the organization structure of the team can be reviewed in ["Appendix: Team Organization Information."](https://embedded-systems-design.github.io/template_report/Appendix/01-Organization-Information/Append-Organization/)
+Other details about the organization structure of the team can be reviewed in ["Appendix: Team Organization Information."](https://egr314-s-2026-30.github.io/EGR314-S-2026-305.github.io/Appendix/01-Organization-Information/Append-Organization/)
