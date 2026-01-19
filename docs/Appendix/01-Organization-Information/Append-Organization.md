@@ -10,6 +10,9 @@ title: Appendix - Extra Team Organization Information
 | Meeting recorder  | Takes minutes of each team meeting, including attendance, and records action items and to whom they are assigned                          | Christo Joseph |
 | Assignment leader | Coordinates the team's work on a given assignment to Canvas before the due date                                                           | Ragul Raj |
 | Project monitor   | Tracks the team's progress relative to the project schedule (Gantt chart) and keeps team members apprised of deadlines and project status | Miles |
+| Technical lead    | Reviews designs, code, and decisions for consistency, helps debug issues, and keeps technical direction aligned.                           | Liam |
+| Documentation lead | Manages reports, write-ups, diagrams, and formatting to keep submissions clean, organized, and rubric-compliant.                          | Isaiah |
+| Quality assurance / tester | Tests the project before demos or submission to check requirements, bugs, and edge cases and verify specs are met.             | Arianna |
 
 ## Communication Channels
 
