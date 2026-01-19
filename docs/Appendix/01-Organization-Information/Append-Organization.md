@@ -17,8 +17,6 @@ _Table #: Project Roles and Duties_
 
 ## Communication Channels
 
-### Team Communication Method
-
 # Team Member Info
 
 | Team Member | First Choice Communication | Second Choice Communication | Third Choice Communication |
