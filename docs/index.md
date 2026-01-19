@@ -5,7 +5,7 @@ tags:
 - tag2
 ---
 <center>
-<font size="8">Project Name<br>
+<font size="8">Project X<br>
 <font size="5">Team 305<br>
 **Submission: January, 18, 2025**<br>
 Spring - 2026<br>
@@ -30,6 +30,6 @@ Dr. Kevin Nichols<br>
 | Ragul Raj RG                | [Crrangasa.Github](https://github.com/rrangasa) |
 | Damian Novgorodov                | [Damian.Github](https://dnovgorodov.github.io/dnovgorodov1.github.io/) |
 | Isaiah Lacombe           | [Isaiah.Github](https://isaiahelixir1.github.io/isaiahelixer1.github.io/) |
-| Liam Mabbutt         | link |
+| Liam Mabbutt         | [Liam.Github](https://lmabbutt.github.io/lmabbutt1.github.io/) |
 | Myles White          | link |
 | Arianna Lazaritt         | link |
