@@ -28,5 +28,5 @@ Dr. Kevin Nichols<br>
 | ---------------------- | -----------------------|
 | Christo Jomon Joseph               | [Christo.Github](https://chvisto.github.io/) |
 | Ragul Raj RG                | [Crrangasa.Github](https://github.com/rrangasa) |
-| Name #3                | link |
+| Damian Novgorodov                | [Damian.Github](https://dnovgorodov.github.io/dnovgorodov1.github.io/) |
 | Name #4                | link |
