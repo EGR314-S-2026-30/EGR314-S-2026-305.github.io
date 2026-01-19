@@ -14,16 +14,7 @@ title: Appendix - Extra Team Organization Information
 | Documentation lead | Manages reports, write-ups, diagrams, and formatting to keep submissions clean, organized, and rubric-compliant.                          | Isaiah |
 | Quality assurance / tester | Tests the project before demos or submission to check requirements, bugs, and edge cases and verify specs are met.             | Arianna |
 
-## Role Management Process
-
-| **Question** | **Answer** |
-| :----------- | :--------- |
-| How often will you change project roles? | Roles will rotate every 3 weeks so that everyone gets the chance to be fully involved in different aspects of the project. |
-| How will you decide who is assigned to each role? | Roles were assigned based on each member's strengths, interests, and availability during an initial team discussion. |
-| How will team members help one another meet their responsibilities? | Team members will communicate through Discord and text to offer assistance, share workload when someone is overwhelmed, and collaborate on tasks that overlap between roles. |
-| How will you identify and respond to situations in which the team must adjust roles and responsibilities? | If a team member is struggling or unavailable, the issue will be raised in a team meeting and responsibilities will be redistributed through group discussion and majority vote. |
-| How will you track the team activities and milestones? | The project monitor will maintain a Gantt chart and keep everyone updated on deadlines and progress through regular check-ins in the group chat. |
-| How will you assign technical responsibilities to the team members? | Technical tasks will be divided based on individual expertise and interest, coordinated by the technical lead to ensure consistency and balanced workload across the team. |
+Roles were initially assigned based on each member's strengths, interests, and availability during an initial team discussion, with the current assignments shown in the table above. To ensure everyone has the opportunity to participate fully, roles will rotate every 3 weeks. Team members will help one another meet their responsibilities by communicating through Discord and text to offer assistance and collaborate on tasks that overlap between roles. If a team member is struggling or unavailable, the issue will be raised in a team meeting and responsibilities will be redistributed through group discussion and majority vote. The project monitor will track team activities and milestones using a Gantt chart and keep everyone updated on deadlines and progress through regular check-ins in the group chat. Technical responsibilities will be divided based on individual expertise and interest.
 
 ## Communication Channels
 
