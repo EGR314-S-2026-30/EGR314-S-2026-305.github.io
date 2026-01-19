@@ -41,11 +41,44 @@ title: Appendix - Extra Team Organization Information
 
 # Team Accountability and Coordination
 
-For availability, everyone has agreed that they are more or less always available to work on weekends and later on in the day (starting around 7:00PM - 7:30PM).
-As for the method we will use to remind everyone of meetings, we will just text in the group chats. If any changes need to be made, we are all adults and will be able to just communicate it and will make adjustments accordinly.
+## Communication Plan
 
-For coordination, we have a group chat on Discord and will likely set one up over text messages to better be able to reach each other.
+**Methods:** We will use Discord as our primary tool for both asynchronous (chat/updates) and synchronous (voice calls) communication. We will also have a group text chat as a backup for urgent alerts. We are avoiding other apps to keep things simple.
 
-For accountability, if a team member repeatedly skips out on contributing, we will first begin by trying to remind them to get back on track. If they need help, we can try to help them and catch them up on anything they may have missed that would help them contribute. If that does not work, we will ultimately have to resort to a pink slip.
+**Instructor Correspondence:** The Team Lead is responsible for emailing the instructor. Any replies will be screenshotted and posted in the Discord "Announcements" channel so the whole team sees the information immediately.
 
-For conflicts, if the team appears to be divided over doing something or how to do something, we will just go by a majority vote (and possibly followed by a discussion).
+**File Sharing:** We have created a shared Google Drive folder for all project files, reports, and assets, following the required naming conventions.
+
+## Meeting Schedule and Coordination
+
+**Availability:** We identified that everyone is generally available on weekends and weekdays after 7:00 PM.
+
+**Weekly Slot:** Our standing weekly meeting will be Tuesdays at 7:30 PM.
+
+**Format:** These meetings will be virtual (via Discord Voice) to save travel time, but we can meet in person at the lab on weekends if hardware testing is needed.
+
+**Reminders:** We will send a "pinned" mention in the Discord chat 1 hour before the meeting.
+
+**Changes:** Since we are all adults, if a time needs to change, a member must request the change in the group chat at least 24 hours in advance so we can adjust.
+
+## Team Coordination & Accountability
+
+**Submission & Skills:** Before any assignment is submitted, we will post the draft in Discord for a "thumbs up" sign-off from all members. If a member lacks the specific skill for a task (e.g., coding or PCB design), they will pair up with a more experienced member to learn, ensuring no one is left behind.
+
+**Design Reviews:** Feedback received from design reviews will be listed as "Action Items" in our Google Doc, and specific members will be assigned to fix them before the next meeting.
+
+**Addressing Underperformance:**
+
+- **First Miss:** We will reach out to remind them and ask if everything is okay.
+- **Support:** If they are struggling, we will schedule a working session to catch them up.
+- **Consequences:** If a member repeatedly ignores help, ghosts the team, or fails to contribute after warnings, we will resort to a pink slip to protect the team's grade.
+
+## Conflict Recognition & Resolution
+
+**Disagreements:** We acknowledge that engineering involves different opinions. When we disagree on a design choice, we will discuss the technical pros and cons of each option.
+
+**Resolution:** If we cannot agree after a discussion, we will rely on a majority vote to move forward.
+
+**Role Conflicts:** We will avoid conflicts of interest by clearly sticking to the roles defined in our Charter (e.g., The Actuation Lead makes final calls on motors).
+
+**Escalation:** We will only involve the instructor if a conflict completely halts our progress or if a team member becomes hostile/unprofessional.
