@@ -275,7 +275,15 @@ The Collaborative Science Rover concept focuses on teamwork and shared problem-s
 - Instruction uses brief role introductions and cooperative task prompts to help users understand responsibilities and work together effectively  
 
 
-## Selected Concept: Mission Rover
+## Selected Concept
+
+- We have chosen to select the Mission Rover (Concept A) for our project. 
+
+Quick Summary:
+
+- Concept A is a mission-based rover where users complete simple tasks designed to familiarize them with the rover. This will be achieved by using communication signals such as audio/visual cues.
+
+- We chose Concept A because it gives users clear goals and instructions, which makes the rover easier to understand and use. The mission-based design keeps users engaged with the rover and it ensures that the user gets the hang of how to use the rover.
 
 ## Concept Selection Rationale
 
