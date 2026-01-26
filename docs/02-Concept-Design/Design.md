@@ -154,21 +154,21 @@ After getting all those ideas out, we organized them into groups and ranked them
 
 ### Group 1: User Interaction and Controls
 **Top-Ranked Features**  
-- Large directional control buttons
-- Joystick-based arm control
-- Touchscreen display
-- On-screen arrows and prompts
-- Physical emergency stop
+- Large directional control buttons  
+- Joystick-based arm control  
+- Touchscreen display  
+- On-screen arrows and prompts  
+- Physical emergency stop  
 
 These features were ranked highest due to their clarity, accessibility, and ability to minimize user confusion.
 
 ### Group 2: Sensors and Feedback
 **Top-Ranked Features**  
-- Ultrasonic distance sensors
-- Arm-mounted camera
-- LED status indicators
-- Audio feedback output
-- Real-time data visualization
+- Ultrasonic distance sensors  
+- Arm-mounted camera  
+- LED status indicators  
+- Audio feedback output  
+- Real-time data visualization  
 
 These give users immediate feedback so they can see how their actions affect the rover.
 
@@ -186,10 +186,10 @@ Since this will be used by the public including kids, we prioritized making it t
 
 ### Group 4: Engagement and Learning
 **Top-Ranked Features**  
-- Mission-based challenges
-- Animated tutorial loop
-- Science fact integration
-- Achievement indicators
+- Mission-based challenges  
+- Animated tutorial loop  
+- Science fact integration  
+- Achievement indicators  
 
 These features keep people interested while also teaching them something.
 
