@@ -228,7 +228,7 @@ This concept gives users short missions to complete. They navigate terrain, coll
 
 ## Concept B: Open Exploration Rover
 The **Open Exploration Rover** concept prioritizes user-driven discovery by removing predefined objectives and allowing unrestricted interaction with the rover and its environment. Users are free to navigate terrain, operate sensors, and experiment with rover capabilities at their own pace. This approach encourages curiosity, creativity, and self-directed learning, but it ranked lower overall due to the increased risk of user confusion and lack of clear guidance for first-time users. Without structured goals, some users may struggle to understand the rover’s purpose or how to meaningfully engage with its systems.  
-![Concept B](concept.png)
+![Concept B](docs\Assets\Concept_B.png)
 
 ### Functional Distribution Across Team Members
 - **Internet-based two-way wireless communication:** Real-time telemetry streaming, live sensor data visualization, and remote command handling  
