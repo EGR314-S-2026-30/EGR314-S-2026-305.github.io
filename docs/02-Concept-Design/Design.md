@@ -25,6 +25,7 @@ Secondary audiences include engineering students and researchers who want to stu
 This is our raw brainstorm of about 100 ideas. We didn't filter anything out at this stage, just wrote everything down.
 
 Mobility and Navigation  
+
 1. Tank-style tread drive  
 2. Four-wheel independent steering  
 3. Obstacle-climbing wheel geometry  
@@ -37,6 +38,7 @@ Mobility and Navigation
 10. Rover recovery mode  
 
 Robotic Arm and Sampling  
+
 11. Two-joint sampling arm  
 12. Three-joint articulated arm  
 13. Magnetic sample pickup  
@@ -49,6 +51,7 @@ Robotic Arm and Sampling
 20. Automatic arm homing  
 
 Sensors and Actuators  
+
 21. Ultrasonic distance sensors  
 22. Color detection sensor  
 23. Weight measurement sensor  
@@ -60,7 +63,8 @@ Sensors and Actuators
 29. Real-time data visualization  
 30. Manual sensor scan mode  
 
-Human-Machine Interface  
+Human-Machine Interface 
+
 31. Large directional control buttons  
 32. Joystick-based arm control  
 33. Touchscreen display  
@@ -73,6 +77,7 @@ Human-Machine Interface
 40. Adjustable difficulty levels  
 
 User Cues and Instruction  
+
 41. Attention-guiding LED animations  
 42. Context-sensitive hints  
 43. Animated tutorial loop  
@@ -85,6 +90,7 @@ User Cues and Instruction
 50. Progress bar visualization  
 
 Durability, Safety, and Comfort  
+
 51. Rounded structural edges  
 52. Fully enclosed mechanisms  
 53. Motor overcurrent protection  
@@ -97,6 +103,7 @@ Durability, Safety, and Comfort
 60. Child-safe construction materials  
 
 Engagement and Motivation  
+
 61. Mission-based challenges  
 62. Timed objectives  
 63. Accuracy-based scoring  
@@ -108,7 +115,8 @@ Engagement and Motivation
 69. Real-world rover comparisons  
 70. Take-home QR code results  
 
-Avoiding Common Interactive Pitfalls  
+Avoiding Common Interactive Pitfalls 
+
 71. Single clear goal per task  
 72. Limited simultaneous controls  
 73. Immediate action feedback  
@@ -121,6 +129,7 @@ Avoiding Common Interactive Pitfalls
 80. Clearly defined physical boundaries  
 
 Unconventional and Exploratory Ideas  
+
 81. Augmented reality overlay  
 82. Simulated communication delay  
 83. Voice command interaction  
@@ -133,6 +142,7 @@ Unconventional and Exploratory Ideas
 90. Night-vision camera mode  
 
 Infrastructure and Connectivity  
+
 91. Two-way wireless communication  
 92. Cloud-based data logging  
 93. Instructor control interface  
