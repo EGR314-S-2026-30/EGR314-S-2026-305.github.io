@@ -2,10 +2,6 @@
 title: Concept Generation and Design Ideation
 ---
 
-## Exploration Rover with Sampling Arm
-
-## Learning About Exploration Devices
-
 ## Goal of the Exploration Device
 The goal of this exploration device is to immerse users in the process of remote scientific exploration by allowing them to operate a mobile rover equipped with a robotic sampling arm. The device simulates real-world exploration scenarios in which direct human interaction is not possible, such as planetary exploration, hazardous material sampling, or environmental monitoring in extreme conditions. Through hands-on interaction, users learn how scientists and engineers gather data, make decisions with limited feedback, and adapt to constraints imposed by remote systems.
 
