@@ -244,6 +244,7 @@ The **Open Exploration Rover** concept prioritizes user-driven discovery by remo
 
 ## Concept C: Collaborative Science Rover
 The Collaborative Science Rover concept emphasizes teamwork and shared problem-solving by enabling multiple users to simultaneously control different subsystems of the rover. Each participant is responsible for a specific role, such as navigation, sensor operation, or data analysis, encouraging communication and collaboration. While this concept promotes social learning and mirrors real-world scientific workflows, it introduces additional interface and coordination complexity that can challenge users if roles and responsibilities are not clearly defined.
+![Concept C](https://github.com/EGR314-S-2026-30/EGR314-S-2026-305.github.io/blob/main/docs/Assets/Concept_C.png?raw=true)
 
 ### Functional Distribution Across Team Members
 - Internet-based two-way wireless communication: Multi-user session management, synchronized command handling, and shared data streams  
