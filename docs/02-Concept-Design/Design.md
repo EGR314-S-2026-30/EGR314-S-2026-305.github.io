@@ -213,16 +213,16 @@ This concept gives users short missions to complete. They navigate terrain, coll
 ![Concept A](concept.png)
 
 ### Functional Distribution Across Team Members
-- **Internet-based two-way wireless communication:** Data transmission and logging and system status reporting  
-- **Human-machine interface:** Touchscreen UI and buttons and visual cues and user feedback  
-- **Sensor and actuator control:** Motors and robotic arm and sensors and closed-loop responses  
-- **System integration and safety:** Power management and fault detection and durability and testing  
+- Internet-based two-way wireless communication: Data transmission and logging and system status reporting  
+- Human-machine interface: Touchscreen UI and buttons and visual cues and user feedback  
+- Sensor and actuator control: Motors and robotic arm and sensors and closed-loop responses  
+- System integration and safety: Power management and fault detection and durability and testing  
 
 ### Design Justification
-- **Cues:** LED animations and on-screen arrows and audio feedback and progress indicators  
-- **Controls:** Large buttons and joystick to make operation straightforward  
-- **Durability and Comfort:** Enclosed mechanisms and current-limited motors and ergonomic layout  
-- **Instruction:** Brief mission briefing and looping tutorial so no one needs to explain it  
+- Cues: LED animations and on-screen arrows and audio feedback and progress indicators  
+- Controls: Large buttons and joystick to make operation straightforward  
+- Durability and Comfort: Enclosed mechanisms and current-limited motors and ergonomic layout  
+- Instruction: Brief mission briefing and looping tutorial so no one needs to explain it  
 
 ## Concept B: Open Exploration Rover
 The **Open Exploration Rover** concept prioritizes user-driven discovery by removing predefined objectives and allowing unrestricted interaction with the rover and its environment. Users are free to navigate terrain, operate sensors, and experiment with rover capabilities at their own pace. This approach encourages curiosity, creativity, and self-directed learning, but it ranked lower overall due to the increased risk of user confusion and lack of clear guidance for first-time users. Without structured goals, some users may struggle to understand the rover’s purpose or how to meaningfully engage with its systems.  
@@ -241,19 +241,19 @@ The **Open Exploration Rover** concept prioritizes user-driven discovery by remo
 - **Instruction:** Optional on-demand help screens and tooltips replace guided tutorials, preserving a sense of freedom while offering limited support  
 
 ## Concept C: Collaborative Science Rover
-The **Collaborative Science Rover** concept emphasizes teamwork and shared problem-solving by enabling multiple users to simultaneously control different subsystems of the rover. Each participant is responsible for a specific role, such as navigation, sensor operation, or data analysis, encouraging communication and collaboration. While this concept promotes social learning and mirrors real-world scientific workflows, it introduces additional interface and coordination complexity that can challenge users if roles and responsibilities are not clearly defined.
+The Collaborative Science Rover concept emphasizes teamwork and shared problem-solving by enabling multiple users to simultaneously control different subsystems of the rover. Each participant is responsible for a specific role, such as navigation, sensor operation, or data analysis, encouraging communication and collaboration. While this concept promotes social learning and mirrors real-world scientific workflows, it introduces additional interface and coordination complexity that can challenge users if roles and responsibilities are not clearly defined.
 
 ### Functional Distribution Across Team Members
-- **Internet-based two-way wireless communication:** Multi-user session management, synchronized command handling, and shared data streams  
-- **Human–machine interface:** Role-based control panels, multi-screen or multi-input support, and shared visual feedback  
-- **Sensor and actuator control:** Partitioned control of motors, robotic arm, cameras, and sensors assigned to different users  
-- **System integration and safety:** Command arbitration, conflict resolution, system safeguards, and fault handling across multiple operators  
+- Internet-based two-way wireless communication: Multi-user session management, synchronized command handling, and shared data streams  
+- Human–machine interface: Role-based control panels, multi-screen or multi-input support, and shared visual feedback  
+- Sensor and actuator control: Partitioned control of motors, robotic arm, cameras, and sensors assigned to different users  
+- System integration and safety: Command arbitration, conflict resolution, system safeguards, and fault handling across multiple operators  
 
 ### Design Justification
-- **Cues:** Role-specific visual indicators, shared status displays, and alerts to communicate system state across users  
-- **Controls:** Segmented controls mapped to user roles to prevent conflicting inputs  
-- **Durability and Comfort:** Robust mechanical design and software interlocks to protect hardware from simultaneous or conflicting commands  
-- **Instruction:** Brief role introductions and cooperative task prompts help users understand responsibilities and encourage effective teamwork  
+- Cues: Role-specific visual indicators, shared status displays, and alerts to communicate system state across users  
+- Controls: Segmented controls mapped to user roles to prevent conflicting inputs  
+- Durability and Comfort: Robust mechanical design and software interlocks to protect hardware from simultaneous or conflicting commands  
+- Instruction: Brief role introductions and cooperative task prompts help users understand responsibilities and encourage effective teamwork  
 
 
 ## Selected Concept: Mission Rover
