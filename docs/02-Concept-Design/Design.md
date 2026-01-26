@@ -212,7 +212,7 @@ Multiple users work together, sharing control and discussing data to complete ta
 
 This concept gives users short missions to complete. They navigate terrain, collect samples, and check sensor readings. Visual and audio cues guide them through each step so they always know what to do. We designed it to avoid common exhibit problems like having too many controls active at once or hiding features users need.  
 
-![Concept A](docs\Assets\Concept_A.png)
+![Concept A](https://github.com/EGR314-S-2026-30/EGR314-S-2026-305.github.io/blob/main/docs/Assets/Concept_A.png?raw=true)
 
 ### Functional Distribution Across Team Members
 - Internet-based two-way wireless communication: Data transmission and logging and system status reporting  
@@ -228,7 +228,7 @@ This concept gives users short missions to complete. They navigate terrain, coll
 
 ## Concept B: Open Exploration Rover
 The **Open Exploration Rover** concept prioritizes user-driven discovery by removing predefined objectives and allowing unrestricted interaction with the rover and its environment. Users are free to navigate terrain, operate sensors, and experiment with rover capabilities at their own pace. This approach encourages curiosity, creativity, and self-directed learning, but it ranked lower overall due to the increased risk of user confusion and lack of clear guidance for first-time users. Without structured goals, some users may struggle to understand the rover’s purpose or how to meaningfully engage with its systems.  
-![Concept B](docs\Assets\Concept_B.png)
+![Concept B](https://github.com/EGR314-S-2026-30/EGR314-S-2026-305.github.io/blob/main/docs/Assets/Concept_B.png?raw=trueg)
 
 ### Functional Distribution Across Team Members
 - **Internet-based two-way wireless communication:** Real-time telemetry streaming, live sensor data visualization, and remote command handling  
