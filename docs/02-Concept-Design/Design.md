@@ -198,13 +198,13 @@ These features keep people interested while also teaching them something.
 We came up with three different directions we could go:
 
 **Concept A: Mission Rover**  
-A structured experience with guided missions and clear goals. Strong cues tell users what to do next.
+Users follow clear missions with step-by-step instructions and specific goals to complete.  
 
 **Concept B: Open Exploration Rover**  
-A sandbox style setup where users can experiment freely with minimal guidance.
+Users freely explore and experiment with the rover without set goals or instructions.  
 
 **Concept C: Collaborative Science Rover**  
-A cooperative system where multiple users share control and work together to interpret the data.
+Multiple users work together, sharing control and discussing data to complete tasks as a team.  
 
 ## Product Concept Descriptions and Evaluation
 
