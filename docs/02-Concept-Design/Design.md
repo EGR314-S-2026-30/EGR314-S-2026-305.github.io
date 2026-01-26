@@ -208,9 +208,9 @@ Multiple users work together, sharing control and discussing data to complete ta
 
 ## Product Concept Descriptions and Evaluation
 
-**Concept A: Mission Rover**  
+## Concept A: Mission Rover
+
 This concept gives users short missions to complete. They navigate terrain, collect samples, and check sensor readings. Visual and audio cues guide them through each step so they always know what to do. We designed it to avoid common exhibit problems like having too many controls active at once or hiding features users need.  
-![Concept A](concept.png)
 
 ### Functional Distribution Across Team Members
 - Internet-based two-way wireless communication: Data transmission and logging and system status reporting  
