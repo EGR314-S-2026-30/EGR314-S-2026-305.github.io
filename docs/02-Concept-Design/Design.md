@@ -217,8 +217,20 @@ This concept gives users short missions to complete. They navigate terrain, coll
 - **Durability and Comfort:** Enclosed mechanisms and current-limited motors and ergonomic layout  
 - **Instruction:** Brief mission briefing and looping tutorial so no one needs to explain it  
 
-**Concept B: Open Exploration Rover**  
-This concept is all about freedom. Users explore without set objectives and figure things out on their own. It is flexible but we were worried users might get confused without any structure.
+## Concept B: Open Exploration Rover
+The **Open Exploration Rover** concept prioritizes user-driven discovery by removing predefined objectives and allowing unrestricted interaction with the rover and its environment. Users are free to navigate terrain, operate sensors, and experiment with rover capabilities at their own pace. This approach encourages curiosity, creativity, and self-directed learning, but it ranked lower overall due to the increased risk of user confusion and lack of clear guidance for first-time users. Without structured goals, some users may struggle to understand the rover’s purpose or how to meaningfully engage with its systems.
+
+### Functional Distribution Across Team Members
+- **Internet-based two-way wireless communication:** Real-time telemetry streaming, live sensor data visualization, and remote command handling  
+- **Human–machine interface:** Open-ended touchscreen UI, manual control inputs, live data dashboards, and minimal instructional overlays  
+- **Sensor and actuator control:** Direct control of motors, robotic arm, cameras, and environmental sensors with fewer automated constraints  
+- **System integration and safety:** Power regulation, collision prevention, emergency stop logic, and robustness under unpredictable user behavior  
+
+### Design Justification
+- **Cues:** Minimal visual indicators, raw sensor readouts, and subtle status LEDs to avoid over-directing user behavior  
+- **Controls:** Full-access joystick and manual controls that expose the rover’s complete functionality  
+- **Durability and Comfort:** Reinforced chassis, protected actuators, and current-limited systems to tolerate exploratory misuse  
+- **Instruction:** Optional on-demand help screens and tooltips replace guided tutorials, preserving a sense of freedom while offering limited support  
 
 **Concept C: Collaborative Science Rover**  
 This one focuses on teamwork. Multiple users control different parts and work together. It is a cool idea but adds complexity to the interface.
