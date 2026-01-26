@@ -16,9 +16,9 @@ The rover teaches through doing. Users get visual and audio feedback right away 
 
 ## Intended Audience
 
-Our main audience is students in grades 6 through 12 and adult learners at places like science museums, engineering outreach events, and university open houses. The device needs to be simple enough for someone using it for the first time but also interesting enough to keep older or repeat users engaged. It works for people exploring on their own or in small groups.
+Our main audience is experts in robotics and scientists at NASA who might use this as a demo tool or proof of concept for educational outreach. The device is meant to show off core rover functionality in a compact format that works for professional presentations, lab demos, or public engagement events run by technical organizations.
 
-Secondary audiences include teachers, families, and museum staff who might use it as a teaching tool or conversation starter. We avoided using a lot of text in the interface and instead went with visual cues and icons so it works for different ages and learning styles.
+Secondary audiences include engineering students and researchers who want to study rover mechanics and control systems up close. Since we are aiming at a technically knowledgeable crowd, we focused on making the system modular and well documented so it can be adapted or built on for future projects.
 
 ## Generating Ideas
 
