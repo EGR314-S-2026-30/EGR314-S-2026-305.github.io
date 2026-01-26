@@ -173,12 +173,14 @@ These features were ranked highest due to their clarity, accessibility, and abil
 These give users immediate feedback so they can see how their actions affect the rover.
 
 ### Group 3: Durability and Safety
-**Top-Ranked Features**  
-- Automatic collision avoidance
-- Rounded structural edges
-- Fully enclosed mechanisms
-- Rubberized impact bumpers
-- Child-safe construction materials
+
+**Top-Ranked Features**
+
+- Automatic collision avoidance  
+- Rounded structural edges  
+- Fully enclosed mechanisms  
+- Rubberized impact bumpers  
+- Child-safe construction materials  
 
 Since this will be used by the public including kids, we prioritized making it tough and safe.
 
