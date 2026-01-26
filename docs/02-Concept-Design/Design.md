@@ -2,19 +2,19 @@
 title: Concept Generation and Design Ideation
 ---
 
-## Background Reading and Design Constraints
+### Background Reading and Design Constraints
 
 From our research, we found that a good exploration device needs to be realistic but still easy to understand and operate. Operators should always know what the rover is doing and how their actions can affect it. Good feedback on both visual and auditory helps make the system intuitive, considering operators can’t directly touch the rover or see everything it’s sensing. We also learned that durability and safety are really important. The rover has to handle repeated use, bumps, and mistakes without breaking. Its vital moving parts should be protected, motors should be limited to safe forces, and the controls should default to safe states if something goes wrong. These are very similar to the real challenges engineers face with planetary rovers. research showed that too many controls or hidden functions can confuse operators. Keeping interactions simple, continous, and supported with clear indicators makes it easier to understand the cause and effect to complete tasks successfully. Generating a lot of ideas before deciding what to include also helped us explore creative ways to meet these needs. 
 
-## Goal of this Exploration Device
+### Goal of this Exploration Device
 The goal of this exploration device is to simulate a realistic planetary robotic exploration rover equipped with a robotic sampling arm to be a representative of planetary and remote-environment missions. The rover is designed to demonstrate how engineers remotely navigate, sense, manipulate, and collect samples in environments where human presence is impossible or very difficult. The device will show system-level thinking, sensor–actuator integration, and operational decision-making under constraints. The rover is intended to showcase engineering design considerations such as mobility tradeoffs, arm kinematics, sensing limitations, communication latency, and fault handling. Users get hands-on experience with the rover, learning how its design changes its movement, sensing, and ability to complete missions.
 
-## Intended Audience
+### Intended Audience
 
 The primary audience for this exploration device is NASA engineers, researchers, and mission operators who want to study or test rover systems in realistic scenarios. It is designed for operators who understand remote navigation, sensor feedback, and robotic manipulation, and who are interested in seeing how system design affects mission performance. A secondary audience could include aerospace engineering students and research collaborators who can use the rover as a hands-on learning tool to explore control strategies, sample collection, and system integration. The interface is designed to be clear and straightforward, providing all necessary information through visual and auditory indicators so operators can focus on testing and learning.
 
 
-## Generating Ideas
+### Generating Ideas
 
 The following list is an initial brainstorm of about 100 potential features, concepts, and design strategies. No ideas were ranked or removed during our brainstorming, but we did set them in categories to make the list more organized. 
 
