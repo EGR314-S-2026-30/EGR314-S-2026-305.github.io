@@ -16,9 +16,7 @@ The main audience for this device is NASA engineers and researchers who want to 
 
 ## Generating Ideas
 
-This is our raw brainstorm of about 100 ideas. We didn't filter anything out at this stage and just wrote everything down.
-
-<embed src="../TeamFiles/314 Brainstroming.pdf" type="application/pdf" width="100%" height="600px" />
+This is our raw brainstorm of about 100 ideas. We didn't filter anything out at this stage and just wrote everything down. Our thought process can be found [here](../TeamFiles/314%20Brainstroming.pdf).
 
 Mobility and Navigation  
 
