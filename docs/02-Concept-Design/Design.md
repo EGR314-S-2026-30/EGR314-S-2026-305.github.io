@@ -16,7 +16,7 @@ Secondary audiences include educators, families, and facilitators who may use th
 
 ## Generating Ideas
 
-The following list represents an initial, unfiltered brainstorm of approximately 100 potential features, concepts, and design strategies. No ideas were evaluated or removed during this phase, in accordance with best practices for effective ideation.
+The following list is an initial brainstorm of about 100 potential features, concepts, and design strategies. No ideas were ranked or removed during our brainstorming, but we did set them in categories to make the list more organized. 
 
 Mobility and Navigation  
 1. Tank-style tread drive  
