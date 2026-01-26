@@ -4,19 +4,19 @@ title: Concept Generation and Design Ideation
 
 ## Background Reading and Design Constraints
 
-From our research, we found that a good exploration device needs to be realistic but still easy to understand and operate. Operators should always know what the rover is doing and how their actions can affect it. Good feedback on both visual and auditory helps make the system intuitive, considering operators can’t directly touch the rover or see everything it’s sensing. We also learned that durability and safety are really important. The rover has to handle repeated use, bumps, and mistakes without breaking. Its vital moving parts should be protected, motors should be limited to safe forces, and the controls should default to safe states if something goes wrong. These are very similar to the real challenges engineers face with planetary rovers. research showed that too many controls or hidden functions can confuse operators. Keeping interactions simple, continous, and supported with clear indicators makes it easier to understand the cause and effect to complete tasks successfully. Generating a lot of ideas before deciding what to include also helped us explore creative ways to meet these needs. 
+From our research we found that a good exploration device needs to be realistic but still easy to understand and use. The person using it should always know what the rover is doing and how their actions affect it. Good feedback through visuals and sounds helps make the system feel natural since operators cant directly touch the rover or see everything its sensing. We also learned that durability and safety are really important. The rover has to handle being used over and over again along with bumps and mistakes without breaking. The moving parts should be protected and the motors should be limited to safe forces. The controls should also go to a safe state if something goes wrong. These are similar to the real challenges engineers deal with when building planetary rovers. Our research also showed that too many controls or hidden features can confuse people. Keeping things simple and giving clear feedback makes it easier for users to understand what is happening and finish tasks. Brainstorming a lot of ideas before picking what to include helped us come up with creative ways to meet these needs.
 
 ## Goal of the Exploration Device
 
-The goal of this exploration device is to simulate a realistic planetary robotic exploration rover equipped with a robotic sampling arm to be a representative of planetary and remote-environment missions. The rover is designed to demonstrate how engineers remotely navigate, sense, manipulate, and collect samples in environments where human presence is impossible or very difficult. The device will show system-level thinking, sensor–actuator integration, and operational decision-making under constraints. The rover is intended to showcase engineering design considerations such as mobility tradeoffs, arm kinematics, sensing limitations, communication latency, and fault handling. Users get hands-on experience with the rover, learning how its design changes its movement, sensing, and ability to complete missions.
+The goal of this exploration device is to simulate a realistic planetary rover with a robotic sampling arm that represents real planetary missions. The rover is meant to show how engineers remotely drive around and collect samples in places where humans cant go. It will demonstrate things like how sensors and motors work together and how decisions are made when theres limited information. The rover shows engineering concepts like how different wheel designs affect movement and how the arm moves and what happens when theres communication delay. Users get to actually use the rover and learn how its design affects what it can do.
 
 ## Intended Audience
 
-The primary audience for this exploration device is NASA engineers, researchers, and mission operators who want to study or test rover systems in realistic scenarios. It is designed for operators who understand remote navigation, sensor feedback, and robotic manipulation, and who are interested in seeing how system design affects mission performance. A secondary audience could include aerospace engineering students and research collaborators who can use the rover as a hands-on learning tool to explore control strategies, sample collection, and system integration. The interface is designed to be clear and straightforward, providing all necessary information through visual and auditory indicators so operators can focus on testing and learning.
+The main audience for this device is NASA engineers and researchers who want to study or test rover systems in realistic situations. Its designed for people who understand remote control and sensor feedback and robot arms. They want to see how the design of the system affects how well it performs missions. A secondary audience is aerospace engineering students and research partners who can use the rover as a hands on learning tool to explore control strategies and sample collection. The interface is designed to be clear and give all the info through lights and sounds so users can focus on testing and learning.
 
 ## Generating Ideas
 
-This is our raw brainstorm of about 100 ideas. We didn't filter anything out at this stage, just wrote everything down.
+This is our raw brainstorm of about 100 ideas. We didnt filter anything out at this stage and just wrote everything down.
 
 Mobility and Navigation  
 
@@ -83,7 +83,7 @@ User Cues and Instruction
 49. Countdown timer  
 50. Progress bar visualization  
 
-Durability, Safety, and Comfort  
+Durability Safety and Comfort  
 
 51. Rounded structural edges  
 52. Fully enclosed mechanisms  
@@ -148,22 +148,26 @@ Infrastructure and Connectivity
 99. Power-saving idle state  
 100. Automatic startup self-check  
 
-## Sorting, Ranking, and Grouping
+## Sorting Ranking and Grouping
 
-After getting all those ideas out, we organized them into groups and ranked them based on what made the most sense for our project.
+After getting all those ideas out we organized them into groups and ranked them based on what made the most sense for our project.
 
 ### Group 1: User Interaction and Controls
-**Top-Ranked Features**  
+
+**Top Ranked Features**
+
 - Large directional control buttons  
 - Joystick-based arm control  
 - Touchscreen display  
 - On-screen arrows and prompts  
 - Physical emergency stop  
 
-These features were ranked highest due to their clarity, accessibility, and ability to minimize user confusion.
+These features ranked highest because they are clear and easy to use and help prevent confusion.
 
 ### Group 2: Sensors and Feedback
-**Top-Ranked Features**  
+
+**Top Ranked Features**
+
 - Ultrasonic distance sensors  
 - Arm-mounted camera  
 - LED status indicators  
@@ -174,7 +178,7 @@ These give users immediate feedback so they can see how their actions affect the
 
 ### Group 3: Durability and Safety
 
-**Top-Ranked Features**
+**Top Ranked Features**
 
 - Automatic collision avoidance  
 - Rounded structural edges  
@@ -182,10 +186,12 @@ These give users immediate feedback so they can see how their actions affect the
 - Rubberized impact bumpers  
 - Child-safe construction materials  
 
-Since this will be used by the public including kids, we prioritized making it tough and safe.
+Since this will be used by the public including kids we made sure it is tough and safe.
 
 ### Group 4: Engagement and Learning
-**Top-Ranked Features**  
+
+**Top Ranked Features**
+
 - Mission-based challenges  
 - Animated tutorial loop  
 - Science fact integration  
@@ -198,79 +204,90 @@ These features keep people interested while also teaching them something.
 We came up with three different directions we could go:
 
 **Concept A: Mission Rover**  
-Users follow clear missions with step-by-step instructions and specific goals to complete.  
+Users follow clear missions with step by step instructions and specific goals to complete.  
 
 **Concept B: Open Exploration Rover**  
 Users freely explore and experiment with the rover without set goals or instructions.  
 
 **Concept C: Collaborative Science Rover**  
-Multiple users work together, sharing control and discussing data to complete tasks as a team.  
+Multiple users work together sharing control and discussing data to complete tasks as a team.  
 
 ## Product Concept Descriptions and Evaluation
 
 ## Concept A: Mission Rover
 
-This concept gives users short missions to complete. They navigate terrain, collect samples, and check sensor readings. Visual and audio cues guide them through each step so they always know what to do. We designed it to avoid common exhibit problems like having too many controls active at once or hiding features users need.  
+This concept gives users short missions to complete. They navigate terrain and collect samples and check sensor readings. Visual and audio cues guide them through each step so they always know what to do. We designed it to avoid common problems like having too many controls active at once or hiding features users need.  
 
 ![Concept A](https://github.com/EGR314-S-2026-30/EGR314-S-2026-305.github.io/blob/main/docs/Assets/Concept_A.png?raw=true)
 
 ### Functional Distribution Across Team Members
-- Internet-based two-way wireless communication: Data transmission and logging and system status reporting  
-- Human-machine interface: Touchscreen UI and buttons and visual cues and user feedback  
-- Sensor and actuator control: Motors and robotic arm and sensors and closed-loop responses  
-- System integration and safety: Power management and fault detection and durability and testing  
+
+- Internet-based two-way wireless communication handles data transmission and logging and system status reporting  
+- Human-machine interface covers the touchscreen UI and buttons and visual cues and user feedback  
+- Sensor and actuator control manages motors and the robotic arm and sensors and closed-loop responses  
+- System integration and safety handles power management and fault detection and durability testing  
 
 ### Design Justification
-- Cues: LED animations and on-screen arrows and audio feedback and progress indicators  
-- Controls: Large buttons and joystick to make operation straightforward  
-- Durability and Comfort: Enclosed mechanisms and current-limited motors and ergonomic layout  
-- Instruction: Brief mission briefing and looping tutorial so no one needs to explain it  
+
+- Cues include LED animations and on-screen arrows and audio feedback and progress indicators  
+- Controls use large buttons and a joystick to make operation straightforward  
+- Durability and Comfort comes from enclosed mechanisms and current-limited motors and ergonomic layout  
+- Instruction uses a brief mission briefing and looping tutorial so no one needs to explain it  
 
 ## Concept B: Open Exploration Rover
-The **Open Exploration Rover** concept prioritizes user-driven discovery by removing predefined objectives and allowing unrestricted interaction with the rover and its environment. Users are free to navigate terrain, operate sensors, and experiment with rover capabilities at their own pace. This approach encourages curiosity, creativity, and self-directed learning, but it ranked lower overall due to the increased risk of user confusion and lack of clear guidance for first-time users. Without structured goals, some users may struggle to understand the rover’s purpose or how to meaningfully engage with its systems.  
+
+The Open Exploration Rover concept focuses on letting users discover things on their own by removing set objectives and letting them freely interact with the rover and its environment. Users can navigate terrain and operate sensors and experiment with what the rover can do at their own pace. This approach encourages curiosity and creativity and self-directed learning but it ranked lower overall because theres more risk of user confusion and lack of clear guidance for first-time users. Without structured goals some users might not understand the rovers purpose or how to actually use its systems.  
+
 ![Concept B](https://github.com/EGR314-S-2026-30/EGR314-S-2026-305.github.io/blob/main/docs/Assets/Concept_B.png?raw=trueg)
 
 ### Functional Distribution Across Team Members
-- **Internet-based two-way wireless communication:** Real-time telemetry streaming, live sensor data visualization, and remote command handling  
-- **Human–machine interface:** Open-ended touchscreen UI, manual control inputs, live data dashboards, and minimal instructional overlays  
-- **Sensor and actuator control:** Direct control of motors, robotic arm, cameras, and environmental sensors with fewer automated constraints  
-- **System integration and safety:** Power regulation, collision prevention, emergency stop logic, and robustness under unpredictable user behavior  
+
+- Internet-based two-way wireless communication handles real-time telemetry streaming and live sensor data visualization and remote command handling  
+- Human-machine interface provides an open-ended touchscreen UI and manual control inputs and live data dashboards with minimal instructions  
+- Sensor and actuator control gives direct control of motors and robotic arm and cameras and environmental sensors with fewer automated constraints  
+- System integration and safety manages power regulation and collision prevention and emergency stop logic and robustness for unpredictable user behavior  
 
 ### Design Justification
-- **Cues:** Minimal visual indicators, raw sensor readouts, and subtle status LEDs to avoid over-directing user behavior  
-- **Controls:** Full-access joystick and manual controls that expose the rover’s complete functionality  
-- **Durability and Comfort:** Reinforced chassis, protected actuators, and current-limited systems to tolerate exploratory misuse  
-- **Instruction:** Optional on-demand help screens and tooltips replace guided tutorials, preserving a sense of freedom while offering limited support  
+
+- Cues are minimal with just raw sensor readouts and subtle status LEDs to avoid over-directing users  
+- Controls give full access through joystick and manual controls that expose the rovers complete functionality  
+- Durability and Comfort comes from a reinforced chassis and protected actuators and current-limited systems to handle rough use  
+- Instruction uses optional on-demand help screens and tooltips instead of guided tutorials to keep a sense of freedom while offering some support  
 
 ## Concept C: Collaborative Science Rover
-The Collaborative Science Rover concept emphasizes teamwork and shared problem-solving by enabling multiple users to simultaneously control different subsystems of the rover. Each participant is responsible for a specific role, such as navigation, sensor operation, or data analysis, encouraging communication and collaboration. While this concept promotes social learning and mirrors real-world scientific workflows, it introduces additional interface and coordination complexity that can challenge users if roles and responsibilities are not clearly defined.
+
+The Collaborative Science Rover concept focuses on teamwork and shared problem-solving by letting multiple users simultaneously control different parts of the rover. Each person is responsible for a specific role like navigation or sensor operation or data analysis which encourages communication and collaboration. While this concept promotes social learning and mirrors how real scientific teams work it adds extra interface and coordination complexity that can be challenging if roles are not clearly defined.
+
 ![Concept C](https://github.com/EGR314-S-2026-30/EGR314-S-2026-305.github.io/blob/main/docs/Assets/Concept_C.png?raw=true)
 
 ### Functional Distribution Across Team Members
-- Internet-based two-way wireless communication: Multi-user session management, synchronized command handling, and shared data streams  
-- Human–machine interface: Role-based control panels, multi-screen or multi-input support, and shared visual feedback  
-- Sensor and actuator control: Partitioned control of motors, robotic arm, cameras, and sensors assigned to different users  
-- System integration and safety: Command arbitration, conflict resolution, system safeguards, and fault handling across multiple operators  
+
+- Internet-based two-way wireless communication handles multi-user session management and synchronized command handling and shared data streams  
+- Human-machine interface provides role-based control panels and multi-screen or multi-input support and shared visual feedback  
+- Sensor and actuator control partitions control of motors and robotic arm and cameras and sensors to different users  
+- System integration and safety manages command arbitration and conflict resolution and system safeguards and fault handling across multiple operators  
 
 ### Design Justification
-- Cues: Role-specific visual indicators, shared status displays, and alerts to communicate system state across users  
-- Controls: Segmented controls mapped to user roles to prevent conflicting inputs  
-- Durability and Comfort: Robust mechanical design and software interlocks to protect hardware from simultaneous or conflicting commands  
-- Instruction: Brief role introductions and cooperative task prompts help users understand responsibilities and encourage effective teamwork  
+
+- Cues include role-specific visual indicators and shared status displays and alerts to communicate system state across users  
+- Controls are segmented and mapped to user roles to prevent conflicting inputs  
+- Durability and Comfort comes from robust mechanical design and software interlocks to protect hardware from simultaneous or conflicting commands  
+- Instruction uses brief role introductions and cooperative task prompts to help users understand responsibilities and work together effectively  
 
 
 ## Selected Concept: Mission Rover
 
 ## Concept Selection Rationale
 
-After comparing all three concepts on usability, educational value, durability, safety, and how well they fit exhibit design guidelines, the Mission Rover won out. It balances engagement with simplicity better than the others. We pulled in some ideas from the other concepts but the mission-based structure gave us the strongest foundation.
+After comparing all three concepts on usability and educational value and durability and safety and how well they fit exhibit design guidelines the Mission Rover won out. It balances engagement with simplicity better than the others. We pulled in some ideas from the other concepts but the mission-based structure gave us the strongest foundation.
 
 ![Annotated Mission Rover Concept](mission_rover_concept.png)
 
 *This diagram shows the main parts including the mobility system and robotic arm and sensors and control interface and display.*
 
 ## Final Selected Concept Summary
-- Clear Indicators through multiple channels like visuals and audio  
+
+- Clear indicators through multiple channels like visuals and audio  
 - Simple controls that anyone can pick up  
 - Built tough and safe for repeated use  
 - Minimal instructions needed because the design guides users naturally  
