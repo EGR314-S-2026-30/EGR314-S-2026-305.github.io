@@ -6,7 +6,7 @@ title: Concept Generation and Design Ideation
 
 From our research, we found that a good exploration device needs to be realistic but still easy to understand and operate. Operators should always know what the rover is doing and how their actions can affect it. Good feedback on both visual and auditory helps make the system intuitive, considering operators can’t directly touch the rover or see everything it’s sensing. We also learned that durability and safety are really important. The rover has to handle repeated use, bumps, and mistakes without breaking. Its vital moving parts should be protected, motors should be limited to safe forces, and the controls should default to safe states if something goes wrong. These are very similar to the real challenges engineers face with planetary rovers. research showed that too many controls or hidden functions can confuse operators. Keeping interactions simple, continous, and supported with clear indicators makes it easier to understand the cause and effect to complete tasks successfully. Generating a lot of ideas before deciding what to include also helped us explore creative ways to meet these needs. 
 
-## Goal of the Exploration Device
+## Goal of this Exploration Device
 The goal of this exploration device is to simulate a realistic planetary robotic exploration rover equipped with a robotic sampling arm to be a representative of planetary and remote-environment missions. The rover is designed to demonstrate how engineers remotely navigate, sense, manipulate, and collect samples in environments where human presence is impossible or very difficult. The device will show system-level thinking, sensor–actuator integration, and operational decision-making under constraints. The rover is intended to showcase engineering design considerations such as mobility tradeoffs, arm kinematics, sensing limitations, communication latency, and fault handling. Users get hands-on experience with the rover, learning how its design changes its movement, sensing, and ability to complete missions.
 
 ## Intended Audience
@@ -140,10 +140,8 @@ The following list is an initial brainstorm of about 100 potential features, con
 
 ## Sorting, Ranking, and Grouping
 
-![Sorted and Grouped Ideas](brainstorm_grouped.png)
-
 ### Group 1: User Interaction and Controls
-**Top-Ranked Features**
+**Top-Ranked Features**  
 - Large directional buttons  
 - Joystick-controlled arm  
 - Touchscreen display  
@@ -154,7 +152,7 @@ These features were ranked highest due to their clarity, accessibility, and abil
 ![Ranked Features](brainstorm_ranked.png)
 
 ### Group 2: Sensors and Feedback
-**Top-Ranked Features**
+**Top-Ranked Features**  
 - Arm-mounted camera  
 - Distance sensing  
 - LED status indicators  
@@ -163,7 +161,7 @@ These features were ranked highest due to their clarity, accessibility, and abil
 These features provide immediate feedback and reinforce cause-and-effect learning.
 
 ### Group 3: Durability and Safety
-**Top-Ranked Features**
+**Top-Ranked Features**  
 - Enclosed mechanisms  
 - Force-limited actuators  
 - Rounded edges  
@@ -172,7 +170,7 @@ These features provide immediate feedback and reinforce cause-and-effect learnin
 Durability and safety were prioritized due to the public-facing nature of the exhibit.
 
 ### Group 4: Engagement and Learning
-**Top-Ranked Features**
+**Top-Ranked Features**  
 - Mission-based challenges  
 - Real-world rover context  
 - Visual progress indicators  
