@@ -2,6 +2,12 @@
 title: Concept Generation and Design Ideation
 ---
 
+## Background Reading and Design Constraints
+
+Key takeaways from the EGR 314 project description and interactive exhibit design readings informed our ideation process. The device must be durable, safe for repeated public use, and intuitive without requiring lengthy instructions. Readings emphasized minimizing cognitive overload, providing immediate feedback, and avoiding hidden interactions that can confuse users.
+
+Brainstorming resources highlighted the importance of deferring judgment, encouraging unconventional ideas, and generating a large quantity of concepts before converging. These principles guided our initial ~100-idea brainstorm and our later sorting and refinement process.
+
 ## Goal of the Exploration Device
 The goal of this exploration device is to immerse users in the process of remote scientific exploration by allowing them to operate a mobile rover equipped with a robotic sampling arm. The device simulates real-world exploration scenarios in which direct human interaction is not possible, such as planetary exploration, hazardous material sampling, or environmental monitoring in extreme conditions. Through hands-on interaction, users learn how scientists and engineers gather data, make decisions with limited feedback, and adapt to constraints imposed by remote systems.
 
