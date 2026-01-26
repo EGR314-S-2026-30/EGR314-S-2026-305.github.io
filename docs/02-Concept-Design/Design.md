@@ -144,6 +144,8 @@ Infrastructure and Connectivity
 
 ## Sorting, Ranking, and Grouping
 
+![Sorted and Grouped Ideas](brainstorm_grouped.png)
+
 ### Group 1: User Interaction and Controls
 **Top-Ranked Features**
 - Large directional buttons  
@@ -152,6 +154,8 @@ Infrastructure and Connectivity
 - Emergency stop  
 
 These features were ranked highest due to their clarity, accessibility, and ability to minimize user confusion.
+
+![Ranked Features](brainstorm_ranked.png)
 
 ### Group 2: Sensors and Feedback
 **Top-Ranked Features**
