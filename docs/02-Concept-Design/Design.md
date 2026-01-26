@@ -208,7 +208,8 @@ A cooperative system where multiple users share control and work together to int
 
 ## Product Concept Descriptions and Evaluation
 
-**Concept A: Mission Rover**  
+## Concept A: Mission Rover
+
 This concept gives users short missions to complete. They navigate terrain, collect samples, and check sensor readings. Visual and audio cues guide them through each step so they always know what to do. We designed it to avoid common exhibit problems like having too many controls active at once or hiding features users need.  
 <img width="251" height="547" alt="Screenshot 2025-08-31 205237" src="https://github.com/user-attachments/assets/2523c0c8-95df-4855-9871-c58de8321973" />
 
