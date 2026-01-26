@@ -211,16 +211,16 @@ This concept emphasizes user-driven discovery by removing predefined objectives 
 Concept C: Collaborative Science Rover
 This concept focuses on teamwork, enabling multiple users to cooperate in navigation, sampling, and data interpretation. While engaging, it introduces additional interface complexity.
 
-## Selected Concept: Mission Rover
+### Selected Concept: Mission Rover
 
-## Concept Selection Rationale
+### Concept Selection Rationale
 The Mission Rover concept was selected after evaluating all three concepts against usability, educational effectiveness, durability, safety, and alignment with interactive exhibit design guidelines. This concept best balances engagement with clarity and provides a scalable framework for future feature expansion. Elements from the Open Exploration and Collaborative Rover concepts were selectively incorporated, but the mission-based structure was chosen as the most robust solution.
 
 ![Annotated Mission Rover Concept](mission_rover_concept.png)
 
 *Annotated diagram highlighting rover mobility system, robotic sampling arm, sensors, control interface, and display.*
 
-## Final Selected Concept Summary
+### Final Selected Concept Summary
 - Clear, multi-modal user cues  
 - Intuitive, low-barrier controls  
 - Durable, safe, and repeatable mechanical design  
