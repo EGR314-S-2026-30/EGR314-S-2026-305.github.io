@@ -142,38 +142,41 @@ The following list is an initial brainstorm of about 100 potential features, con
 
 ### Group 1: User Interaction and Controls
 **Top-Ranked Features**  
-- Large directional buttons  
-- Joystick-controlled arm  
-- Touchscreen display  
-- Emergency stop  
+- Large directional control buttons
+- Joystick-based arm control
+- Touchscreen display
+- On-screen arrows and prompts
+- Physical emergency stop
 
 These features were ranked highest due to their clarity, accessibility, and ability to minimize user confusion.
 
-![Ranked Features](brainstorm_ranked.png)
 
 ### Group 2: Sensors and Feedback
 **Top-Ranked Features**  
-- Arm-mounted camera  
-- Distance sensing  
-- LED status indicators  
-- Real-time data display  
+- Ultrasonic distance sensors
+- Arm-mounted camera
+- LED status indicators
+- Audio feedback output
+- Real-time data visualization
 
 These features provide immediate feedback and reinforce cause-and-effect learning.
 
 ### Group 3: Durability and Safety
 **Top-Ranked Features**  
-- Enclosed mechanisms  
-- Force-limited actuators  
-- Rounded edges  
-- Impact bumpers  
+- Automatic collision avoidance
+- Rounded structural edges
+- Fully enclosed mechanisms
+- Rubberized impact bumpers
+- Child-safe construction materials
 
 Durability and safety were prioritized due to the public-facing nature of the exhibit.
 
 ### Group 4: Engagement and Learning
 **Top-Ranked Features**  
-- Mission-based challenges  
-- Real-world rover context  
-- Visual progress indicators  
+- Mission-based challenges
+- Animated tutorial loop
+- Science fact integration
+- Achievement indicators
 
 These features were selected to maintain attention while supporting educational goals.
 
