@@ -199,7 +199,7 @@ A cooperative system where multiple users share control and work together to int
 ## Product Concept Descriptions and Evaluation
 
 **Concept A: Mission Rover**  
-This concept gives users short missions to complete. They navigate terrain, collect samples, and check sensor readings. Visual and audio cues guide them through each step so they always know what to do. We designed it to avoid common exhibit problems like having too many controls active at once or hiding features users need.
+This concept gives users short missions to complete. They navigate terrain, collect samples, and check sensor readings. Visual and audio cues guide them through each step so they always know what to do. We designed it to avoid common exhibit problems like having too many controls active at once or hiding features users need.  
 ![Concept A](concept.png)
 
 ### Functional Distribution Across Team Members
@@ -215,7 +215,7 @@ This concept gives users short missions to complete. They navigate terrain, coll
 - **Instruction:** Brief mission briefing and looping tutorial so no one needs to explain it  
 
 ## Concept B: Open Exploration Rover
-The **Open Exploration Rover** concept prioritizes user-driven discovery by removing predefined objectives and allowing unrestricted interaction with the rover and its environment. Users are free to navigate terrain, operate sensors, and experiment with rover capabilities at their own pace. This approach encourages curiosity, creativity, and self-directed learning, but it ranked lower overall due to the increased risk of user confusion and lack of clear guidance for first-time users. Without structured goals, some users may struggle to understand the rover’s purpose or how to meaningfully engage with its systems.
+The **Open Exploration Rover** concept prioritizes user-driven discovery by removing predefined objectives and allowing unrestricted interaction with the rover and its environment. Users are free to navigate terrain, operate sensors, and experiment with rover capabilities at their own pace. This approach encourages curiosity, creativity, and self-directed learning, but it ranked lower overall due to the increased risk of user confusion and lack of clear guidance for first-time users. Without structured goals, some users may struggle to understand the rover’s purpose or how to meaningfully engage with its systems.  
 ![Concept B](concept.png)
 
 ### Functional Distribution Across Team Members
@@ -231,7 +231,7 @@ The **Open Exploration Rover** concept prioritizes user-driven discovery by remo
 - **Instruction:** Optional on-demand help screens and tooltips replace guided tutorials, preserving a sense of freedom while offering limited support  
 
 **Concept C: Collaborative Science Rover**  
-This one focuses on teamwork. Multiple users control different parts and work together. It is a cool idea but adds complexity to the interface.
+This one focuses on teamwork. Multiple users control different parts and work together. It is a cool idea but adds complexity to the interface.  
 ![Concept C](concept.png)
 
 ## Selected Concept: Mission Rover
