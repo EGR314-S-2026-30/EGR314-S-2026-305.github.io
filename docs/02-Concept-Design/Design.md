@@ -159,7 +159,7 @@ Infrastructure and Connectivity
 After getting all those ideas out, we organized them into groups and ranked them based on what made the most sense for our project.
 
 ### Group 1: User Interaction and Controls
-**Top Picks**
+**Top Picks**  
 - Large directional buttons  
 - Joystick-controlled arm  
 - Touchscreen display  
@@ -168,7 +168,7 @@ After getting all those ideas out, we organized them into groups and ranked them
 These ranked highest because they are clear and accessible. Users won't get confused trying to figure out how to use them.
 
 ### Group 2: Sensors and Feedback
-**Top Picks**
+**Top Picks**  
 - Arm-mounted camera  
 - Distance sensing  
 - LED status indicators  
@@ -177,7 +177,7 @@ These ranked highest because they are clear and accessible. Users won't get conf
 These give users immediate feedback so they can see how their actions affect the rover.
 
 ### Group 3: Durability and Safety
-**Top Picks**
+**Top Picks**  
 - Enclosed mechanisms  
 - Force-limited actuators  
 - Rounded edges  
@@ -186,7 +186,7 @@ These give users immediate feedback so they can see how their actions affect the
 Since this will be used by the public including kids, we prioritized making it tough and safe.
 
 ### Group 4: Engagement and Learning
-**Top Picks**
+**Top Picks**  
 - Mission-based challenges  
 - Real-world rover context  
 - Visual progress indicators  
