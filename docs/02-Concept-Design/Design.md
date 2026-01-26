@@ -18,7 +18,7 @@ Secondary audiences include educators, families, and facilitators who may use th
 
 The following list is an initial brainstorm of about 100 potential features, concepts, and design strategies. No ideas were ranked or removed during our brainstorming, but we did set them in categories to make the list more organized. 
 
-###Mobility and Navigation  
+#### Mobility and Navigation  
 1. Tank-style tread drive  
 2. Four-wheel independent steering  
 3. Obstacle-climbing wheel geometry  
@@ -30,7 +30,7 @@ The following list is an initial brainstorm of about 100 potential features, con
 9. Variable terrain difficulty zones  
 10. Rover recovery mode  
 
-Robotic Arm and Sampling  
+#### Robotic Arm and Sampling  
 11. Two-joint sampling arm  
 12. Three-joint articulated arm  
 13. Magnetic sample pickup  
@@ -42,7 +42,7 @@ Robotic Arm and Sampling
 19. Sample-secured feedback indicator  
 20. Automatic arm homing  
 
-Sensors and Actuators  
+#### Sensors and Actuators  
 21. Ultrasonic distance sensors  
 22. Color detection sensor  
 23. Weight measurement sensor  
@@ -54,7 +54,7 @@ Sensors and Actuators
 29. Real-time data visualization  
 30. Manual sensor scan mode  
 
-Human–Machine Interface  
+#### Human–Machine Interface  
 31. Large directional control buttons  
 32. Joystick-based arm control  
 33. Touchscreen display  
@@ -66,7 +66,7 @@ Human–Machine Interface
 39. Multi-language support  
 40. Adjustable difficulty levels  
 
-User Cues and Instruction  
+#### User Cues and Instruction  
 41. Attention-guiding LED animations  
 42. Context-sensitive hints  
 43. Animated tutorial loop  
@@ -78,7 +78,7 @@ User Cues and Instruction
 49. Countdown timer  
 50. Progress bar visualization  
 
-Durability, Safety, and Comfort  
+#### Durability, Safety, and Comfort  
 51. Rounded structural edges  
 52. Fully enclosed mechanisms  
 53. Motor overcurrent protection  
@@ -90,7 +90,7 @@ Durability, Safety, and Comfort
 59. Tethered operational area  
 60. Child-safe construction materials  
 
-Engagement and Motivation  
+#### Engagement and Motivation  
 61. Mission-based challenges  
 62. Timed objectives  
 63. Accuracy-based scoring  
@@ -102,7 +102,7 @@ Engagement and Motivation
 69. Real-world rover comparisons  
 70. Take-home QR code results  
 
-Avoiding Common Interactive Pitfalls  
+#### Avoiding Common Interactive Pitfalls  
 71. Single clear goal per task  
 72. Limited simultaneous controls  
 73. Immediate action feedback  
@@ -114,7 +114,7 @@ Avoiding Common Interactive Pitfalls
 79. Robust, repeatable hardware  
 80. Clearly defined physical boundaries  
 
-Unconventional and Exploratory Ideas  
+#### Unconventional and Exploratory Ideas  
 81. Augmented reality overlay  
 82. Simulated communication delay  
 83. Voice command interaction  
@@ -126,7 +126,7 @@ Unconventional and Exploratory Ideas
 89. Competitive mission mode  
 90. Night-vision camera mode  
 
-Infrastructure and Connectivity  
+#### Infrastructure and Connectivity  
 91. Two-way wireless communication  
 92. Cloud-based data logging  
 93. Instructor control interface  
