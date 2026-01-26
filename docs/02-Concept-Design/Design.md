@@ -246,7 +246,7 @@ After comparing all three concepts on usability, educational value, durability, 
 *This diagram shows the main parts including the mobility system and robotic arm and sensors and control interface and display.*
 
 ## Final Selected Concept Summary
-- Clear cues through multiple channels like visuals and audio  
+- Clear Indicators through multiple channels like visuals and audio  
 - Simple controls that anyone can pick up  
 - Built tough and safe for repeated use  
 - Minimal instructions needed because the design guides users naturally  
