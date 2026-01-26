@@ -289,9 +289,6 @@ Quick Summary:
 
 After comparing all three concepts on usability and educational value and durability and safety and how well they fit exhibit design guidelines the Mission Rover won out. It balances engagement with simplicity better than the others. We pulled in some ideas from the other concepts but the mission-based structure gave us the strongest foundation.
 
-![Annotated Mission Rover Concept](mission_rover_concept.png)
-
-*This diagram shows the main parts including the mobility system and robotic arm and sensors and control interface and display.*
 
 ## Final Selected Concept Summary
 
