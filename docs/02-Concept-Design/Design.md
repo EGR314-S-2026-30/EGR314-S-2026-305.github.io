@@ -190,7 +190,7 @@ A cooperative system where multiple users share control and interpret sensor dat
 
 ## Product Concept Descriptions and Evaluation
 
-Concept A: Mission Rover
+Concept A: Mission Rover 
 The Mission Rover concept provides users with short, clearly defined scientific missions that involve navigating terrain, collecting samples, and interpreting sensor feedback. Visual and auditory cues guide the user through each task, reducing cognitive load while reinforcing learning objectives. This concept intentionally avoids common interactive exhibit pitfalls by limiting simultaneous controls, providing constant feedback, and ensuring that all essential actions are discoverable.
 
 ### Functional Distribution Across Team Members
