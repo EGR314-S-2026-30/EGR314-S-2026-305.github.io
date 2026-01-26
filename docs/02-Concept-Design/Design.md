@@ -4,15 +4,11 @@ title: Concept Generation and Design Ideation
 
 ## Background Reading and Design Constraints
 
-We started by going through the EGR 314 project description and some readings on interactive exhibit design. The big takeaways were that the device has to be durable enough for repeated public use, safe for all ages, and easy to figure out without needing a ton of instructions. The readings also talked about not overwhelming users with too much info at once and making sure feedback happens right away so people know what they did.
-
-The brainstorming guides we looked at said not to judge ideas too early and to just get as many out there as possible before narrowing down. We followed that approach when we came up with our initial list of about 100 ideas.
+From our research, we found that a good exploration device needs to be realistic but still easy to understand and operate. Operators should always know what the rover is doing and how their actions can affect it. Good feedback on both visual and auditory helps make the system intuitive, considering operators can’t directly touch the rover or see everything it’s sensing. We also learned that durability and safety are really important. The rover has to handle repeated use, bumps, and mistakes without breaking. Its vital moving parts should be protected, motors should be limited to safe forces, and the controls should default to safe states if something goes wrong. These are very similar to the real challenges engineers face with planetary rovers. research showed that too many controls or hidden functions can confuse operators. Keeping interactions simple, continous, and supported with clear indicators makes it easier to understand the cause and effect to complete tasks successfully. Generating a lot of ideas before deciding what to include also helped us explore creative ways to meet these needs. 
 
 ## Goal of the Exploration Device
 
-The point of this device is to let users experience what remote scientific exploration feels like. They get to operate a mobile rover with a robotic arm that can pick up samples, kind of like how real exploration missions work when scientists can't physically be there. Think planetary rovers or robots used in hazardous environments.
-
-The rover teaches through doing. Users get visual and audio feedback right away when they take actions, which helps them understand cause and effect. They can test out different strategies for driving around and collecting samples, and then see how their choices play out. We wanted to make it engaging without making it so complicated that people get lost.
+The goal of this exploration device is to simulate a realistic planetary robotic exploration rover equipped with a robotic sampling arm to be a representative of planetary and remote-environment missions. The rover is designed to demonstrate how engineers remotely navigate, sense, manipulate, and collect samples in environments where human presence is impossible or very difficult. The device will show system-level thinking, sensor–actuator integration, and operational decision-making under constraints. The rover is intended to showcase engineering design considerations such as mobility tradeoffs, arm kinematics, sensing limitations, communication latency, and fault handling. Users get hands-on experience with the rover, learning how its design changes its movement, sensing, and ability to complete missions.
 
 ## Intended Audience
 
