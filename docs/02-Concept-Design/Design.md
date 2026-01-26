@@ -148,8 +148,6 @@ Infrastructure and Connectivity
 
 After getting all those ideas out, we organized them into groups and ranked them based on what made the most sense for our project.
 
-![Sorted and Grouped Ideas](brainstorm_grouped.png)
-
 ### Group 1: User Interaction and Controls
 **Top Picks**
 - Large directional buttons  
@@ -158,8 +156,6 @@ After getting all those ideas out, we organized them into groups and ranked them
 - Emergency stop  
 
 These ranked highest because they are clear and accessible. Users won't get confused trying to figure out how to use them.
-
-![Ranked Features](brainstorm_ranked.png)
 
 ### Group 2: Sensors and Feedback
 **Top Picks**
@@ -204,6 +200,7 @@ A cooperative system where multiple users share control and work together to int
 
 **Concept A: Mission Rover**  
 This concept gives users short missions to complete. They navigate terrain, collect samples, and check sensor readings. Visual and audio cues guide them through each step so they always know what to do. We designed it to avoid common exhibit problems like having too many controls active at once or hiding features users need.
+![Concept A](concept.png)
 
 ### Functional Distribution Across Team Members
 - **Internet-based two-way wireless communication:** Data transmission and logging and system status reporting  
@@ -219,6 +216,7 @@ This concept gives users short missions to complete. They navigate terrain, coll
 
 ## Concept B: Open Exploration Rover
 The **Open Exploration Rover** concept prioritizes user-driven discovery by removing predefined objectives and allowing unrestricted interaction with the rover and its environment. Users are free to navigate terrain, operate sensors, and experiment with rover capabilities at their own pace. This approach encourages curiosity, creativity, and self-directed learning, but it ranked lower overall due to the increased risk of user confusion and lack of clear guidance for first-time users. Without structured goals, some users may struggle to understand the rover’s purpose or how to meaningfully engage with its systems.
+![Concept B](concept.png)
 
 ### Functional Distribution Across Team Members
 - **Internet-based two-way wireless communication:** Real-time telemetry streaming, live sensor data visualization, and remote command handling  
@@ -234,6 +232,7 @@ The **Open Exploration Rover** concept prioritizes user-driven discovery by remo
 
 **Concept C: Collaborative Science Rover**  
 This one focuses on teamwork. Multiple users control different parts and work together. It is a cool idea but adds complexity to the interface.
+![Concept C](concept.png)
 
 ## Selected Concept: Mission Rover
 
