@@ -153,7 +153,6 @@ Infrastructure and Connectivity
 After getting all those ideas out, we organized them into groups and ranked them based on what made the most sense for our project.
 
 ### Group 1: User Interaction and Controls
-<<<<<<< HEAD
 **Top-Ranked Features**  
 - Large directional control buttons
 - Joystick-based arm control
@@ -163,7 +162,6 @@ After getting all those ideas out, we organized them into groups and ranked them
 
 These features were ranked highest due to their clarity, accessibility, and ability to minimize user confusion.
 
-
 ### Group 2: Sensors and Feedback
 **Top-Ranked Features**  
 - Ultrasonic distance sensors
@@ -171,56 +169,25 @@ These features were ranked highest due to their clarity, accessibility, and abil
 - LED status indicators
 - Audio feedback output
 - Real-time data visualization
-=======
-**Top Picks**  
-- Large directional buttons  
-- Joystick-controlled arm  
-- Touchscreen display  
-- Emergency stop  
-
-These ranked highest because they are clear and accessible. Users won't get confused trying to figure out how to use them.
-
-### Group 2: Sensors and Feedback
-**Top Picks**  
-- Arm-mounted camera  
-- Distance sensing  
-- LED status indicators  
-- Real-time data display  
->>>>>>> 323bcf8549d823b7bfec667bc179b8aa6e149027
 
 These give users immediate feedback so they can see how their actions affect the rover.
 
 ### Group 3: Durability and Safety
-<<<<<<< HEAD
 **Top-Ranked Features**  
 - Automatic collision avoidance
 - Rounded structural edges
 - Fully enclosed mechanisms
 - Rubberized impact bumpers
 - Child-safe construction materials
-=======
-**Top Picks**  
-- Enclosed mechanisms  
-- Force-limited actuators  
-- Rounded edges  
-- Impact bumpers  
->>>>>>> 323bcf8549d823b7bfec667bc179b8aa6e149027
 
 Since this will be used by the public including kids, we prioritized making it tough and safe.
 
 ### Group 4: Engagement and Learning
-<<<<<<< HEAD
 **Top-Ranked Features**  
 - Mission-based challenges
 - Animated tutorial loop
 - Science fact integration
 - Achievement indicators
-=======
-**Top Picks**  
-- Mission-based challenges  
-- Real-world rover context  
-- Visual progress indicators  
->>>>>>> 323bcf8549d823b7bfec667bc179b8aa6e149027
 
 These features keep people interested while also teaching them something.
 
