@@ -12,9 +12,7 @@ The goal of this exploration device is to simulate a realistic planetary robotic
 
 ## Intended Audience
 
-Our main audience is experts in robotics and scientists at NASA who might use this as a demo tool or proof of concept for educational outreach. The device is meant to show off core rover functionality in a compact format that works for professional presentations, lab demos, or public engagement events run by technical organizations.
-
-Secondary audiences include engineering students and researchers who want to study rover mechanics and control systems up close. Since we are aiming at a technically knowledgeable crowd, we focused on making the system modular and well documented so it can be adapted or built on for future projects.
+The primary audience for this exploration device is NASA engineers, researchers, and mission operators who want to study or test rover systems in realistic scenarios. It is designed for operators who understand remote navigation, sensor feedback, and robotic manipulation, and who are interested in seeing how system design affects mission performance. A secondary audience could include aerospace engineering students and research collaborators who can use the rover as a hands-on learning tool to explore control strategies, sample collection, and system integration. The interface is designed to be clear and straightforward, providing all necessary information through visual and auditory indicators so operators can focus on testing and learning.
 
 ## Generating Ideas
 
