@@ -723,124 +723,107 @@
 <thead>
 <tr>
 <th>Description</th>
-<th>Minimum (Acceptance – Not Complete Failure)</th>
+<th>Minimum</th>
 <th>Target</th>
 <th>Feature Satisfied</th>
-<th>Stretch?</th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td>Rover shall provide drive mobility with independent motor control</td>
-<td>Forward and backward motion on flat surfaces at ≥0.1 m/s</td>
-<td>2WD with variable speed control (0.1–0.5 m/s); 4WD supported as an optional enhancement</td>
+<td>Forward/backward motion on flat surfaces ≥0.1 m/s</td>
+<td>2WD with variable speed control (0.1–0.5 m/s)</td>
 <td>Mobility (Drive)</td>
-<td>Yes (4WD)</td>
 </tr>
 <tr>
 <td>Rover shall implement steering control for directional navigation</td>
-<td>Basic turning using differential drive or simple steering mechanism</td>
-<td>Controlled steering with ≥30° effective turning radius</td>
+<td>Basic turning using differential drive or simple steering</td>
+<td>Controlled steering with ≥30° turning radius</td>
 <td>Mobility (Steering)</td>
-<td>No</td>
 </tr>
 <tr>
-<td>Rover shall detect obstacles or hazards and alert or autonomously slow/stop</td>
+<td>Rover shall detect obstacles or hazards and alert or slow/stop</td>
 <td>Detect obstacles ≤0.5 m ahead and alert operator</td>
-<td>Detection ≤1.5 m with proportional speed reduction or automatic stop</td>
+<td>Detect ≤1.5 m with optional automatic slow/stop</td>
 <td>Hazard Avoidance, Safety</td>
-<td>No</td>
 </tr>
 <tr>
 <td>Rover shall measure atmospheric pressure</td>
-<td>Functional barometric sensor reporting pressure values</td>
-<td>Calibrated sensor (0–1100 hPa) with real-time data streaming to base station</td>
+<td>Functional basic barometric sensor</td>
+<td>Calibrated sensor (0–1100 hPa)</td>
 <td>Environmental Sensing (Pressure)</td>
-<td>No</td>
 </tr>
 <tr>
 <td>Rover shall measure temperature and humidity</td>
-<td>Basic temperature (±2 °C) and relative humidity sensing</td>
-<td>High-accuracy sensing (±0.5 °C, ±3% RH) with continuous telemetry</td>
+<td>Basic temperature (±2 °C) and humidity sensing</td>
+<td>Continuous telemetry with ±1 °C, ±5% RH</td>
 <td>Environmental Sensing (Weather)</td>
-<td>No</td>
 </tr>
 <tr>
 <td>Rover shall provide navigation and orientation data</td>
-<td>Basic IMU providing heading and tilt information</td>
-<td>6- or 9-DOF IMU with optional wheel odometry integration</td>
+<td>IMU provides heading and tilt</td>
+<td>Optional integration with wheel odometry for smoother navigation</td>
 <td>Navigation &amp; Orientation</td>
-<td>No</td>
 </tr>
 <tr>
 <td>Rover shall capture and transmit imaging data</td>
-<td>Static image capture on operator request</td>
-<td>Real-time video streaming at ≥10 fps</td>
+<td>Capture static images</td>
+<td>Real-time video streaming at low frame rate (≥5 fps)</td>
 <td>Imaging &amp; Operator Feedback</td>
-<td>Yes</td>
 </tr>
 <tr>
 <td>Two-way wireless communication shall enable remote control and telemetry</td>
-<td>Reliable command transmission and sensor data return within 15 m</td>
-<td>&lt;300 ms latency with simultaneous control, telemetry, and imaging</td>
+<td>Commands reach rover, basic telemetry returns</td>
+<td>Stable Wi-Fi/Bluetooth link with minimal delay</td>
 <td>Teleoperation &amp; Wireless Communication</td>
-<td>No</td>
 </tr>
 <tr>
 <td>Rover shall provide a local human–machine interface</td>
-<td>OLED displays basic system status and sensor data</td>
-<td>Menu-driven OLED interface with alerts, parameters, and live data</td>
+<td>OLED shows basic status</td>
+<td>Menu-driven OLED with sensor data, alerts, and parameters</td>
 <td>Human–Machine Interface (OLED)</td>
-<td>No</td>
 </tr>
 <tr>
 <td>Rover chassis and major structural components shall be 3D printed</td>
-<td>Primary structure printable and assembled with purchased components</td>
-<td>Lightweight and durable design suitable for repeated testing</td>
+<td>Printable and assembles with purchased parts</td>
+<td>Lightweight, durable design for testing</td>
 <td>Mechanical Construction</td>
-<td>No</td>
 </tr>
 <tr>
 <td>Power system shall support extended operation</td>
-<td>≥30 minutes of continuous operation with all subsystems active</td>
-<td>≥90 minutes with battery monitoring and low-power modes</td>
+<td>≥30 minutes continuous operation</td>
+<td>~60 minutes with monitoring and low-power modes</td>
 <td>Power Management</td>
-<td>No</td>
 </tr>
 <tr>
 <td>System shall include emergency stop and fail-safe behaviors</td>
-<td>Software-commanded stop on signal loss or emergency input</td>
-<td>Automatic safe state with system-wide status broadcast</td>
+<td>Physical switch or software stop works</td>
+<td>Automatic safe state with simple system alerts</td>
 <td>System Safety</td>
-<td>No</td>
 </tr>
 <tr>
-<td>Communication network shall reliably support all subsystem messaging</td>
-<td>Messages may be delayed or lost &lt;5% of the time</td>
-<td>&lt;1% message loss, ≤50 ms latency</td>
+<td>Communication network shall support all subsystem messaging</td>
+<td>Messages may be delayed occasionally</td>
+<td>Reliable messaging via UART/I2C between boards</td>
 <td>Modular Subsystem Integration</td>
-<td>No</td>
 </tr>
 <tr>
-<td>Rover shall not exceed weight limit of chassis</td>
+<td>Rover shall not exceed chassis weight limit</td>
 <td>Total weight ≤5 kg</td>
-<td>≤4.5 kg for optimal mobility and motor efficiency</td>
+<td>≤4.5 kg for mobility efficiency</td>
 <td>Mechanical Construction &amp; Mobility</td>
-<td>No</td>
 </tr>
 <tr>
 <td>Maximum current draw per subsystem</td>
-<td>Each subsystem &lt;2 A under normal operation</td>
-<td>Each subsystem &lt;1.5 A with power monitoring</td>
+<td>Each subsystem ≤2 A</td>
+<td>Each subsystem ≤1.5 A</td>
 <td>Power Management &amp; Safety</td>
-<td>No</td>
 </tr>
 <tr>
-<td>Environmental tolerance for sensors and electronics</td>
-<td>Functional at 0–40°C, 20–80% RH</td>
-<td>Functional at -10–50°C, 10–90% RH</td>
+<td>Environmental tolerance for sensors</td>
+<td>Functional indoors</td>
+<td>Functional outdoors, 0–40°C, 20–80% RH</td>
 <td>Environmental Sensing &amp; System Safety</td>
-<td>No</td>
 </tr>
 </tbody>
 </table>
