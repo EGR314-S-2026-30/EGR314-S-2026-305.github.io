@@ -22,8 +22,6 @@ This approach emphasizes:
 - **User interaction:** Local OLED display enables real-time monitoring and parameter adjustment  
 - **Safety and durability:** Emergency stop, fail-safes, and low-power operation mirror real planetary rover practices  
 
----
-
 ## Key Feature-to-Requirement Mappings
 
 | Feature | Requirement |
@@ -35,8 +33,6 @@ This approach emphasizes:
 | Local user interface | OLED display and pushbuttons allow on-rover status viewing and parameter adjustment. |
 | Remote teleoperation | Wireless link enables driving commands and streams sensor/video data to the base station. |
 | Modular subsystem integration | All boards communicate via a UART daisy-chain configuration for reliability and expansion. |
-
----
 
 ## Requirements Table
 
@@ -55,22 +51,17 @@ This approach emphasizes:
 | Power system shall support extended operation | ≥30 minutes of continuous operation with all subsystems active | ≥90 minutes with battery monitoring and low-power modes | Power Management | No |
 | System shall include emergency stop and fail-safe behaviors | Software-commanded stop on signal loss or emergency input | Automatic safe state with system-wide status broadcast | System Safety | No |
 
-
----
-
 ## Requirement Assignment to Team Members
 
 | Team Member | Name | Main Board Functions (Key Responsibilities) | Primary Assignee (Subsystem) |
 |------------|------|--------------------------------------------|------------------------------|
-| Member 1 | TBD | Rover drive mobility using **2WD baseline** (4WD supported as stretch), motor speed control, steering control, motor feedback, and safety interlocks | Mobility & Motor Control Board |
-| Member 2 | TBD | Obstacle and hazard detection using distance sensors, collision warnings, autonomous slow/stop requests, and safety alerts | Obstacle Detection & Safety Board |
-| Member 3 | TBD | Environmental sensing including atmospheric pressure, temperature, and humidity measurement, calibration, and real-time telemetry | Environmental Sensor Board |
-| Member 4 | TBD | Navigation and orientation sensing using IMU and optional wheel odometry, heading estimation, tilt detection, and motion data reporting | Navigation & Orientation Board |
-| Member 5 | TBD | Imaging system control including camera operation, image/video capture, data packetization, and status reporting | Imaging Board |
-| Member 6 | TBD | Two-way wireless communication (WiFi/MQTT), command routing between base station and rover subsystems, telemetry aggregation, and system messaging | Wireless Communication Board |
-| Member 7 | TBD | Local human–machine interface including **OLED display**, pushbuttons, rover status display, user input handling, power monitoring, emergency stop, and fail-safe control | HMI & System Safety Board |
-
----
+| Member 1 | Liam | Rover drive mobility using **2WD baseline** (4WD supported as stretch), motor speed control, steering control, motor feedback, and safety interlocks | Mobility & Motor Control Board |
+| Member 2 | Myles | Obstacle and hazard detection using distance sensors, collision warnings, autonomous slow/stop requests, and safety alerts | Obstacle Detection & Safety Board |
+| Member 3 | Isaiah | Environmental sensing including atmospheric pressure, temperature, and humidity measurement, calibration, and real-time telemetry | Environmental Sensor Board |
+| Member 4 | Raj | Navigation and orientation sensing using IMU and optional wheel odometry, heading estimation, tilt detection, and motion data reporting | Navigation & Orientation Board |
+| Member 5 | Arianna | Imaging system control including camera operation, image/video capture, data packetization, and status reporting | Imaging Board |
+| Member 6 | Damian | Two-way wireless communication (WiFi/MQTT), command routing between base station and rover subsystems, telemetry aggregation, and system messaging | Wireless Communication Board |
+| Member 7 | Christo | Local human–machine interface including **OLED display**, pushbuttons, rover status display, user input handling, power monitoring, emergency stop, and fail-safe control | HMI & System Safety Board |
 
 **Alignment Notes**
 
