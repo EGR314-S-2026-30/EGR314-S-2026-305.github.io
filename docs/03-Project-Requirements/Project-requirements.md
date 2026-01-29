@@ -23,8 +23,6 @@ This approach emphasizes:
 - **Reliable integration:** Daisy-chain UART network ensures safe message passing between boards  
 - **Safety and durability:** Emergency stop, fail-safes, and low-power operation mirror real planetary rover practices  
 
----
-
 ## Key Feature-to-Requirement Mappings
 
 | Feature | Requirement |
@@ -36,8 +34,6 @@ This approach emphasizes:
 | Remote teleoperation | Wireless link enables driving commands and streams sensor/video data back to the base station. |
 | Construction and constraints | 3D-printed structure with purchased components, plus power and safety constraints that affect all subsystems. |
 | Modular subsystem integration | All boards communicate via UART in a daisy-chain configuration for reliability and expansion. |
-
----
 
 ## Requirements Table
 
@@ -56,8 +52,6 @@ This approach emphasizes:
 | Power system shall support extended operation | ≥30 minutes continuous operation | ≥90 minutes, low-power modes, real-time battery monitoring | System Constraint (Power) | No |
 | System shall include emergency stop and fail-safe behaviors | Software/commanded stop of all motors on signal loss or e-stop | Automatic safe state on communication loss (stop + status broadcast) | Safety, Durability | No |
 
----
-
 ## Requirement Assignment to Team Members
 
 | Requirement Description | Primary Assignee (Functional Area) |
@@ -74,8 +68,6 @@ This approach emphasizes:
 | 3D-printed chassis & structural components | System Integration & Safety |
 | Power system | System Integration & Safety |
 | Emergency stop / fail-safe | System Integration & Safety |
-
----
 
 **Notes on Alignment with Semester Requirements:**
 
