@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#header" class="md-skip">
+        <a href="#overview-and-rationale" class="md-skip">
           Skip to content
         </a>
       
@@ -538,6 +538,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -566,6 +568,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -574,35 +578,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#header" class="md-nav__link">
-    <span class="md-ellipsis">
-      Header
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#overview-and-rationale" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview and Rationale
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Overview and Rationale">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#key-feature-to-requirement-mappings" class="md-nav__link">
     <span class="md-ellipsis">
       Key Feature-to-Requirement Mappings
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -616,26 +596,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#rover-subsystem-assignment-for-7-team-members" class="md-nav__link">
+  <a href="#requirement-assignment-to-team-members" class="md-nav__link">
     <span class="md-ellipsis">
-      Rover Subsystem Assignment for 7 Team Members
+      Requirement Assignment to Team Members
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Rover Subsystem Assignment for 7 Team Members">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#integration-notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Integration Notes
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -770,6 +735,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -778,35 +745,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#header" class="md-nav__link">
-    <span class="md-ellipsis">
-      Header
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#overview-and-rationale" class="md-nav__link">
-    <span class="md-ellipsis">
-      Overview and Rationale
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Overview and Rationale">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
   <a href="#key-feature-to-requirement-mappings" class="md-nav__link">
     <span class="md-ellipsis">
       Key Feature-to-Requirement Mappings
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -820,26 +763,11 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#rover-subsystem-assignment-for-7-team-members" class="md-nav__link">
+  <a href="#requirement-assignment-to-team-members" class="md-nav__link">
     <span class="md-ellipsis">
-      Rover Subsystem Assignment for 7 Team Members
+      Requirement Assignment to Team Members
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Rover Subsystem Assignment for 7 Team Members">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#integration-notes" class="md-nav__link">
-    <span class="md-ellipsis">
-      Integration Notes
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -866,20 +794,25 @@
   
 
 
-<h2 id="header">Header</h2>
 <h1 id="overview-and-rationale">Overview and Rationale</h1>
-<p>Through team discussions, we have refined the rover design to focus primarily on exploration of a simulated Martian environment. The rover will be remotely driven and will actively collect and transmit scientific and environmental data using a suite of sensors:</p>
+<p>Through team discussions, we have refined our rover design to focus on <strong>modular exploration of a simulated Martian environment</strong>. The rover is <strong>remotely operated</strong> and collects scientific and environmental data through a variety of sensors, including:</p>
 <ul>
-<li>Atmospheric pressure</li>
-<li>Temperature/humidity (weather-related)</li>
-<li>Radiation</li>
-<li>Hazard/obstacle detection</li>
-<li>Imaging (camera)</li>
-<li>Navigation/orientation sensors</li>
+<li>Atmospheric pressure  </li>
+<li>Temperature and humidity (weather-related)  </li>
+<li>Hazard/obstacle detection  </li>
+<li>Imaging (camera)  </li>
+<li>Navigation/orientation sensors (IMU, odometry)</li>
 </ul>
-<p>The rover will feature a 4-wheel drive system with steering for robust mobility on uneven terrain. The majority of the structural components (chassis, mounts, body) will be 3D printed for rapid prototyping and customization, while non-printable parts (wheels, motors, electronics, sensors) will be purchased off-the-shelf.</p>
-<p>Remote operation will be achieved through reliable two-way wireless communication, allowing manual control from a base station (laptop or dedicated controller) while streaming real-time sensor data, video/imaging, and system status back to the operator for teleoperation and data logging.</p>
-<p>This exploratory focus shifts away from structured missions toward open-ended remote scientific data collection, emphasizing real-time feedback, sensor integration, and reliable mobility — qualities that mirror real planetary rover operations.</p>
+<p>The rover features <strong>2-wheel drive with steering</strong>, with 4-wheel drive as a possible future enhancement. Most structural components (chassis, mounts, body) will be <strong>3D printed</strong> for rapid prototyping and customization. Non-printable components, such as wheels, motors, electronics, and sensors, will be <strong>purchased off-the-shelf</strong>.</p>
+<p>The rover operates over a <strong>daisy-chain UART network</strong> with 8-wire ribbon cables connecting all <strong>modular subsystem boards</strong>. Each board is independently controlled but communicates via a shared protocol. Remote operation is achieved through <strong>bidirectional wireless communication</strong>, allowing real-time telemetry, video streaming, and manual control from a base station.</p>
+<p>This approach emphasizes:</p>
+<ul>
+<li><strong>Open-ended exploration:</strong> Real-time scientific data collection rather than fixed mission tasks  </li>
+<li><strong>Subsystem modularity:</strong> Individual boards for mobility, sensors, HMI, and communication  </li>
+<li><strong>Reliable integration:</strong> Daisy-chain UART network ensures safe message passing between boards  </li>
+<li><strong>Safety and durability:</strong> Emergency stop, fail-safes, and low-power operation mirror real planetary rover practices  </li>
+</ul>
+<hr>
 <h2 id="key-feature-to-requirement-mappings">Key Feature-to-Requirement Mappings</h2>
 <table>
 <thead>
@@ -891,11 +824,11 @@
 <tbody>
 <tr>
 <td>Mobility</td>
-<td>4-wheel drive and steering required for controllable movement across simulated Martian terrain (sand, rocks, inclines).</td>
+<td>2WD with steering required for controllable movement across simulated Martian terrain. 4WD may be added for enhanced capability.</td>
 </tr>
 <tr>
 <td>Scientific exploration</td>
-<td>Dedicated sensors for pressure, temperature/humidity, radiation, and navigation enable environmental data collection.</td>
+<td>Dedicated sensors for pressure, temperature/humidity, and navigation enable environmental data collection.</td>
 </tr>
 <tr>
 <td>Hazard avoidance</td>
@@ -913,10 +846,14 @@
 <td>Construction and constraints</td>
 <td>3D-printed structure with purchased components, plus power and safety constraints that affect all subsystems.</td>
 </tr>
+<tr>
+<td>Modular subsystem integration</td>
+<td>All boards communicate via UART in a daisy-chain configuration for reliability and expansion.</td>
+</tr>
 </tbody>
 </table>
-<p>Requirements are distributed across team members to ensure each has primary ownership of critical functional areas.</p>
-<h1 id="requirements-table">Requirements Table</h1>
+<hr>
+<h2 id="requirements-table">Requirements Table</h2>
 <table>
 <thead>
 <tr>
@@ -929,86 +866,79 @@
 </thead>
 <tbody>
 <tr>
-<td>Rover shall provide 4-wheel drive mobility with independent motor control</td>
-<td>Basic forward/backward movement on flat surfaces at ≥0.1 m/s</td>
-<td>All-wheel drive with variable speed (0.1–0.5 m/s), ability to climb ≥10° inclines and small obstacles</td>
-<td>Mobility (4WD)</td>
-<td>No</td>
+<td>Rover shall provide drive mobility with independent motor control</td>
+<td>Forward/backward movement on flat surfaces ≥0.1 m/s</td>
+<td>2WD with variable speed (0.1–0.5 m/s); 4WD optional</td>
+<td>Mobility (Drive)</td>
+<td>Yes (4WD)</td>
 </tr>
 <tr>
 <td>Rover shall implement steering control for directional navigation</td>
 <td>Basic turning via differential drive or simple servo steering</td>
-<td>Precise Ackermann or 4-wheel steering with ≥30° turn radius on uneven terrain</td>
+<td>Precise steering with ≥30° turn radius</td>
 <td>Mobility (Steering)</td>
 <td>No</td>
 </tr>
 <tr>
 <td>Rover shall detect obstacles/hazards and alert or autonomously slow/stop</td>
-<td>Detection of obstacles ≤0.5 m ahead using ultrasonic/IR sensors with operator alert</td>
-<td>Detection ≤1.5 m, proportional speed reduction or auto-stop, resume capability</td>
+<td>Detect obstacles ≤0.5 m ahead using ultrasonic/IR sensors with operator alert</td>
+<td>Detection ≤1.5 m, proportional speed reduction or auto-stop</td>
 <td>Hazard Avoidance, Safety</td>
 <td>No</td>
 </tr>
 <tr>
 <td>Rover shall measure atmospheric pressure</td>
 <td>Functional barometric sensor reporting values in real-time</td>
-<td>Accurate readings (0–1100 hPa) with calibration and transmission to base station</td>
+<td>Calibrated sensor (0–1100 hPa) streaming to base</td>
 <td>Environmental Sensing (Pressure)</td>
 <td>No</td>
 </tr>
 <tr>
 <td>Rover shall measure temperature and humidity</td>
-<td>Basic temperature (±2°C) and relative humidity sensor functional</td>
-<td>High-accuracy (±0.5°C, ±3% RH) with real-time data streaming</td>
+<td>Basic temperature (±2°C) and RH sensor functional</td>
+<td>High-accuracy (±0.5°C, ±3% RH) with real-time streaming</td>
 <td>Environmental Sensing (Weather)</td>
-<td>No</td>
-</tr>
-<tr>
-<td>Rover shall measure radiation levels</td>
-<td>Basic Geiger counter or radiation sensor detecting presence</td>
-<td>Quantitative dose rate (µSv/h) with alerts above threshold</td>
-<td>Radiation Sensing</td>
 <td>No</td>
 </tr>
 <tr>
 <td>Rover shall provide navigation/orientation data</td>
 <td>Basic IMU/compass for heading and tilt</td>
-<td>6/9-DOF IMU with odometry integration for dead-reckoning position tracking</td>
+<td>6/9-DOF IMU with odometry integration for dead-reckoning</td>
 <td>Navigation</td>
 <td>No (full dead-reckoning is stretch)</td>
 </tr>
 <tr>
 <td>Rover shall capture and stream imaging data</td>
-<td>Static image capture on demand, transmitted to base station</td>
-<td>Real-time low-latency video feed (≥10 fps) from forward-facing camera</td>
+<td>Static image capture on demand</td>
+<td>Real-time low-latency video feed (≥10 fps)</td>
 <td>Imaging, Operator Feedback</td>
-<td>Yes (real-time video)</td>
+<td>Yes</td>
 </tr>
 <tr>
 <td>Two-way wireless communication shall enable remote control and telemetry</td>
-<td>Reliable command transmission and basic sensor data return within 15 m range</td>
-<td>&lt;300 ms latency, simultaneous control + multi-sensor/video streaming within 30 m</td>
+<td>Basic command transmission and sensor return within 15 m</td>
+<td>&lt;300 ms latency, simultaneous control + multi-sensor/video streaming</td>
 <td>Remote Teleoperation, Feedback</td>
 <td>No</td>
 </tr>
 <tr>
 <td>Base station HMI shall display real-time sensor data and vehicle status</td>
-<td>Basic text/numeric display of all sensor values and battery/status</td>
-<td>Graphical dashboard with graphs, camera view, alerts, and data logging</td>
+<td>Text/numeric display of sensors and battery</td>
+<td>Graphical dashboard with camera view, alerts, and data logging</td>
 <td>Operator Feedback, HMI</td>
 <td>No</td>
 </tr>
 <tr>
 <td>Rover chassis and major structural components shall be 3D printed</td>
 <td>Primary structure printable and assembled with purchased parts</td>
-<td>Optimized lightweight design, durable filament (e.g., PETG/ABS), survives repeated drops/bumps</td>
+<td>Optimized lightweight design, durable filament, survives repeated drops</td>
 <td>Construction (3D Printed)</td>
 <td>No</td>
 </tr>
 <tr>
 <td>Power system shall support extended operation</td>
-<td>≥30 minutes continuous use (driving + all sensors active)</td>
-<td>≥90 minutes, low-power modes, real-time battery monitoring and low-battery alerts</td>
+<td>≥30 minutes continuous operation</td>
+<td>≥90 minutes, low-power modes, real-time battery monitoring</td>
 <td>System Constraint (Power)</td>
 <td>No</td>
 </tr>
@@ -1021,74 +951,74 @@
 </tr>
 </tbody>
 </table>
-<h1 id="rover-subsystem-assignment-for-7-team-members">Rover Subsystem Assignment for 7 Team Members</h1>
-<p>Each team member is assigned a subsystem that connects to a main control board (or communicates with other subsystem boards). Each subsystem has sufficient complexity for individual ownership and integration.</p>
+<hr>
+<h2 id="requirement-assignment-to-team-members">Requirement Assignment to Team Members</h2>
 <table>
 <thead>
 <tr>
-<th>Team Member</th>
-<th>Subsystem</th>
-<th>Description / Complexity</th>
-<th>Board Connection / Integration</th>
+<th>Requirement Description</th>
+<th>Primary Assignee (Functional Area)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Member 1</td>
-<td><strong>Mobility Drive Control (4WD + Steering)</strong></td>
-<td>Controls motor drivers for 4 wheels, steering servos/motors, implements speed &amp; direction control with PID regulation and safety stop.</td>
-<td>Connects to Main Control Board (MCB) via CAN/I2C for speed commands and status feedback.</td>
+<td>Drive mobility (2WD/4WD optional)</td>
+<td>Sensor &amp; Actuator Control Board</td>
 </tr>
 <tr>
-<td>Member 2</td>
-<td><strong>Obstacle Detection / Hazard Avoidance</strong></td>
-<td>Uses ultrasonic/IR/LIDAR sensors to detect obstacles. Implements logic for automatic speed reduction or stop, integrates alerts to operator HMI.</td>
-<td>Connects to MCB to send hazard info and request auto-stop when needed.</td>
+<td>Steering control</td>
+<td>Sensor &amp; Actuator Control Board</td>
 </tr>
 <tr>
-<td>Member 3</td>
-<td><strong>Environmental Sensors (Pressure + Temperature/Humidity)</strong></td>
-<td>Reads barometer and temp/humidity sensors. Includes calibration routines and real-time streaming to base station.</td>
-<td>Sends sensor data via I2C/SPI to MCB. Provides alerts if thresholds exceeded.</td>
+<td>Obstacle detection / hazard avoidance</td>
+<td>Sensor &amp; Actuator Control Board</td>
 </tr>
 <tr>
-<td>Member 4</td>
-<td><strong>Radiation Monitoring</strong></td>
-<td>Uses Geiger counter or radiation sensor. Implements threshold detection and logs dose over time.</td>
-<td>Communicates to MCB via I2C/SPI. Sends alerts if radiation exceeds safe limits.</td>
+<td>Atmospheric pressure measurement</td>
+<td>Environmental Sensor Board</td>
 </tr>
 <tr>
-<td>Member 5</td>
-<td><strong>Navigation &amp; Orientation</strong></td>
-<td>IMU (6/9-DOF) integration and optional wheel odometry. Performs dead-reckoning and heading calculations.</td>
-<td>Sends orientation/position data to MCB. Can provide autonomous corrections to Mobility subsystem.</td>
+<td>Temperature &amp; humidity measurement</td>
+<td>Environmental Sensor Board</td>
 </tr>
 <tr>
-<td>Member 6</td>
-<td><strong>Imaging &amp; Camera Streaming</strong></td>
-<td>Forward-facing camera captures static images and streams low-latency video (~10 fps). Includes basic compression and transmission.</td>
-<td>Connects to MCB or directly to wireless board for streaming to base station.</td>
+<td>Navigation/orientation data</td>
+<td>Navigation Board</td>
 </tr>
 <tr>
-<td>Member 7</td>
-<td><strong>Wireless Communication &amp; Base Station Interface</strong></td>
-<td>Handles 2-way wireless communication, transmits all telemetry (sensor, IMU, imaging) and receives operator control commands. Coordinates emergency stop signals.</td>
-<td>Acts as main interface between all subsystems and base station. Receives data from all boards over serial/CAN/I2C.</td>
+<td>Imaging capture and streaming</td>
+<td>Imaging Board</td>
+</tr>
+<tr>
+<td>Two-way wireless communication</td>
+<td>Wireless Communication Board</td>
+</tr>
+<tr>
+<td>Base station HMI</td>
+<td>HMI Board</td>
+</tr>
+<tr>
+<td>3D-printed chassis &amp; structural components</td>
+<td>System Integration &amp; Safety</td>
+</tr>
+<tr>
+<td>Power system</td>
+<td>System Integration &amp; Safety</td>
+</tr>
+<tr>
+<td>Emergency stop / fail-safe</td>
+<td>System Integration &amp; Safety</td>
 </tr>
 </tbody>
 </table>
-<h2 id="integration-notes">Integration Notes</h2>
+<hr>
+<p><strong>Notes on Alignment with Semester Requirements:</strong></p>
 <ul>
-<li><strong>Each subsystem has its own board</strong> for individual ownership and complexity.  </li>
-<li><strong>Communication Paths:</strong>  </li>
-<li>Mobility, obstacle detection, and navigation boards communicate for autonomous adjustments.  </li>
-<li>Environmental and radiation sensor boards send telemetry to the communication board.  </li>
-<li>Imaging board streams data via the communication board.  </li>
-<li><strong>Fail-safe Logic:</strong> The Wireless/Communication board can implement a global emergency stop if any subsystem reports critical status.  </li>
-<li><strong>Data Flow Example:</strong>  </li>
-<li>Operator → Wireless Board → Mobility/Steering Commands → Mobility Board  </li>
-<li>Sensors → Subsystem Board → Wireless Board → Operator  </li>
-<li>Obstacle Detection → Mobility Board → Adjust Speed/Stop  </li>
+<li>Rover is <strong>modular</strong>, with each team member owning a <strong>subsystem board</strong>.  </li>
+<li><strong>2WD is primary</strong>, with 4WD as a potential stretch goal.  </li>
+<li>Radiation sensing has been <strong>removed</strong> to simplify subsystem requirements.  </li>
+<li>All boards communicate safely over the <strong>UART daisy-chain network</strong>.  </li>
+<li>Subsystems include <strong>sensors, actuators, HMI, and wireless communication</strong>, meeting course modularity requirements.  </li>
 </ul>
 
 
