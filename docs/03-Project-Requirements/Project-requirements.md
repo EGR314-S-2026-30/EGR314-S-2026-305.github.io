@@ -1,38 +1,24 @@
-# Overview and Rationale
+# Project Overview
 
-Through team discussions, we have refined our rover design to focus on modular exploration of a simulated Martian environment. The rover is remotely operated and collects scientific and environmental data through a variety of sensors, including:
+Through team discussions, we designed our rover to explore a simulated Martian environment. The rover is remotely operated and collects scientific and environmental data through a variety of sensors, including atmospheric pressure, temperature and humidity, hazard detection, imaging, and navigation/orientation sensors like IMU and odometry. To move across the terrain, the rover features 2-wheel drive with steering, with 4-wheel drive considered as a future enhancement. Most structural components, including the chassis, mounts, and body, are 3D printed for rapid prototyping and customization, while wheels, motors, electronics, and sensors are purchased from suppliers.
 
-- Atmospheric pressure  
-- Temperature and humidity (weather-related)  
-- Hazard/obstacle detection  
-- Imaging (camera)  
-- Navigation/orientation sensors (IMU, odometry)
+All subsystems communicate through a daisy-chained UART network, allowing independent boards to send and receive messages safely. Remote operation is achieved through bidirectional wireless communication for real-time telemetry, video streaming, and manual control. A local Human–Machine Interface consisting of pushbuttons, levers, and an OLED display, provides immediate system feedback without needing a remote connection.
 
-The rover features 2-wheel drive (2WD) with steering, with 4-wheel drive (4WD) considered as a possible future enhancement. Most structural components (chassis, mounts, body) will be 3D printed for rapid prototyping and customization. Non-printable components, such as wheels, motors, electronics, and sensors, will be purchased off-the-shelf.
+# Project Rationel
 
-The rover operates over a daisy-chain UART network using an 8-wire ribbon cable to connect all **modular subsystem boards**. Each subsystem is implemented as an independent PCB that safely passes messages while responding only to commands addressed to it.
-
-Remote operation is achieved through bidirectional wireless communication, allowing real-time telemetry, video streaming, and manual control from a base station. In addition, the rover includes a local Human–Machine Interface (HMI) consisting of pushbuttons and a small OLED display, providing immediate system feedback without requiring a remote connection.
-
-This approach emphasizes:
-
-- Open-ended exploration: Real-time scientific data collection rather than fixed mission tasks  
-- Subsystem modularity: Individually designed sensor, actuator, HMI, and communication boards  
-- Reliable integration: Daisy-chain UART network ensures safe message passing between subsystems  
-- User interaction: Local OLED display enables real-time monitoring and parameter adjustment  
-- Safety and durability: Emergency stop, fail-safes, and low-power operation mirror real planetary rover practices  
+Our team designed this as an open-ended exploration platform focused on collecting real-time scientific data rather than following fixed tasks. It uses a modular setup with separate sensor, actuator, HMI, and communication boards, all connected through a daisy-chained UART network for reliable communication between subsystems. A local OLED display allows users to monitor data and adjust settings in real time, while safety features like an emergency stop, built-in fail-safes, and low-power operation are included to relate to real planetary rover designs.
 
 ## Key Feature-to-Requirement Mappings
 
-| Feature | Requirement |
-|-------|-------------|
-| Mobility | 2WD with steering required for controllable movement across simulated Martian terrain; 4WD may be added as a stretch feature. |
-| Scientific exploration | Sensors for pressure, temperature/humidity, and navigation provide environmental data collection. |
-| Hazard avoidance | Obstacle detection protects the rover during remote operation when direct visual cues are limited. |
-| Imaging and feedback | Camera and real-time telemetry provide operator situational awareness. |
-| Local user interface | OLED display and pushbuttons allow on-rover status viewing and parameter adjustment. |
-| Remote teleoperation | Wireless link enables driving commands and streams sensor/video data to the base station. |
-| Modular subsystem integration | All boards communicate via a UART daisy-chain configuration for reliability and expansion. |
+Our rover is designed as an open-ended exploration platform, focused on collecting scientific data rather than performing fixed tasks. Each feature of the rover naturally leads to a set of requirements that ensure the system works as intended:
+
+- **Mobility:** To explore the terrain effectively, the rover needs drive and steering capabilities. This translates to a requirement for 2WD with steering, and a stretch goal for 4WD.
+- **Scientific Exploration:** To collect environmental data, the rover requires sensors for pressure, temperature, humidity, and navigation, all with calibrated outputs for real-time telemetry.
+- **Hazard Avoidance:** Since the rover operates remotely, obstacle detection is required to prevent collisions. This includes alerts and, in advanced operation, automatic slow or stop behaviors.
+- **Imaging and Feedback:** Cameras and video streaming provide situational awareness to the operator, which is critical for safe navigation and mission planning.
+- **User Interaction:** A local OLED display and input buttons allow on-rover monitoring and control, providing redundancy if wireless control is lost.
+- **Modular Subsystem Integration:** All subsystems need to communicate reliably via UART to ensure messages reach the correct module, allowing future expansion without reworking the network.
+- **Safety and Power Management:** Emergency stops, fail-safes, and low-power operation are required to ensure both operator safety and system longevity.
 
 ## Requirements Table
 
@@ -62,13 +48,4 @@ This approach emphasizes:
 | Member 5 | Arianna Lazaritt | Imaging system control including camera operation, image/video capture, data packetization, and status reporting | Imaging Board |
 | Member 6 | Damian Novgorodov | Two-way wireless communication (WiFi/MQTT), command routing between base station and rover subsystems, telemetry aggregation, and system messaging | Wireless Communication Board |
 | Member 7 | Christo Jomon Joseph | Local human–machine interface including OLED display, pushbuttons, rover status display, user input handling, power monitoring, emergency stop, and fail-safe control | HMI & System Safety Board |
-
-**Alignment Notes**
-
-- The OLED display satisfies the required HMI subsystem using a small screen and pushbuttons.
-- The HMI board communicates over UART and can:
-  - Display live sensor values
-  - Show rover status and alerts
-  - Adjust setpoints and parameters
-- All subsystems remain modular, independent, and UART-compliant.
 
