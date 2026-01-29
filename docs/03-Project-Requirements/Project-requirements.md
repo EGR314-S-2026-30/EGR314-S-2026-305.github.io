@@ -8,11 +8,11 @@ Through team discussions, we have refined our rover design to focus on **modular
 - Imaging (camera)  
 - Navigation/orientation sensors (IMU, odometry)
 
-The rover features **2-wheel drive (2WD) with steering**, with **4-wheel drive (4WD) considered as a possible future enhancement**. Most structural components (chassis, mounts, body) will be **3D printed** for rapid prototyping and customization. Non-printable components, such as wheels, motors, electronics, and sensors, will be **purchased off-the-shelf**.
+The rover features **2-wheel drive (2WD) with steering**, with 4-wheel drive (4WD) considered as a possible future enhancement. Most structural components (chassis, mounts, body) will be 3D printed for rapid prototyping and customization. Non-printable components, such as wheels, motors, electronics, and sensors, will be purchased off-the-shelf.
 
-The rover operates over a **daisy-chain UART network** using an 8-wire ribbon cable to connect all **modular subsystem boards**. Each subsystem is implemented as an independent PCB that safely passes messages while responding only to commands addressed to it.
+The rover operates over a daisy-chain UART network using an 8-wire ribbon cable to connect all **modular subsystem boards**. Each subsystem is implemented as an independent PCB that safely passes messages while responding only to commands addressed to it.
 
-Remote operation is achieved through **bidirectional wireless communication**, allowing real-time telemetry, video streaming, and manual control from a base station. In addition, the rover includes a **local Human–Machine Interface (HMI)** consisting of **pushbuttons and a small OLED display**, providing immediate system feedback without requiring a remote connection.
+Remote operation is achieved through bidirectional wireless communication, allowing real-time telemetry, video streaming, and manual control from a base station. In addition, the rover includes a local Human–Machine Interface (HMI) consisting of pushbuttons and a small OLED display, providing immediate system feedback without requiring a remote connection.
 
 This approach emphasizes:
 
