@@ -51,20 +51,29 @@ Requirements are distributed across team members to ensure each has primary owne
 | Power system shall support extended operation | ≥30 minutes continuous use (driving + all sensors active) | ≥90 minutes, low-power modes, real-time battery monitoring and low-battery alerts | System Constraint (Power) | No |
 | System shall include emergency stop and fail-safe behaviors | Software/commanded stop of all motors on signal loss or e-stop | Automatic safe state on communication loss (stop + status broadcast) | Safety, Durability | No |
 
-# Requirement Assignment to Team Members
+# Rover Subsystem Assignment for 7 Team Members
 
-| Requirement Description | Primary Assignee (Functional Area) |
-|------------------------|----------------------------------|
-| Rover shall provide 4-wheel drive mobility... | Sensor and Actuator Control |
-| Rover shall implement steering control... | Sensor and Actuator Control |
-| Rover shall detect obstacles/hazards... | Sensor and Actuator Control |
-| Rover shall measure atmospheric pressure... | Sensor and Actuator Control |
-| Rover shall measure temperature and humidity... | Sensor and Actuator Control |
-| Rover shall measure radiation levels... | Sensor and Actuator Control |
-| Rover shall provide navigation/orientation data... | Sensor and Actuator Control |
-| Rover shall capture and stream imaging data... | Sensor and Actuator Control |
-| Two-way wireless communication... | Internet-based Two-way Wireless Communication |
-| Base station HMI shall display real-time sensor data... | Human-Machine Interface |
-| Rover chassis and major structural components... | System Integration and Safety |
-| Power system shall support extended operation... | System Integration and Safety |
-| System shall include emergency stop and fail-safe behaviors... | System Integration and Safety |
+Each team member is assigned a subsystem that connects to a main control board (or communicates with other subsystem boards). Each subsystem has sufficient complexity for individual ownership and integration.
+
+| Team Member | Subsystem | Description / Complexity | Board Connection / Integration |
+|------------|-----------|-------------------------|-------------------------------|
+| Member 1 | **Mobility Drive Control (4WD + Steering)** | Controls motor drivers for 4 wheels, steering servos/motors, implements speed & direction control with PID regulation and safety stop. | Connects to Main Control Board (MCB) via CAN/I2C for speed commands and status feedback. |
+| Member 2 | **Obstacle Detection / Hazard Avoidance** | Uses ultrasonic/IR/LIDAR sensors to detect obstacles. Implements logic for automatic speed reduction or stop, integrates alerts to operator HMI. | Connects to MCB to send hazard info and request auto-stop when needed. |
+| Member 3 | **Environmental Sensors (Pressure + Temperature/Humidity)** | Reads barometer and temp/humidity sensors. Includes calibration routines and real-time streaming to base station. | Sends sensor data via I2C/SPI to MCB. Provides alerts if thresholds exceeded. |
+| Member 4 | **Radiation Monitoring** | Uses Geiger counter or radiation sensor. Implements threshold detection and logs dose over time. | Communicates to MCB via I2C/SPI. Sends alerts if radiation exceeds safe limits. |
+| Member 5 | **Navigation & Orientation** | IMU (6/9-DOF) integration and optional wheel odometry. Performs dead-reckoning and heading calculations. | Sends orientation/position data to MCB. Can provide autonomous corrections to Mobility subsystem. |
+| Member 6 | **Imaging & Camera Streaming** | Forward-facing camera captures static images and streams low-latency video (~10 fps). Includes basic compression and transmission. | Connects to MCB or directly to wireless board for streaming to base station. |
+| Member 7 | **Wireless Communication & Base Station Interface** | Handles 2-way wireless communication, transmits all telemetry (sensor, IMU, imaging) and receives operator control commands. Coordinates emergency stop signals. | Acts as main interface between all subsystems and base station. Receives data from all boards over serial/CAN/I2C. |
+
+## Integration Notes
+
+- **Each subsystem has its own board** for individual ownership and complexity.  
+- **Communication Paths:**  
+  - Mobility, obstacle detection, and navigation boards communicate for autonomous adjustments.  
+  - Environmental and radiation sensor boards send telemetry to the communication board.  
+  - Imaging board streams data via the communication board.  
+- **Fail-safe Logic:** The Wireless/Communication board can implement a global emergency stop if any subsystem reports critical status.  
+- **Data Flow Example:**  
+  1. Operator → Wireless Board → Mobility/Steering Commands → Mobility Board  
+  2. Sensors → Subsystem Board → Wireless Board → Operator  
+  3. Obstacle Detection → Mobility Board → Adjust Speed/Stop  
