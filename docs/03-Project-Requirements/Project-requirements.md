@@ -12,16 +12,16 @@ Through team discussions, we have refined our rover design to focus on **modular
 - Imaging (camera)  
 - Navigation/orientation sensors (IMU, odometry)
 
-The rover features **2-wheel drive with steering**, with 4-wheel drive as a possible future enhancement. Most structural components (chassis, mounts, body) will be **3D printed** for rapid prototyping and customization. Non-printable components, such as wheels, motors, electronics, and sensors, will be **purchased off-the-shelf**.
+The rover features 2-wheel drive with steering, with 4-wheel drive as a possible future enhancement. Most structural components (chassis, mounts, body) will be **3D printed** for rapid prototyping and customization. Non-printable components, such as wheels, motors, electronics, and sensors, will be purchased off-the-shelf.
 
-The rover operates over a **daisy-chain UART network** with 8-wire ribbon cables connecting all **modular subsystem boards**. Each board is independently controlled but communicates via a shared protocol. Remote operation is achieved through **bidirectional wireless communication**, allowing real-time telemetry, video streaming, and manual control from a base station.
+The rover operates over a daisy-chain UART network with 8-wire ribbon cables connecting all modular subsystem boards. Each board is independently controlled but communicates via a shared protocol. Remote operation is achieved through bidirectional wireless communication, allowing real-time telemetry, video streaming, and manual control from a base station.
 
 This approach emphasizes:
 
-- **Open-ended exploration:** Real-time scientific data collection rather than fixed mission tasks  
-- **Subsystem modularity:** Individual boards for mobility, sensors, HMI, and communication  
-- **Reliable integration:** Daisy-chain UART network ensures safe message passing between boards  
-- **Safety and durability:** Emergency stop, fail-safes, and low-power operation mirror real planetary rover practices  
+- Open-ended exploration: Real-time scientific data collection rather than fixed mission tasks  
+- Subsystem modularity: Individual boards for mobility, sensors, HMI, and communication  
+- Reliable integration: Daisy-chain UART network ensures safe message passing between boards  
+- Safety and durability: Emergency stop, fail-safes, and low-power operation mirror real planetary rover practices  
 
 ## Key Feature-to-Requirement Mappings
 
@@ -71,8 +71,8 @@ This approach emphasizes:
 
 **Notes on Alignment with Semester Requirements:**
 
-- Rover is **modular**, with each team member owning a **subsystem board**.  
-- **2WD is primary**, with 4WD as a potential stretch goal.  
-- Radiation sensing has been **removed** to simplify subsystem requirements.  
-- All boards communicate safely over the **UART daisy-chain network**.  
-- Subsystems include **sensors, actuators, HMI, and wireless communication**, meeting course modularity requirements.  
+- Rover is modular, with each team member owning a **subsystem board**.  
+- 2WD is primary, with 4WD as a potential stretch goal.  
+- Radiation sensing has been removed to simplify subsystem requirements.  
+- All boards communicate safely over the UART daisy-chain network.  
+- Subsystems include sensors, actuators, HMI, and wireless communication**, meeting course modularity requirements.  
