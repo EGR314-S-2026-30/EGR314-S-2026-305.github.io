@@ -1,6 +1,8 @@
 # Project Overview
 
-Through team discussions, we designed our rover to explore a simulated Martian environment. The rover is remotely operated and collects scientific and environmental data through a variety of sensors, including atmospheric pressure, temperature and humidity, hazard detection, imaging, and navigation/orientation sensors like IMU and odometry. To move across the terrain, the rover features 2-wheel drive with steering, with 4-wheel drive considered as a future enhancement. Most structural components, including the chassis, mounts, and body, are 3D printed for rapid prototyping and customization, while wheels, motors, electronics, and sensors are purchased from suppliers.
+Through team discussions, we designed our rover to explore a simulated Martian environment. The rover is remotely operated and collects scientific and environmental data through a variety of sensors, including atmospheric pressure, temperature and humidity, hazard detection, imaging, and navigation/orientation sensors like IMU and odometry. 
+
+To move across the terrain, the rover features 2-wheel drive with steering, with 4-wheel drive considered as a future enhancement. Most structural components, including the chassis, mounts, and body, are 3D printed for rapid prototyping and customization, while wheels, motors, electronics, and sensors are purchased from suppliers.
 
 All subsystems communicate through a daisy-chained UART network, allowing independent boards to send and receive messages safely. Remote operation is achieved through bidirectional wireless communication for real-time telemetry, video streaming, and manual control. A local Human–Machine Interface consisting of pushbuttons, levers, and an OLED display, provides immediate system feedback without needing a remote connection.
 
