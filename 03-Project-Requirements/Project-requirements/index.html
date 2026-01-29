@@ -795,7 +795,7 @@
 
 
 <h1 id="overview-and-rationale">Overview and Rationale</h1>
-<p>Through team discussions, we have refined our rover design to focus on <strong>modular exploration of a simulated Martian environment</strong>. The rover is <strong>remotely operated</strong> and collects scientific and environmental data through a variety of sensors, including:</p>
+<p>Through team discussions, we have refined our rover design to focus on modular exploration of a simulated Martian environment. The rover is remotely operated and collects scientific and environmental data through a variety of sensors, including:</p>
 <ul>
 <li>Atmospheric pressure  </li>
 <li>Temperature and humidity (weather-related)  </li>
@@ -803,16 +803,16 @@
 <li>Imaging (camera)  </li>
 <li>Navigation/orientation sensors (IMU, odometry)</li>
 </ul>
-<p>The rover features <strong>2-wheel drive (2WD) with steering</strong>, with 4-wheel drive (4WD) considered as a possible future enhancement. Most structural components (chassis, mounts, body) will be 3D printed for rapid prototyping and customization. Non-printable components, such as wheels, motors, electronics, and sensors, will be purchased off-the-shelf.</p>
+<p>The rover features 2-wheel drive (2WD) with steering, with 4-wheel drive (4WD) considered as a possible future enhancement. Most structural components (chassis, mounts, body) will be 3D printed for rapid prototyping and customization. Non-printable components, such as wheels, motors, electronics, and sensors, will be purchased off-the-shelf.</p>
 <p>The rover operates over a daisy-chain UART network using an 8-wire ribbon cable to connect all <strong>modular subsystem boards</strong>. Each subsystem is implemented as an independent PCB that safely passes messages while responding only to commands addressed to it.</p>
 <p>Remote operation is achieved through bidirectional wireless communication, allowing real-time telemetry, video streaming, and manual control from a base station. In addition, the rover includes a local Human–Machine Interface (HMI) consisting of pushbuttons and a small OLED display, providing immediate system feedback without requiring a remote connection.</p>
 <p>This approach emphasizes:</p>
 <ul>
-<li><strong>Open-ended exploration:</strong> Real-time scientific data collection rather than fixed mission tasks  </li>
-<li><strong>Subsystem modularity:</strong> Individually designed sensor, actuator, HMI, and communication boards  </li>
-<li><strong>Reliable integration:</strong> Daisy-chain UART network ensures safe message passing between subsystems  </li>
-<li><strong>User interaction:</strong> Local OLED display enables real-time monitoring and parameter adjustment  </li>
-<li><strong>Safety and durability:</strong> Emergency stop, fail-safes, and low-power operation mirror real planetary rover practices  </li>
+<li>Open-ended exploration: Real-time scientific data collection rather than fixed mission tasks  </li>
+<li>Subsystem modularity: Individually designed sensor, actuator, HMI, and communication boards  </li>
+<li>Reliable integration: Daisy-chain UART network ensures safe message passing between subsystems  </li>
+<li>User interaction: Local OLED display enables real-time monitoring and parameter adjustment  </li>
+<li>Safety and durability: Emergency stop, fail-safes, and low-power operation mirror real planetary rover practices  </li>
 </ul>
 <h2 id="key-feature-to-requirement-mappings">Key Feature-to-Requirement Mappings</h2>
 <table>
@@ -868,7 +868,7 @@
 <tr>
 <td>Rover shall provide drive mobility with independent motor control</td>
 <td>Forward and backward motion on flat surfaces at ≥0.1 m/s</td>
-<td><strong>2WD</strong> with variable speed control (0.1–0.5 m/s); <strong>4WD supported as an optional enhancement</strong></td>
+<td>2WD with variable speed control (0.1–0.5 m/s); 4WD supported as an optional enhancement</td>
 <td>Mobility (Drive)</td>
 <td>Yes (4WD)</td>
 </tr>
@@ -965,7 +965,7 @@
 <tr>
 <td>Member 1</td>
 <td>Liam Mabbutt</td>
-<td>Rover drive mobility using <strong>2WD baseline</strong> (4WD supported as stretch), motor speed control, steering control, motor feedback, and safety interlocks</td>
+<td>Rover drive mobility using 2WD baseline (4WD supported as stretch), motor speed control, steering control, motor feedback, and safety interlocks</td>
 <td>Mobility &amp; Motor Control Board</td>
 </tr>
 <tr>
@@ -1001,19 +1001,19 @@
 <tr>
 <td>Member 7</td>
 <td>Christo Jomon Joseph</td>
-<td>Local human–machine interface including <strong>OLED display</strong>, pushbuttons, rover status display, user input handling, power monitoring, emergency stop, and fail-safe control</td>
+<td>Local human–machine interface including OLED display, pushbuttons, rover status display, user input handling, power monitoring, emergency stop, and fail-safe control</td>
 <td>HMI &amp; System Safety Board</td>
 </tr>
 </tbody>
 </table>
 <p><strong>Alignment Notes</strong></p>
 <ul>
-<li>The <strong>OLED display satisfies the required HMI subsystem</strong> using a small screen and pushbuttons.</li>
+<li>The OLED display satisfies the required HMI subsystem using a small screen and pushbuttons.</li>
 <li>The HMI board communicates over UART and can:</li>
 <li>Display live sensor values</li>
 <li>Show rover status and alerts</li>
 <li>Adjust setpoints and parameters</li>
-<li>All subsystems remain <strong>modular, independent, and UART-compliant</strong>.</li>
+<li>All subsystems remain modular, independent, and UART-compliant.</li>
 </ul>
 
 
