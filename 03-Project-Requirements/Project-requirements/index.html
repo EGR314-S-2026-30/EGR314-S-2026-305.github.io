@@ -616,11 +616,26 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#requirement-assignment-to-team-members" class="md-nav__link">
+  <a href="#rover-subsystem-assignment-for-7-team-members" class="md-nav__link">
     <span class="md-ellipsis">
-      Requirement Assignment to Team Members
+      Rover Subsystem Assignment for 7 Team Members
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Rover Subsystem Assignment for 7 Team Members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integration-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Notes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -805,11 +820,26 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#requirement-assignment-to-team-members" class="md-nav__link">
+  <a href="#rover-subsystem-assignment-for-7-team-members" class="md-nav__link">
     <span class="md-ellipsis">
-      Requirement Assignment to Team Members
+      Rover Subsystem Assignment for 7 Team Members
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Rover Subsystem Assignment for 7 Team Members">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#integration-notes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Integration Notes
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -991,69 +1021,75 @@
 </tr>
 </tbody>
 </table>
-<h1 id="requirement-assignment-to-team-members">Requirement Assignment to Team Members</h1>
+<h1 id="rover-subsystem-assignment-for-7-team-members">Rover Subsystem Assignment for 7 Team Members</h1>
+<p>Each team member is assigned a subsystem that connects to a main control board (or communicates with other subsystem boards). Each subsystem has sufficient complexity for individual ownership and integration.</p>
 <table>
 <thead>
 <tr>
-<th>Requirement Description</th>
-<th>Primary Assignee (Functional Area)</th>
+<th>Team Member</th>
+<th>Subsystem</th>
+<th>Description / Complexity</th>
+<th>Board Connection / Integration</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>Rover shall provide 4-wheel drive mobility...</td>
-<td>Sensor and Actuator Control</td>
+<td>Member 1</td>
+<td><strong>Mobility Drive Control (4WD + Steering)</strong></td>
+<td>Controls motor drivers for 4 wheels, steering servos/motors, implements speed &amp; direction control with PID regulation and safety stop.</td>
+<td>Connects to Main Control Board (MCB) via CAN/I2C for speed commands and status feedback.</td>
 </tr>
 <tr>
-<td>Rover shall implement steering control...</td>
-<td>Sensor and Actuator Control</td>
+<td>Member 2</td>
+<td><strong>Obstacle Detection / Hazard Avoidance</strong></td>
+<td>Uses ultrasonic/IR/LIDAR sensors to detect obstacles. Implements logic for automatic speed reduction or stop, integrates alerts to operator HMI.</td>
+<td>Connects to MCB to send hazard info and request auto-stop when needed.</td>
 </tr>
 <tr>
-<td>Rover shall detect obstacles/hazards...</td>
-<td>Sensor and Actuator Control</td>
+<td>Member 3</td>
+<td><strong>Environmental Sensors (Pressure + Temperature/Humidity)</strong></td>
+<td>Reads barometer and temp/humidity sensors. Includes calibration routines and real-time streaming to base station.</td>
+<td>Sends sensor data via I2C/SPI to MCB. Provides alerts if thresholds exceeded.</td>
 </tr>
 <tr>
-<td>Rover shall measure atmospheric pressure...</td>
-<td>Sensor and Actuator Control</td>
+<td>Member 4</td>
+<td><strong>Radiation Monitoring</strong></td>
+<td>Uses Geiger counter or radiation sensor. Implements threshold detection and logs dose over time.</td>
+<td>Communicates to MCB via I2C/SPI. Sends alerts if radiation exceeds safe limits.</td>
 </tr>
 <tr>
-<td>Rover shall measure temperature and humidity...</td>
-<td>Sensor and Actuator Control</td>
+<td>Member 5</td>
+<td><strong>Navigation &amp; Orientation</strong></td>
+<td>IMU (6/9-DOF) integration and optional wheel odometry. Performs dead-reckoning and heading calculations.</td>
+<td>Sends orientation/position data to MCB. Can provide autonomous corrections to Mobility subsystem.</td>
 </tr>
 <tr>
-<td>Rover shall measure radiation levels...</td>
-<td>Sensor and Actuator Control</td>
+<td>Member 6</td>
+<td><strong>Imaging &amp; Camera Streaming</strong></td>
+<td>Forward-facing camera captures static images and streams low-latency video (~10 fps). Includes basic compression and transmission.</td>
+<td>Connects to MCB or directly to wireless board for streaming to base station.</td>
 </tr>
 <tr>
-<td>Rover shall provide navigation/orientation data...</td>
-<td>Sensor and Actuator Control</td>
-</tr>
-<tr>
-<td>Rover shall capture and stream imaging data...</td>
-<td>Sensor and Actuator Control</td>
-</tr>
-<tr>
-<td>Two-way wireless communication...</td>
-<td>Internet-based Two-way Wireless Communication</td>
-</tr>
-<tr>
-<td>Base station HMI shall display real-time sensor data...</td>
-<td>Human-Machine Interface</td>
-</tr>
-<tr>
-<td>Rover chassis and major structural components...</td>
-<td>System Integration and Safety</td>
-</tr>
-<tr>
-<td>Power system shall support extended operation...</td>
-<td>System Integration and Safety</td>
-</tr>
-<tr>
-<td>System shall include emergency stop and fail-safe behaviors...</td>
-<td>System Integration and Safety</td>
+<td>Member 7</td>
+<td><strong>Wireless Communication &amp; Base Station Interface</strong></td>
+<td>Handles 2-way wireless communication, transmits all telemetry (sensor, IMU, imaging) and receives operator control commands. Coordinates emergency stop signals.</td>
+<td>Acts as main interface between all subsystems and base station. Receives data from all boards over serial/CAN/I2C.</td>
 </tr>
 </tbody>
 </table>
+<h2 id="integration-notes">Integration Notes</h2>
+<ul>
+<li><strong>Each subsystem has its own board</strong> for individual ownership and complexity.  </li>
+<li><strong>Communication Paths:</strong>  </li>
+<li>Mobility, obstacle detection, and navigation boards communicate for autonomous adjustments.  </li>
+<li>Environmental and radiation sensor boards send telemetry to the communication board.  </li>
+<li>Imaging board streams data via the communication board.  </li>
+<li><strong>Fail-safe Logic:</strong> The Wireless/Communication board can implement a global emergency stop if any subsystem reports critical status.  </li>
+<li><strong>Data Flow Example:</strong>  </li>
+<li>Operator → Wireless Board → Mobility/Steering Commands → Mobility Board  </li>
+<li>Sensors → Subsystem Board → Wireless Board → Operator  </li>
+<li>Obstacle Detection → Mobility Board → Adjust Speed/Stop  </li>
+</ul>
 
 
 
