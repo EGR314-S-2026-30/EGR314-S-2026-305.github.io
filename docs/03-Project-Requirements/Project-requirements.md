@@ -36,6 +36,10 @@ Our rover is designed as an open-ended exploration platform, focused on collecti
 | Rover chassis and major structural components shall be 3D printed | Primary structure printable and assembled with purchased components | Lightweight and durable design suitable for repeated testing | Mechanical Construction | No |
 | Power system shall support extended operation | ≥30 minutes of continuous operation with all subsystems active | ≥90 minutes with battery monitoring and low-power modes | Power Management | No |
 | System shall include emergency stop and fail-safe behaviors | Software-commanded stop on signal loss or emergency input | Automatic safe state with system-wide status broadcast | System Safety | No |
+| Communication network shall reliably support all subsystem messaging | Messages may be delayed or lost <5% of the time | <1% message loss, ≤50 ms latency | Modular Subsystem Integration | No |
+| Rover shall not exceed weight limit of chassis | Total weight ≤5 kg | ≤4.5 kg for optimal mobility and motor efficiency | Mechanical Construction & Mobility | No |
+| Maximum current draw per subsystem | Each subsystem <2 A under normal operation | Each subsystem <1.5 A with power monitoring | Power Management & Safety | No |
+| Environmental tolerance for sensors and electronics | Functional at 0–40°C, 20–80% RH | Functional at -10–50°C, 10–90% RH | Environmental Sensing & System Safety | No |
 
 ## Requirement Assignment to Team Members
 
