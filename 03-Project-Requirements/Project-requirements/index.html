@@ -869,86 +869,86 @@
 <tbody>
 <tr>
 <td>Rover shall provide drive mobility with independent motor control</td>
-<td>Forward/backward movement on flat surfaces ≥0.1 m/s</td>
-<td>2WD with variable speed (0.1–0.5 m/s); 4WD optional</td>
+<td>Forward and backward motion on flat surfaces at ≥0.1 m/s</td>
+<td><strong>2WD</strong> with variable speed control (0.1–0.5 m/s); <strong>4WD supported as an optional enhancement</strong></td>
 <td>Mobility (Drive)</td>
 <td>Yes (4WD)</td>
 </tr>
 <tr>
 <td>Rover shall implement steering control for directional navigation</td>
-<td>Basic turning via differential drive or servo steering</td>
-<td>Precise steering with ≥30° turn radius</td>
+<td>Basic turning using differential drive or simple steering mechanism</td>
+<td>Controlled steering with ≥30° effective turning radius</td>
 <td>Mobility (Steering)</td>
 <td>No</td>
 </tr>
 <tr>
-<td>Rover shall detect obstacles/hazards and alert or autonomously slow/stop</td>
-<td>Detect obstacles ≤0.5 m ahead with operator alert</td>
-<td>Detection ≤1.5 m with proportional slow or stop</td>
+<td>Rover shall detect obstacles or hazards and alert or autonomously slow/stop</td>
+<td>Detect obstacles ≤0.5 m ahead and alert operator</td>
+<td>Detection ≤1.5 m with proportional speed reduction or automatic stop</td>
 <td>Hazard Avoidance, Safety</td>
 <td>No</td>
 </tr>
 <tr>
 <td>Rover shall measure atmospheric pressure</td>
-<td>Functional barometric sensor reporting values</td>
-<td>Calibrated sensor (0–1100 hPa) streaming to base</td>
-<td>Environmental Sensing</td>
+<td>Functional barometric sensor reporting pressure values</td>
+<td>Calibrated sensor (0–1100 hPa) with real-time data streaming to base station</td>
+<td>Environmental Sensing (Pressure)</td>
 <td>No</td>
 </tr>
 <tr>
 <td>Rover shall measure temperature and humidity</td>
-<td>Basic temperature (±2°C) and RH sensor</td>
-<td>High-accuracy (±0.5°C, ±3% RH) streaming</td>
-<td>Environmental Sensing</td>
+<td>Basic temperature (±2 °C) and relative humidity sensing</td>
+<td>High-accuracy sensing (±0.5 °C, ±3% RH) with continuous telemetry</td>
+<td>Environmental Sensing (Weather)</td>
 <td>No</td>
 </tr>
 <tr>
-<td>Rover shall provide navigation/orientation data</td>
-<td>Basic IMU for heading and tilt</td>
-<td>6/9-DOF IMU with odometry integration</td>
-<td>Navigation</td>
+<td>Rover shall provide navigation and orientation data</td>
+<td>Basic IMU providing heading and tilt information</td>
+<td>6- or 9-DOF IMU with optional wheel odometry integration</td>
+<td>Navigation &amp; Orientation</td>
 <td>No</td>
 </tr>
 <tr>
-<td>Rover shall capture and stream imaging data</td>
-<td>Static image capture on demand</td>
-<td>Real-time video feed (≥10 fps)</td>
-<td>Imaging</td>
+<td>Rover shall capture and transmit imaging data</td>
+<td>Static image capture on operator request</td>
+<td>Real-time video streaming at ≥10 fps</td>
+<td>Imaging &amp; Operator Feedback</td>
 <td>Yes</td>
 </tr>
 <tr>
-<td>Two-way wireless communication shall enable control and telemetry</td>
-<td>Commands and sensor data within 15 m</td>
-<td>&lt;300 ms latency, multi-sensor + video streaming</td>
-<td>Teleoperation</td>
+<td>Two-way wireless communication shall enable remote control and telemetry</td>
+<td>Reliable command transmission and sensor data return within 15 m</td>
+<td>&lt;300 ms latency with simultaneous control, telemetry, and imaging</td>
+<td>Teleoperation &amp; Wireless Communication</td>
 <td>No</td>
 </tr>
 <tr>
-<td>Rover shall provide a local human-machine interface</td>
-<td>OLED displays system status and sensor data</td>
-<td>Menu-driven OLED with graphs, alerts, and parameters</td>
-<td>HMI (OLED)</td>
+<td>Rover shall provide a local human–machine interface</td>
+<td>OLED displays basic system status and sensor data</td>
+<td>Menu-driven OLED interface with alerts, parameters, and live data</td>
+<td>Human–Machine Interface (OLED)</td>
 <td>No</td>
 </tr>
 <tr>
 <td>Rover chassis and major structural components shall be 3D printed</td>
-<td>Printable and assembled with purchased parts</td>
-<td>Lightweight, durable design</td>
-<td>Construction</td>
+<td>Primary structure printable and assembled with purchased components</td>
+<td>Lightweight and durable design suitable for repeated testing</td>
+<td>Mechanical Construction</td>
 <td>No</td>
 </tr>
 <tr>
 <td>Power system shall support extended operation</td>
-<td>≥30 minutes continuous operation</td>
-<td>≥90 minutes with battery monitoring</td>
-<td>Power</td>
+<td>≥30 minutes of continuous operation with all subsystems active</td>
+<td>≥90 minutes with battery monitoring and low-power modes</td>
+<td>Power Management</td>
 <td>No</td>
 </tr>
 <tr>
 <td>System shall include emergency stop and fail-safe behaviors</td>
-<td>Software stop on signal loss or e-stop</td>
-<td>Automatic safe state with status broadcast</td>
-<td>Safety</td>
+<td>Software-commanded stop on signal loss or emergency input</td>
+<td>Automatic safe state with system-wide status broadcast</td>
+<td>System Safety</td>
 <td>No</td>
 </tr>
 </tbody>
