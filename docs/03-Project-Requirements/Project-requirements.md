@@ -47,11 +47,11 @@ Our rover is designed as an open-ended exploration platform, focused on collecti
 
 | Team Member | Name | Main Board Functions (Key Responsibilities) | Primary Assignee (Subsystem) |
 |------------|------|--------------------------------------------|------------------------------|
-| Member 1 | Liam Mabbutt | Rover drive mobility using 2WD baseline (4WD supported as stretch), motor speed control, steering control, motor feedback, and safety interlocks | Mobility & Motor Control Board |
+| Member 1 | Liam Mabbutt | Rover drive mobility using 2WD baseline, 4WD may be added, motor speed control, steering control, motor feedback, and safety interlocks | Mobility & Motor Control Board |
 | Member 2 | Myles White | Obstacle and hazard detection using distance sensors, collision warnings, autonomous slow/stop requests, and safety alerts | Obstacle Detection & Safety Board |
 | Member 3 | Isaiah Lacombe | Environmental sensing including atmospheric pressure, temperature, and humidity measurement, calibration, and real-time telemetry | Environmental Sensor Board |
 | Member 4 | Ragul Raj RG | Navigation and orientation sensing using IMU and optional wheel odometry, heading estimation, tilt detection, and motion data reporting | Navigation & Orientation Board |
 | Member 5 | Arianna Lazaritt | Imaging system control including camera operation, image/video capture, data packetization, and status reporting | Imaging Board |
-| Member 6 | Damian Novgorodov | Two-way wireless communication (WiFi/MQTT), command routing between base station and rover subsystems, telemetry aggregation, and system messaging | Wireless Communication Board |
+| Member 6 | Damian Novgorodov | Two-way wireless communication (WiFi/Bluetooth), command routing between base station and rover subsystems, telemetry aggregation, and system messaging | Wireless Communication Board |
 | Member 7 | Christo Jomon Joseph | Local human–machine interface including OLED display, pushbuttons, rover status display, user input handling, power monitoring, emergency stop, and fail-safe control | HMI & System Safety Board |
 
