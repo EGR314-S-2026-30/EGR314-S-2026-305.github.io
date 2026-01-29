@@ -41,19 +41,20 @@ This approach emphasizes:
 ## Requirements Table
 
 | Description | Minimum (Acceptance – Not Complete Failure) | Target | Feature Satisfied | Stretch? |
-|------------|--------------------------------------------|-------|-----------------|----------|
-| Rover shall provide drive mobility with independent motor control | Forward/backward movement on flat surfaces ≥0.1 m/s | 2WD with variable speed (0.1–0.5 m/s); 4WD optional | Mobility (Drive) | Yes (4WD) |
-| Rover shall implement steering control for directional navigation | Basic turning via differential drive or servo steering | Precise steering with ≥30° turn radius | Mobility (Steering) | No |
-| Rover shall detect obstacles/hazards and alert or autonomously slow/stop | Detect obstacles ≤0.5 m ahead with operator alert | Detection ≤1.5 m with proportional slow or stop | Hazard Avoidance, Safety | No |
-| Rover shall measure atmospheric pressure | Functional barometric sensor reporting values | Calibrated sensor (0–1100 hPa) streaming to base | Environmental Sensing | No |
-| Rover shall measure temperature and humidity | Basic temperature (±2°C) and RH sensor | High-accuracy (±0.5°C, ±3% RH) streaming | Environmental Sensing | No |
-| Rover shall provide navigation/orientation data | Basic IMU for heading and tilt | 6/9-DOF IMU with odometry integration | Navigation | No |
-| Rover shall capture and stream imaging data | Static image capture on demand | Real-time video feed (≥10 fps) | Imaging | Yes |
-| Two-way wireless communication shall enable control and telemetry | Commands and sensor data within 15 m | <300 ms latency, multi-sensor + video streaming | Teleoperation | No |
-| Rover shall provide a local human-machine interface | OLED displays system status and sensor data | Menu-driven OLED with graphs, alerts, and parameters | HMI (OLED) | No |
-| Rover chassis and major structural components shall be 3D printed | Printable and assembled with purchased parts | Lightweight, durable design | Construction | No |
-| Power system shall support extended operation | ≥30 minutes continuous operation | ≥90 minutes with battery monitoring | Power | No |
-| System shall include emergency stop and fail-safe behaviors | Software stop on signal loss or e-stop | Automatic safe state with status broadcast | Safety | No |
+|------------|---------------------------------------------|--------|-------------------|----------|
+| Rover shall provide drive mobility with independent motor control | Forward and backward motion on flat surfaces at ≥0.1 m/s | **2WD** with variable speed control (0.1–0.5 m/s); **4WD supported as an optional enhancement** | Mobility (Drive) | Yes (4WD) |
+| Rover shall implement steering control for directional navigation | Basic turning using differential drive or simple steering mechanism | Controlled steering with ≥30° effective turning radius | Mobility (Steering) | No |
+| Rover shall detect obstacles or hazards and alert or autonomously slow/stop | Detect obstacles ≤0.5 m ahead and alert operator | Detection ≤1.5 m with proportional speed reduction or automatic stop | Hazard Avoidance, Safety | No |
+| Rover shall measure atmospheric pressure | Functional barometric sensor reporting pressure values | Calibrated sensor (0–1100 hPa) with real-time data streaming to base station | Environmental Sensing (Pressure) | No |
+| Rover shall measure temperature and humidity | Basic temperature (±2 °C) and relative humidity sensing | High-accuracy sensing (±0.5 °C, ±3% RH) with continuous telemetry | Environmental Sensing (Weather) | No |
+| Rover shall provide navigation and orientation data | Basic IMU providing heading and tilt information | 6- or 9-DOF IMU with optional wheel odometry integration | Navigation & Orientation | No |
+| Rover shall capture and transmit imaging data | Static image capture on operator request | Real-time video streaming at ≥10 fps | Imaging & Operator Feedback | Yes |
+| Two-way wireless communication shall enable remote control and telemetry | Reliable command transmission and sensor data return within 15 m | <300 ms latency with simultaneous control, telemetry, and imaging | Teleoperation & Wireless Communication | No |
+| Rover shall provide a local human–machine interface | OLED displays basic system status and sensor data | Menu-driven OLED interface with alerts, parameters, and live data | Human–Machine Interface (OLED) | No |
+| Rover chassis and major structural components shall be 3D printed | Primary structure printable and assembled with purchased components | Lightweight and durable design suitable for repeated testing | Mechanical Construction | No |
+| Power system shall support extended operation | ≥30 minutes of continuous operation with all subsystems active | ≥90 minutes with battery monitoring and low-power modes | Power Management | No |
+| System shall include emergency stop and fail-safe behaviors | Software-commanded stop on signal loss or emergency input | Automatic safe state with system-wide status broadcast | System Safety | No |
+
 
 ---
 
