@@ -582,6 +582,48 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#overview-and-rationale" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview and Rationale
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview and Rationale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-feature-to-requirement-mappings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Feature-to-Requirement Mappings
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirements Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirement-assignment-to-team-members" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirement Assignment to Team Members
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -729,6 +771,48 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#overview-and-rationale" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview and Rationale
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Overview and Rationale">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#key-feature-to-requirement-mappings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Feature-to-Requirement Mappings
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirements Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirement-assignment-to-team-members" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirement Assignment to Team Members
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -752,10 +836,224 @@
   
 
 
-  <h1>Project Requirements</h1>
-
 <h2 id="header">Header</h2>
-<p>Add content</p>
+<h1 id="overview-and-rationale">Overview and Rationale</h1>
+<p>Through team discussions, we have refined the rover design to focus primarily on exploration of a simulated Martian environment. The rover will be remotely driven and will actively collect and transmit scientific and environmental data using a suite of sensors:</p>
+<ul>
+<li>Atmospheric pressure</li>
+<li>Temperature/humidity (weather-related)</li>
+<li>Radiation</li>
+<li>Hazard/obstacle detection</li>
+<li>Imaging (camera)</li>
+<li>Navigation/orientation sensors</li>
+</ul>
+<p>The rover will feature a 4-wheel drive system with steering for robust mobility on uneven terrain. The majority of the structural components (chassis, mounts, body) will be 3D printed for rapid prototyping and customization, while non-printable parts (wheels, motors, electronics, sensors) will be purchased off-the-shelf.</p>
+<p>Remote operation will be achieved through reliable two-way wireless communication, allowing manual control from a base station (laptop or dedicated controller) while streaming real-time sensor data, video/imaging, and system status back to the operator for teleoperation and data logging.</p>
+<p>This exploratory focus shifts away from structured missions toward open-ended remote scientific data collection, emphasizing real-time feedback, sensor integration, and reliable mobility — qualities that mirror real planetary rover operations.</p>
+<h2 id="key-feature-to-requirement-mappings">Key Feature-to-Requirement Mappings</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mobility</td>
+<td>4-wheel drive and steering required for controllable movement across simulated Martian terrain (sand, rocks, inclines).</td>
+</tr>
+<tr>
+<td>Scientific exploration</td>
+<td>Dedicated sensors for pressure, temperature/humidity, radiation, and navigation enable environmental data collection.</td>
+</tr>
+<tr>
+<td>Hazard avoidance</td>
+<td>Obstacle detection protects the rover during remote operation when direct visual cues are limited.</td>
+</tr>
+<tr>
+<td>Imaging and feedback</td>
+<td>Camera and real-time telemetry provide the operator with situational awareness.</td>
+</tr>
+<tr>
+<td>Remote teleoperation</td>
+<td>Wireless link enables driving commands and streams sensor/video data back to the base station.</td>
+</tr>
+<tr>
+<td>Construction and constraints</td>
+<td>3D-printed structure with purchased components, plus power and safety constraints that affect all subsystems.</td>
+</tr>
+</tbody>
+</table>
+<p>Requirements are distributed across team members to ensure each has primary ownership of critical functional areas.</p>
+<h1 id="requirements-table">Requirements Table</h1>
+<table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Minimum (Acceptance – Not Complete Failure)</th>
+<th>Target</th>
+<th>Feature Satisfied</th>
+<th>Stretch?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rover shall provide 4-wheel drive mobility with independent motor control</td>
+<td>Basic forward/backward movement on flat surfaces at ≥0.1 m/s</td>
+<td>All-wheel drive with variable speed (0.1–0.5 m/s), ability to climb ≥10° inclines and small obstacles</td>
+<td>Mobility (4WD)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Rover shall implement steering control for directional navigation</td>
+<td>Basic turning via differential drive or simple servo steering</td>
+<td>Precise Ackermann or 4-wheel steering with ≥30° turn radius on uneven terrain</td>
+<td>Mobility (Steering)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Rover shall detect obstacles/hazards and alert or autonomously slow/stop</td>
+<td>Detection of obstacles ≤0.5 m ahead using ultrasonic/IR sensors with operator alert</td>
+<td>Detection ≤1.5 m, proportional speed reduction or auto-stop, resume capability</td>
+<td>Hazard Avoidance, Safety</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Rover shall measure atmospheric pressure</td>
+<td>Functional barometric sensor reporting values in real-time</td>
+<td>Accurate readings (0–1100 hPa) with calibration and transmission to base station</td>
+<td>Environmental Sensing (Pressure)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Rover shall measure temperature and humidity</td>
+<td>Basic temperature (±2°C) and relative humidity sensor functional</td>
+<td>High-accuracy (±0.5°C, ±3% RH) with real-time data streaming</td>
+<td>Environmental Sensing (Weather)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Rover shall measure radiation levels</td>
+<td>Basic Geiger counter or radiation sensor detecting presence</td>
+<td>Quantitative dose rate (µSv/h) with alerts above threshold</td>
+<td>Radiation Sensing</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Rover shall provide navigation/orientation data</td>
+<td>Basic IMU/compass for heading and tilt</td>
+<td>6/9-DOF IMU with odometry integration for dead-reckoning position tracking</td>
+<td>Navigation</td>
+<td>No (full dead-reckoning is stretch)</td>
+</tr>
+<tr>
+<td>Rover shall capture and stream imaging data</td>
+<td>Static image capture on demand, transmitted to base station</td>
+<td>Real-time low-latency video feed (≥10 fps) from forward-facing camera</td>
+<td>Imaging, Operator Feedback</td>
+<td>Yes (real-time video)</td>
+</tr>
+<tr>
+<td>Two-way wireless communication shall enable remote control and telemetry</td>
+<td>Reliable command transmission and basic sensor data return within 15 m range</td>
+<td>&lt;300 ms latency, simultaneous control + multi-sensor/video streaming within 30 m</td>
+<td>Remote Teleoperation, Feedback</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Base station HMI shall display real-time sensor data and vehicle status</td>
+<td>Basic text/numeric display of all sensor values and battery/status</td>
+<td>Graphical dashboard with graphs, camera view, alerts, and data logging</td>
+<td>Operator Feedback, HMI</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Rover chassis and major structural components shall be 3D printed</td>
+<td>Primary structure printable and assembled with purchased parts</td>
+<td>Optimized lightweight design, durable filament (e.g., PETG/ABS), survives repeated drops/bumps</td>
+<td>Construction (3D Printed)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>Power system shall support extended operation</td>
+<td>≥30 minutes continuous use (driving + all sensors active)</td>
+<td>≥90 minutes, low-power modes, real-time battery monitoring and low-battery alerts</td>
+<td>System Constraint (Power)</td>
+<td>No</td>
+</tr>
+<tr>
+<td>System shall include emergency stop and fail-safe behaviors</td>
+<td>Software/commanded stop of all motors on signal loss or e-stop</td>
+<td>Automatic safe state on communication loss (stop + status broadcast)</td>
+<td>Safety, Durability</td>
+<td>No</td>
+</tr>
+</tbody>
+</table>
+<h1 id="requirement-assignment-to-team-members">Requirement Assignment to Team Members</h1>
+<table>
+<thead>
+<tr>
+<th>Requirement Description</th>
+<th>Primary Assignee (Functional Area)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rover shall provide 4-wheel drive mobility...</td>
+<td>Sensor and Actuator Control</td>
+</tr>
+<tr>
+<td>Rover shall implement steering control...</td>
+<td>Sensor and Actuator Control</td>
+</tr>
+<tr>
+<td>Rover shall detect obstacles/hazards...</td>
+<td>Sensor and Actuator Control</td>
+</tr>
+<tr>
+<td>Rover shall measure atmospheric pressure...</td>
+<td>Sensor and Actuator Control</td>
+</tr>
+<tr>
+<td>Rover shall measure temperature and humidity...</td>
+<td>Sensor and Actuator Control</td>
+</tr>
+<tr>
+<td>Rover shall measure radiation levels...</td>
+<td>Sensor and Actuator Control</td>
+</tr>
+<tr>
+<td>Rover shall provide navigation/orientation data...</td>
+<td>Sensor and Actuator Control</td>
+</tr>
+<tr>
+<td>Rover shall capture and stream imaging data...</td>
+<td>Sensor and Actuator Control</td>
+</tr>
+<tr>
+<td>Two-way wireless communication...</td>
+<td>Internet-based Two-way Wireless Communication</td>
+</tr>
+<tr>
+<td>Base station HMI shall display real-time sensor data...</td>
+<td>Human-Machine Interface</td>
+</tr>
+<tr>
+<td>Rover chassis and major structural components...</td>
+<td>System Integration and Safety</td>
+</tr>
+<tr>
+<td>Power system shall support extended operation...</td>
+<td>System Integration and Safety</td>
+</tr>
+<tr>
+<td>System shall include emergency stop and fail-safe behaviors...</td>
+<td>System Integration and Safety</td>
+</tr>
+</tbody>
+</table>
 
 
 
