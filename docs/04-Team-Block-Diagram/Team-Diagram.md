@@ -2,11 +2,14 @@
 title: Block Diagram, Protocol, and Message Structure
 ---
 
-## 1️⃣ Team Block Diagram Overview
+## Part 1: Team Block Diagram Overview
 
 ![Subsystem](Team_305_Block_Diagram.drawio.svg)
 
-# Message Type Table
+## Part 2: Team Communication
+![image2](https://github.com/EGR314-S-2026-30/EGR314-S-2026-305.github.io/blob/main/docs/04-Team-Block-Diagram/314%20Team%20Communication.png?raw=true)
+
+## Part 3: Message Type Table
 
 | Message Type (uint16_t) | Description |
 |--------------------------|-------------|
