@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#environmental-sensor-messages" class="md-skip">
+        <a href="#1-team-block-diagram-overview" class="md-skip">
           Skip to content
         </a>
       
@@ -584,8 +584,6 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -614,8 +612,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -624,55 +620,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#message-types" class="md-nav__link">
+  <a href="#1-team-block-diagram-overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Message Types
+      1️⃣ Team Block Diagram Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#message-structures" class="md-nav__link">
+  <a href="#environmental-sensor-subsystem-specification" class="md-nav__link">
     <span class="md-ellipsis">
-      Message Structures
+      Environmental Sensor Subsystem Specification
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Message Structures">
+    <nav class="md-nav" aria-label="Environmental Sensor Subsystem Specification">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#message-type-4-sensor-reading" class="md-nav__link">
+  <a href="#environmental-sensor-message-types-structures" class="md-nav__link">
     <span class="md-ellipsis">
-      Message Type 4 – Sensor Reading
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#message-type-12-subsystem-status-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Message Type 12 – Subsystem Status Code
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#message-type-13-subsystem-status-message" class="md-nav__link">
-    <span class="md-ellipsis">
-      Message Type 13 – Subsystem Status Message
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#message-type-11-subsystem-error-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Message Type 11 – Subsystem Error Code
+      Environmental Sensor Message Types &amp; Structures
     </span>
   </a>
   
@@ -768,8 +737,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -778,55 +745,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#message-types" class="md-nav__link">
+  <a href="#1-team-block-diagram-overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Message Types
+      1️⃣ Team Block Diagram Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#message-structures" class="md-nav__link">
+  <a href="#environmental-sensor-subsystem-specification" class="md-nav__link">
     <span class="md-ellipsis">
-      Message Structures
+      Environmental Sensor Subsystem Specification
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Message Structures">
+    <nav class="md-nav" aria-label="Environmental Sensor Subsystem Specification">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#message-type-4-sensor-reading" class="md-nav__link">
+  <a href="#environmental-sensor-message-types-structures" class="md-nav__link">
     <span class="md-ellipsis">
-      Message Type 4 – Sensor Reading
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#message-type-12-subsystem-status-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Message Type 12 – Subsystem Status Code
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#message-type-13-subsystem-status-message" class="md-nav__link">
-    <span class="md-ellipsis">
-      Message Type 13 – Subsystem Status Message
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#message-type-11-subsystem-error-code" class="md-nav__link">
-    <span class="md-ellipsis">
-      Message Type 11 – Subsystem Error Code
+      Environmental Sensor Message Types &amp; Structures
     </span>
   </a>
   
@@ -860,141 +800,81 @@
   
 
 
-<h1 id="environmental-sensor-messages">Environmental Sensor Messages</h1>
-<h2 id="message-types">Message Types</h2>
+<h2 id="1-team-block-diagram-overview">1️⃣ Team Block Diagram Overview</h2>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="block_diagram.png" data-desc-position="bottom"><img alt="Subsystem" src="block_diagram.png"></a></p>
+<h1 id="environmental-sensor-subsystem-specification">Environmental Sensor Subsystem Specification</h1>
+<p><strong>Subsystem Designer:</strong> Isaiah LaCombe<br>
+This document defines the message types, byte-level structures, and hardware-to-message mapping for the Environmental Sensor Subsystem.</p>
+<h2 id="environmental-sensor-message-types-structures">Environmental Sensor Message Types &amp; Structures</h2>
 <table>
 <thead>
 <tr>
 <th>Message Type</th>
-<th>Byte 1-2</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>4</td>
-<td>0x04</td>
-<td>Environmental sensor reading (temperature, pressure, humidity)</td>
-</tr>
-<tr>
-<td>11</td>
-<td>0x0B</td>
-<td>Environmental subsystem error code</td>
-</tr>
-<tr>
-<td>12</td>
-<td>0x0C</td>
-<td>Environmental subsystem status code</td>
-</tr>
-<tr>
-<td>13</td>
-<td>0x0D</td>
-<td>Environmental subsystem status message (string)</td>
-</tr>
-</tbody>
-</table>
-<h2 id="message-structures">Message Structures</h2>
-<h3 id="message-type-4-sensor-reading">Message Type 4 – Sensor Reading</h3>
-<table>
-<thead>
-<tr>
-<th>Byte</th>
+<th>Byte(s)</th>
 <th>Data Type</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
+<td>4 – Sensor Reading</td>
 <td>1-2</td>
 <td>uint16_t</td>
 <td>Message Type = 0x04</td>
 </tr>
 <tr>
+<td>4 – Sensor Reading</td>
 <td>3</td>
 <td>uint8_t</td>
-<td>Sensor ID (0 = temperature, 1 = humidity, 2 = pressure)</td>
+<td>Sensor ID: 0 = Temperature, 1 = Humidity, 2 = Pressure</td>
 </tr>
 <tr>
+<td>4 – Sensor Reading</td>
 <td>4-5</td>
 <td>int16_t</td>
-<td>Sensor value (scaled as needed, e.g., temperature ×100 for 2 decimals)</td>
+<td>Sensor value (scaled, e.g., temperature ×100 for 2 decimals)</td>
 </tr>
 <tr>
+<td>4 – Sensor Reading</td>
 <td>6-61</td>
 <td>char</td>
-<td>Optional telemetry string (e.g., <code>unit=Celsius</code>, <code>unit=hPa</code>)</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Example:</strong> Sending 23.56 °C from temperature sensor:</p>
-<ul>
-<li>Byte 3 = 0 (temperature)  </li>
-<li>Byte 4-5 = 2356  </li>
-</ul>
-<h3 id="message-type-12-subsystem-status-code">Message Type 12 – Subsystem Status Code</h3>
-<table>
-<thead>
-<tr>
-<th>Byte</th>
-<th>Data Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1-2</td>
-<td>uint16_t</td>
-<td>Message Type = 0x0C</td>
+<td>Optional telemetry string, null-terminated (e.g., <code>"unit=Celsius"</code>, <code>"unit=hPa"</code>)</td>
 </tr>
 <tr>
-<td>3</td>
-<td>uint8_t</td>
-<td>Status code (0 = OK, 1 = calibration needed, 2 = sensor fault)</td>
-</tr>
-</tbody>
-</table>
-<h3 id="message-type-13-subsystem-status-message">Message Type 13 – Subsystem Status Message</h3>
-<table>
-<thead>
-<tr>
-<th>Byte</th>
-<th>Data Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>1-2</td>
-<td>uint16_t</td>
-<td>Message Type = 0x0D</td>
-</tr>
-<tr>
-<td>3-58</td>
-<td>char</td>
-<td>Status message (max 55 characters, null-terminated)</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Example:</strong> <code>"Temp sensor OK"</code> → send as ASCII characters, final byte = <code>0x00</code>  </p>
-<h3 id="message-type-11-subsystem-error-code">Message Type 11 – Subsystem Error Code</h3>
-<table>
-<thead>
-<tr>
-<th>Byte</th>
-<th>Data Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
+<td>11 – Subsystem Error</td>
 <td>1-2</td>
 <td>uint16_t</td>
 <td>Message Type = 0x0B</td>
 </tr>
 <tr>
+<td>11 – Subsystem Error</td>
 <td>3</td>
 <td>uint8_t</td>
-<td>Error code (1 = temperature sensor fail, 2 = humidity sensor fail, 3 = pressure sensor fail)</td>
+<td>Error code: 1 = temperature sensor fail, 2 = humidity sensor fail, 3 = pressure sensor fail</td>
+</tr>
+<tr>
+<td>12 – Subsystem Status Code</td>
+<td>1-2</td>
+<td>uint16_t</td>
+<td>Message Type = 0x0C</td>
+</tr>
+<tr>
+<td>12 – Subsystem Status Code</td>
+<td>3</td>
+<td>uint8_t</td>
+<td>Status code: 0 = OK, 1 = calibration needed, 2 = sensor fault</td>
+</tr>
+<tr>
+<td>13 – Subsystem Status Message</td>
+<td>1-2</td>
+<td>uint16_t</td>
+<td>Message Type = 0x0D</td>
+</tr>
+<tr>
+<td>13 – Subsystem Status Message</td>
+<td>3-58</td>
+<td>char</td>
+<td>Status message, max 55 characters, null-terminated</td>
 </tr>
 </tbody>
 </table>
