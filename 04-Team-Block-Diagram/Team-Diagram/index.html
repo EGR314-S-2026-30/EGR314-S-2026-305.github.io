@@ -878,6 +878,52 @@ This document defines the message types, byte-level structures, and hardware-to-
 </tr>
 </tbody>
 </table>
+<p>sequenceDiagram
+    autonumber
+    %% Participants with full member names
+    participant WebUser
+    participant InPersonUser
+    participant Christo as "Christo Jomon Joseph (HMI &amp; System Safety Board)"
+    participant Isaiah as "Isaiah Lacombe (Environmental Sensor Board)"
+    participant Liam as "Liam Mabbutt (Mobility &amp; Motor Control Board)"
+    participant Ragul as "Ragul Raj RG (Navigation &amp; Orientation Board)"
+    participant Arianna as "Arianna Lazaritt (Imaging Board)"
+    participant Damian as "Damian Novgorodov (Wireless Communication Board)"
+    participant OLED as "OLED Display"</p>
+<pre><code>loop Every second
+    WebUser-&gt;&gt;Christo: Request turn on LED1
+    InPersonUser-&gt;&gt;Christo: Press button LED1
+    Christo-&gt;&gt;Isaiah: Command LED1 ON
+    Isaiah--&gt;&gt;Christo: LED1 On, trash message
+    Christo-&gt;&gt;OLED: Display LED1 status
+
+    Liam-&gt;&gt;Ragul: Set speed 200 m/s
+    Liam--&gt;&gt;Ragul: Confirm speed, trash message
+
+    Ragul-&gt;&gt;Everyone: My Speed is 300 m/s
+    OLED-&gt;&gt;WebUser: Display speed
+    OLED-&gt;&gt;InPersonUser: Display speed
+    Ragul--&gt;&gt;Everyone: Trash message
+end
+
+%% Event-driven environmental reading
+loop Sensor update (event-driven)
+    Isaiah-&gt;&gt;Liam: Sensor reading Msg Type 4 (Temp=23.56°C)
+    Liam-&gt;&gt;OLED: Update telemetry display
+    Isaiah-&gt;&gt;Christo: Environmental status Msg Type 12 (Status OK)
+    Christo-&gt;&gt;WebUser: Update web telemetry
+    Isaiah-&gt;&gt;Ragul: Environmental message Type 13 (Status message)
+    Ragul--&gt;&gt;Christo: Trash message after processing
+end
+
+%% Error handling example
+loop Error event
+    Isaiah-&gt;&gt;Christo: Msg Type 11, Temp sensor fail
+    Christo-&gt;&gt;OLED: Show error alert
+    Christo-&gt;&gt;WebUser: Web notification of error
+    Christo--&gt;&gt;Isaiah: Trash message
+end
+</code></pre>
 
 
 
