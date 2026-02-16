@@ -2,52 +2,25 @@
 title: Block Diagram, Protocol, and Message Structure
 ---
 
-# Environmental Sensor Messages
+## 1️⃣ Team Block Diagram Overview
 
-## Message Types
+![Subsystem](block_diagram.png)
 
-| Message Type | Byte 1-2 | Description |
-|--------------|----------|------------|
-| 4            | 0x04     | Environmental sensor reading (temperature, pressure, humidity) |
-| 11           | 0x0B     | Environmental subsystem error code |
-| 12           | 0x0C     | Environmental subsystem status code |
-| 13           | 0x0D     | Environmental subsystem status message (string) |
+# Environmental Sensor Subsystem Specification
+**Subsystem Designer:** Isaiah LaCombe  
+This document defines the message types, byte-level structures, and hardware-to-message mapping for the Environmental Sensor Subsystem.
 
-## Message Structures
+## Environmental Sensor Message Types & Structures
 
-### Message Type 4 – Sensor Reading
-
-| Byte | Data Type | Description |
-|------|-----------|------------|
-| 1-2  | uint16_t  | Message Type = 0x04 |
-| 3    | uint8_t   | Sensor ID (0 = temperature, 1 = humidity, 2 = pressure) |
-| 4-5  | int16_t   | Sensor value (scaled as needed, e.g., temperature ×100 for 2 decimals) |
-| 6-61 | char      | Optional telemetry string (e.g., `unit=Celsius`, `unit=hPa`) |
-
-**Example:** Sending 23.56 °C from temperature sensor:
-
-- Byte 3 = 0 (temperature)  
-- Byte 4-5 = 2356  
-
-### Message Type 12 – Subsystem Status Code
-
-| Byte | Data Type | Description |
-|------|-----------|------------|
-| 1-2  | uint16_t  | Message Type = 0x0C |
-| 3    | uint8_t   | Status code (0 = OK, 1 = calibration needed, 2 = sensor fault) |
-
-### Message Type 13 – Subsystem Status Message
-
-| Byte | Data Type | Description |
-|------|-----------|------------|
-| 1-2  | uint16_t  | Message Type = 0x0D |
-| 3-58 | char      | Status message (max 55 characters, null-terminated) |
-
-**Example:** `"Temp sensor OK"` → send as ASCII characters, final byte = `0x00`  
-
-### Message Type 11 – Subsystem Error Code
-
-| Byte | Data Type | Description |
-|------|-----------|------------|
-| 1-2  | uint16_t  | Message Type = 0x0B |
-| 3    | uint8_t   | Error code (1 = temperature sensor fail, 2 = humidity sensor fail, 3 = pressure sensor fail) |
+| Message Type | Byte(s)   | Data Type  | Description |
+|--------------|-----------|-----------|-------------|
+| 4 – Sensor Reading | 1-2       | uint16_t  | Message Type = 0x04 |
+| 4 – Sensor Reading | 3         | uint8_t   | Sensor ID: 0 = Temperature, 1 = Humidity, 2 = Pressure |
+| 4 – Sensor Reading | 4-5       | int16_t   | Sensor value (scaled, e.g., temperature ×100 for 2 decimals) |
+| 4 – Sensor Reading | 6-61      | char      | Optional telemetry string, null-terminated (e.g., `"unit=Celsius"`, `"unit=hPa"`) |
+| 11 – Subsystem Error | 1-2    | uint16_t  | Message Type = 0x0B |
+| 11 – Subsystem Error | 3       | uint8_t   | Error code: 1 = temperature sensor fail, 2 = humidity sensor fail, 3 = pressure sensor fail |
+| 12 – Subsystem Status Code | 1-2 | uint16_t | Message Type = 0x0C |
+| 12 – Subsystem Status Code | 3   | uint8_t  | Status code: 0 = OK, 1 = calibration needed, 2 = sensor fault |
+| 13 – Subsystem Status Message | 1-2 | uint16_t | Message Type = 0x0D |
+| 13 – Subsystem Status Message | 3-58 | char   | Status message, max 55 characters, null-terminated |
