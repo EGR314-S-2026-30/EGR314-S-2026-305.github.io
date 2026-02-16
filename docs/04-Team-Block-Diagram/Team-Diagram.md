@@ -4,7 +4,7 @@ title: Block Diagram, Protocol, and Message Structure
 
 ## 1️⃣ Team Block Diagram Overview
 
-![Subsystem](block_diagram.png)
+![Subsystem](Team_305_Block_Diagram.drawio.svg)
 
 # Message Type Table
 
