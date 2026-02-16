@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#header" class="md-skip">
+        <a href="#rover-block-digram-project-overview" class="md-skip">
           Skip to content
         </a>
       
@@ -584,6 +584,8 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           
@@ -612,6 +614,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -620,9 +624,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#header" class="md-nav__link">
+  <a href="#project-and-block-digram-overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Header
+      Project and Block Digram Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-rationale" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Rationale
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-feature-to-requirement-mappings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Feature-to-Requirement Mappings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirements Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirement-assignment-to-team-members" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirement Assignment to Team Members
     </span>
   </a>
   
@@ -713,6 +753,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -721,9 +763,45 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#header" class="md-nav__link">
+  <a href="#project-and-block-digram-overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Header
+      Project and Block Digram Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#project-rationale" class="md-nav__link">
+    <span class="md-ellipsis">
+      Project Rationale
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-feature-to-requirement-mappings" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Feature-to-Requirement Mappings
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirements-table" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirements Table
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#requirement-assignment-to-team-members" class="md-nav__link">
+    <span class="md-ellipsis">
+      Requirement Assignment to Team Members
     </span>
   </a>
   
@@ -752,10 +830,228 @@
   
 
 
-  <h1>Block Diagram, Protocol, and Message Structure</h1>
-
-<h2 id="header">Header</h2>
-<p>Add content!</p>
+<h1 id="rover-block-digram-project-overview">Rover Block Digram Project Overview</h1>
+<h2 id="project-and-block-digram-overview">Project and Block Digram Overview</h2>
+<p>Through team discussions, we designed our rover to explore a simulated Martian environment. The rover is remotely operated and collects scientific and environmental data through a variety of sensors, including:</p>
+<ul>
+<li>Atmospheric pressure</li>
+<li>Temperature and humidity</li>
+<li>Hazard detection</li>
+<li>Imaging</li>
+<li>Navigation/orientation (IMU and odometry)</li>
+</ul>
+<p>Mobility is provided by a 2-wheel drive with steering, with 4-wheel drive considered as a future enhancement. Most structural components (chassis, mounts, body) are 3D printed for rapid prototyping, while wheels, motors, electronics, and sensors are purchased.  </p>
+<p>Subsystems communicate via a daisy-chained UART network and over WiFi, allowing independent boards to send and receive messages safely. Remote operation is achieved through bidirectional wireless communication for real-time telemetry, video streaming, and manual control. A local Human–Machine Interface (HMI) consisting of pushbuttons, levers, and an OLED display provides immediate system feedback without requiring remote connection.</p>
+<h2 id="project-rationale">Project Rationale</h2>
+<p>The rover is designed as an open-ended exploration platform, focused on collecting real-time scientific data rather than performing fixed tasks. Key design aspects include:</p>
+<ul>
+<li>Modular Setup: Separate sensor, actuator, HMI, and communication boards connected via a daisy-chained UART network.  </li>
+<li>Real-Time Monitoring: Local OLED display allows users to monitor data and adjust settings.  </li>
+<li>Safety Features: Emergency stop, built-in fail-safes, and low-power operation reflect real planetary rover design considerations.</li>
+</ul>
+<h2 id="key-feature-to-requirement-mappings">Key Feature-to-Requirement Mappings</h2>
+<table>
+<thead>
+<tr>
+<th>Feature</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Mobility</td>
+<td>2WD with steering; stretch goal: 4WD</td>
+</tr>
+<tr>
+<td>Scientific Exploration</td>
+<td>Sensors for pressure, temperature, humidity, and navigation with calibrated real-time telemetry</td>
+</tr>
+<tr>
+<td>Hazard Avoidance</td>
+<td>Obstacle detection and alerts; optional automatic slow/stop</td>
+</tr>
+<tr>
+<td>Imaging &amp; Feedback</td>
+<td>Camera/video streaming for situational awareness</td>
+</tr>
+<tr>
+<td>User Interaction</td>
+<td>Local OLED display and input buttons for redundancy</td>
+</tr>
+<tr>
+<td>Modular Subsystem Integration</td>
+<td>Reliable UART communication; allows future expansion</td>
+</tr>
+<tr>
+<td>Safety &amp; Power Management</td>
+<td>Emergency stop, fail-safes, low-power operation</td>
+</tr>
+</tbody>
+</table>
+<h2 id="requirements-table">Requirements Table</h2>
+<table>
+<thead>
+<tr>
+<th>Description</th>
+<th>Minimum</th>
+<th>Target</th>
+<th>Feature Satisfied</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Rover shall provide drive mobility with independent motor control</td>
+<td>Forward/backward ≥0.1 m/s</td>
+<td>2WD with variable speed (0.1–0.5 m/s)</td>
+<td>Mobility (Drive)</td>
+</tr>
+<tr>
+<td>Rover shall implement steering control</td>
+<td>Basic turning using differential drive</td>
+<td>Controlled steering ≥30° turning radius</td>
+<td>Mobility (Steering)</td>
+</tr>
+<tr>
+<td>Rover shall detect obstacles or hazards</td>
+<td>Detect ≤0.5 m ahead</td>
+<td>Detect ≤1.5 m with optional auto slow/stop</td>
+<td>Hazard Avoidance, Safety</td>
+</tr>
+<tr>
+<td>Rover shall measure atmospheric pressure</td>
+<td>Functional barometric sensor</td>
+<td>Calibrated 0–1100 hPa</td>
+<td>Environmental Sensing (Pressure)</td>
+</tr>
+<tr>
+<td>Rover shall measure temperature and humidity</td>
+<td>±2 °C, basic sensing</td>
+<td>Continuous telemetry ±1 °C, ±5% RH</td>
+<td>Environmental Sensing (Weather)</td>
+</tr>
+<tr>
+<td>Rover shall provide navigation and orientation data</td>
+<td>IMU heading and tilt</td>
+<td>Optional wheel odometry integration</td>
+<td>Navigation &amp; Orientation</td>
+</tr>
+<tr>
+<td>Rover shall capture and transmit imaging data</td>
+<td>Capture static images</td>
+<td>Real-time video ≥5 fps</td>
+<td>Imaging &amp; Operator Feedback</td>
+</tr>
+<tr>
+<td>Two-way wireless communication</td>
+<td>Commands reach rover</td>
+<td>Stable Wi-Fi/Bluetooth link</td>
+<td>Teleoperation &amp; Wireless Communication</td>
+</tr>
+<tr>
+<td>Rover shall provide local HMI</td>
+<td>OLED shows basic status</td>
+<td>Menu-driven OLED with data, alerts, parameters</td>
+<td>HMI (OLED)</td>
+</tr>
+<tr>
+<td>Chassis and structural components</td>
+<td>Printable and assembleable</td>
+<td>Lightweight, durable for testing</td>
+<td>Mechanical Construction</td>
+</tr>
+<tr>
+<td>Power system</td>
+<td>≥30 minutes operation</td>
+<td>~60 minutes with monitoring</td>
+<td>Power Management</td>
+</tr>
+<tr>
+<td>Emergency stop and fail-safe</td>
+<td>Physical or software stop works</td>
+<td>Automatic safe state, alerts</td>
+<td>System Safety</td>
+</tr>
+<tr>
+<td>Communication network</td>
+<td>Occasional delays</td>
+<td>Reliable UART/I2C messaging</td>
+<td>Modular Subsystem Integration</td>
+</tr>
+<tr>
+<td>Chassis weight limit</td>
+<td>≤5 kg</td>
+<td>≤4.5 kg for efficiency</td>
+<td>Mechanical Construction &amp; Mobility</td>
+</tr>
+<tr>
+<td>Maximum current draw</td>
+<td>≤2 A per subsystem</td>
+<td>≤1.5 A per subsystem</td>
+<td>Power Management &amp; Safety</td>
+</tr>
+<tr>
+<td>Environmental tolerance</td>
+<td>Functional indoors</td>
+<td>Functional outdoors 0–40°C, 20–80% RH</td>
+<td>Environmental Sensing &amp; Safety</td>
+</tr>
+</tbody>
+</table>
+<h2 id="requirement-assignment-to-team-members">Requirement Assignment to Team Members</h2>
+<table>
+<thead>
+<tr>
+<th>Member</th>
+<th>Name</th>
+<th>Key Responsibilities</th>
+<th>Primary Subsystem</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Liam Mabbutt</td>
+<td>Rover drive mobility: 2WD baseline, 4WD optional, motor speed/steering control, feedback, safety interlocks</td>
+<td>Mobility &amp; Motor Control Board</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Myles White</td>
+<td>Obstacle/hazard detection, collision warnings, autonomous slow/stop, safety alerts</td>
+<td>Obstacle Detection &amp; Safety Board</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Isaiah Lacombe</td>
+<td>Environmental sensing: pressure, temperature, humidity, calibration, real-time telemetry</td>
+<td>Environmental Sensor Board</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Ragul Raj RG</td>
+<td>Navigation &amp; orientation: IMU, optional wheel odometry, heading, tilt, motion reporting</td>
+<td>Navigation &amp; Orientation Board</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Arianna Lazaritt</td>
+<td>Imaging system: camera control, image/video capture, data packetization, status reporting</td>
+<td>Imaging Board</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Damian Novgorodov</td>
+<td>Two-way wireless communication (Wi-Fi/Bluetooth), command routing, telemetry aggregation, system messaging</td>
+<td>Wireless Communication Board</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Christo Jomon Joseph</td>
+<td>Local HMI: OLED display, pushbuttons, rover status, user input, power monitoring, emergency stop, fail-safes</td>
+<td>HMI &amp; System Safety Board</td>
+</tr>
+</tbody>
+</table>
 
 
 
