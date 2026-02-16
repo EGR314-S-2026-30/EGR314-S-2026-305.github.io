@@ -38,6 +38,24 @@ sequenceDiagram
     participant Damian as "Damian Novgorodov (Wireless Communication Board)"
     participant OLED as "OLED Display"
 
+# Part 2: Sequence Diagram of Team Communication
+
+This diagram shows a typical use case of team communication for the rover, including sensor updates, user interactions (web and in-person), motor commands, and message disposal. Each message type (4, 11, 12, 13) is represented in the hops.
+
+```mermaid
+sequenceDiagram
+    autonumber
+    %% Participants with full member names
+    participant WebUser
+    participant InPersonUser
+    participant Christo as "Christo Jomon Joseph (HMI & System Safety Board)"
+    participant Isaiah as "Isaiah Lacombe (Environmental Sensor Board)"
+    participant Liam as "Liam Mabbutt (Mobility & Motor Control Board)"
+    participant Ragul as "Ragul Raj RG (Navigation & Orientation Board)"
+    participant Arianna as "Arianna Lazaritt (Imaging Board)"
+    participant Damian as "Damian Novgorodov (Wireless Communication Board)"
+    participant OLED as "OLED Display"
+
     loop Every second
         WebUser->>Christo: Request turn on LED1
         InPersonUser->>Christo: Press button LED1
@@ -71,4 +89,5 @@ sequenceDiagram
         Christo->>WebUser: Web notification of error
         Christo-->>Isaiah: Trash message
     end
+
 
