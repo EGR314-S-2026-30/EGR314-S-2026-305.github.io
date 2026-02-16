@@ -652,6 +652,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#part-2-sequence-diagram-of-team-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 2: Sequence Diagram of Team Communication
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -777,6 +786,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#part-2-sequence-diagram-of-team-communication" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 2: Sequence Diagram of Team Communication
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -879,6 +897,21 @@ This document defines the message types, byte-level structures, and hardware-to-
 </tbody>
 </table>
 <p>sequenceDiagram
+    autonumber
+    %% Participants with full member names
+    participant WebUser
+    participant InPersonUser
+    participant Christo as "Christo Jomon Joseph (HMI &amp; System Safety Board)"
+    participant Isaiah as "Isaiah Lacombe (Environmental Sensor Board)"
+    participant Liam as "Liam Mabbutt (Mobility &amp; Motor Control Board)"
+    participant Ragul as "Ragul Raj RG (Navigation &amp; Orientation Board)"
+    participant Arianna as "Arianna Lazaritt (Imaging Board)"
+    participant Damian as "Damian Novgorodov (Wireless Communication Board)"
+    participant OLED as "OLED Display"</p>
+<h1 id="part-2-sequence-diagram-of-team-communication">Part 2: Sequence Diagram of Team Communication</h1>
+<p>This diagram shows a typical use case of team communication for the rover, including sensor updates, user interactions (web and in-person), motor commands, and message disposal. Each message type (4, 11, 12, 13) is represented in the hops.</p>
+<p>```mermaid
+sequenceDiagram
     autonumber
     %% Participants with full member names
     participant WebUser
