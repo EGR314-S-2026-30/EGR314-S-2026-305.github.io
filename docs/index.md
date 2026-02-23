@@ -32,4 +32,4 @@ Dr. Kevin Nichols<br>
 | Isaiah Lacombe           | [Isaiah.Github](https://isaiahelixir1.github.io/isaiahelixer1.github.io/) |
 | Liam Mabbutt         | [Liam.Github](https://lmabbutt.github.io/lmabbutt1.github.io/) |
 | Myles White          | [Myles.Github](https://github.com/mcwhit14?tab=repositories) |
-| Arianna Lazaritt         | [Arianna.Github](https://github.com/) |
+| Arianna Lazaritt         | [Arianna.Github](https://alazaritt.github.io/EGR314DataSheet/) |
