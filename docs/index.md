@@ -7,7 +7,7 @@ tags:
 <center>
 <font size="8">Project X<br>
 <font size="5">Team 305<br>
-**Submission: January, 18, 2025**<br>
+**Submission: March, 6 2026**<br>
 Spring - 2026<br>
 <font size="4">Arizona State University<br>
 **EGR 314**<br>
@@ -17,9 +17,10 @@ Dr. Kevin Nichols<br>
 </center>
 
 ## Team Introduction
-> This will be updated as part of the preparation for the External Review.<br>
->    * This needs to be updated to reflect a team introduction.<br>
->    * Content should also help an unfamiliar reader navigate to areas of interest.
+
+Our team is developing an investigative rover to explore a simulated planetary environment, collecting environmental data while navigating terrain autonomously or under remote control. The rover uses sensors for temperature, humidity, atmospheric pressure, as well as imaging, and navigation, transmitting real-time telemetry and video to a laptop base station for monitoring and mission control.
+
+The system is modular, with specialized subsystems handling mobility, hazard detection, sensing, navigation, imaging, communication, and user interaction. Subsystems communicate through a UART-based daisy-chain network, enabling coordinated operation and easy expansion. A local human–machine interface with an OLED display and physical controls provides immediate feedback and safety features. This design allows us to create a reliable exploration platform that mirrors key aspects of similar rover systems.
 
 
 ## Team Members Datasheet links
