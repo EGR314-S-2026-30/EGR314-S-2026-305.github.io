@@ -4,7 +4,7 @@ title: Block Diagram, Protocol, and Message Structure
 
 ## Part 1: Team Block Diagram Overview
 
-![314 Team 305 Block Diagram](https://github.com/user-attachments/assets/f9466f81-1f1d-4836-b3de-f080e99b5803)
+![314 Team 305 Block Diagram](https://github.com/user-attachments/assets/1cb0c852-3694-414e-b8d5-232344cd1791)
 
 ## Part 2: Team Communication
 ![image2](https://github.com/EGR314-S-2026-30/EGR314-S-2026-305.github.io/blob/main/docs/04-Team-Block-Diagram/314%20Team%20Communication.png?raw=true)
