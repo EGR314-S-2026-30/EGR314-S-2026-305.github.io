@@ -32,5 +32,5 @@ The system is modular, with specialized subsystems handling mobility, hazard det
 | Damian Novgorodov                | [Damian.Github](https://dnovgorodov.github.io/dnovgorodov1.github.io/) |
 | Isaiah Lacombe           | [Isaiah.Github](https://isaiahelixir1.github.io/isaiahelixer1.github.io/) |
 | Liam Mabbutt         | [Liam.Github](https://lmabbutt.github.io/lmabbutt1.github.io/) |
-| Myles White          | [Myles.Github](https://github.com/mcwhit14?tab=repositories) |
+| Myles White          | [Myles.Github](https://mcwhit14.github.io/EGR314DataSheet/) |
 | Arianna Lazaritt         | [Arianna.Github](https://alazaritt.github.io/EGR314DataSheet/) |
