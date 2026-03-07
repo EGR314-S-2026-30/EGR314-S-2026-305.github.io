@@ -2,11 +2,14 @@
 title: Block Diagram, Protocol, and Message Structure
 ---
 
-## 1️⃣ Team Block Diagram Overview
+## Part 1: Team Block Diagram Overview
 
-![Subsystem](block_diagram.png)
+![314 Team 305 Block Diagram](https://github.com/user-attachments/assets/1cb0c852-3694-414e-b8d5-232344cd1791)
 
-# Message Type Table
+## Part 2: Team Communication
+![image2](https://github.com/EGR314-S-2026-30/EGR314-S-2026-305.github.io/blob/main/docs/04-Team-Block-Diagram/314%20Team%20Communication.png?raw=true)
+
+## Part 3: Message Type Table
 
 | Message Type (uint16_t) | Description |
 |--------------------------|-------------|
@@ -29,8 +32,6 @@ title: Block Diagram, Protocol, and Message Structure
 
 # Message Type Structure
 
----
-
 ## Message Type 1 – Motor Control State Report
 
 | Payload Byte | Type      | Description |
@@ -40,8 +41,6 @@ title: Block Diagram, Protocol, and Message Structure
 | 5–6 | int16_t  | Right Motor Speed (PWM) |
 | 7   | uint8_t  | Left Motor Direction (0=Rev,1=Fwd) |
 | 8   | uint8_t  | Right Motor Direction |
-
----
 
 ## Message Type 2 – Motor Status Report
 
@@ -53,8 +52,6 @@ title: Block Diagram, Protocol, and Message Structure
 | 7 | uint8_t | Left Motor Status Code |
 | 8 | uint8_t | Right Motor Status Code |
 
----
-
 ## Message Type 3 – Camera Frame Data Packet
 
 | Payload Byte | Type | Description |
@@ -64,8 +61,6 @@ title: Block Diagram, Protocol, and Message Structure
 | 5–6 | uint16_t | Packet Index |
 | 7–8 | uint16_t | Total Packets in Frame |
 | 9–58 | uint8_t[] | Image Data Chunk (50 bytes) |
-
----
 
 ## Message Type 4 – Camera Status Report
 
@@ -77,8 +72,6 @@ title: Block Diagram, Protocol, and Message Structure
 | 6–7 | uint16_t | Frame Height |
 | 8 | uint8_t | Error Code |
 
----
-
 ## Message Type 5 – Gyroscope Data Report
 
 | Payload Byte | Type | Description |
@@ -88,16 +81,12 @@ title: Block Diagram, Protocol, and Message Structure
 | 7–10 | float | Angular Velocity Y |
 | 11–14 | float | Angular Velocity Z |
 
----
-
 ## Message Type 6 – LCD Display Data Report
 
 | Payload Byte | Type | Description |
 |--------------|------|-------------|
 | 1–2 | uint16_t | 6 |
 | 3–58 | char[] | Display Text (Null-terminated, max 55 chars) |
-
----
 
 ## Message Type 7 – LCD Status Report
 
@@ -108,8 +97,6 @@ title: Block Diagram, Protocol, and Message Structure
 | 4 | uint8_t | Backlight Level |
 | 5 | uint8_t | Error Code |
 
----
-
 ## Message Type 8 – Temperature Sensor Data Report
 
 | Payload Byte | Type | Description |
@@ -117,16 +104,12 @@ title: Block Diagram, Protocol, and Message Structure
 | 1–2 | uint16_t | 8 |
 | 3–6 | float | Temperature (°C) |
 
----
-
 ## Message Type 9 – Light Sensor Data Report
 
 | Payload Byte | Type | Description |
 |--------------|------|-------------|
 | 1–2 | uint16_t | 9 |
 | 3–6 | float | Light Intensity (lux) |
-
----
 
 ## Message Type 10 – Barometric Pressure Sensor Data Report
 
@@ -136,8 +119,6 @@ title: Block Diagram, Protocol, and Message Structure
 | 3–6 | float | Pressure (Pa) |
 | 7–10 | float | Estimated Altitude (m) |
 
----
-
 ## Message Type 11 – Humidity Sensor Data Report
 
 | Payload Byte | Type | Description |
@@ -145,16 +126,12 @@ title: Block Diagram, Protocol, and Message Structure
 | 1–2 | uint16_t | 11 |
 | 3–6 | float | Relative Humidity (%) |
 
----
-
 ## Message Type 12 – Distance Sensor Data Report
 
 | Payload Byte | Type | Description |
 |--------------|------|-------------|
 | 1–2 | uint16_t | 12 |
 | 3–6 | float | Distance (meters) |
-
----
 
 ## Message Type 13 – System Status Report
 
@@ -165,8 +142,6 @@ title: Block Diagram, Protocol, and Message Structure
 | 4–7 | uint32_t | Uptime (ms) |
 | 8–9 | uint16_t | Battery Voltage (mV) |
 
----
-
 ## Message Type 14 – System Error Code Report
 
 | Payload Byte | Type | Description |
@@ -175,16 +150,12 @@ title: Block Diagram, Protocol, and Message Structure
 | 3 | uint8_t | Subsystem ID |
 | 4 | uint8_t | Error Code |
 
----
-
 ## Message Type 15 – Debug Message (String)
 
 | Payload Byte | Type | Description |
 |--------------|------|-------------|
 | 1–2 | uint16_t | 15 |
 | 3–58 | char[] | Debug String (Null-terminated, max 55 chars) |
-
----
 
 ## Message Type 16 – Heartbeat / Alive Signal
 

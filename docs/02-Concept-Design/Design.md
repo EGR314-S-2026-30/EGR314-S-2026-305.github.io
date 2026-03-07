@@ -238,7 +238,7 @@ This concept gives users short missions to complete. They navigate terrain and c
 
 The Open Exploration Rover concept focuses on letting users discover things on their own by removing set objectives and letting them freely interact with the rover and its environment. Users can navigate terrain and operate sensors and experiment with what the rover can do at their own pace. This approach encourages curiosity and creativity and self-directed learning but it ranked lower overall because theres more risk of user confusion and lack of clear guidance for first-time users. Without structured goals some users might not understand the rovers purpose or how to actually use its systems.  
 
-![Concept B](https://github.com/EGR314-S-2026-30/EGR314-S-2026-305.github.io/blob/main/docs/Assets/Concept_B.png?raw=trueg)
+![Concept B](https://github.com/EGR314-S-2026-30/EGR314-S-2026-305.github.io/blob/main/docs/Assets/Concept_B.png?raw=true)
 
 ### Functional Distribution Across Team Members
 
@@ -277,7 +277,9 @@ The Collaborative Science Rover concept focuses on teamwork and shared problem-s
 
 ## Selected Concept
 
-- We have chosen to select the Mission Rover (Concept A) for our project. 
+- We have chosen to select the Mission Rover (Concept A) for our project.
+
+![Concept A](https://github.com/EGR314-S-2026-30/EGR314-S-2026-305.github.io/blob/main/docs/Assets/Concept_A.png?raw=true)
 
 Quick Summary:
 

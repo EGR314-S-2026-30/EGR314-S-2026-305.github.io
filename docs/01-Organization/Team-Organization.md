@@ -10,7 +10,7 @@ We are here to build a solid project that actually works. We agree to split the 
 
 ## Product Mission Statement
 
-Our goal is to prototype a Mars Scout Rover designed to navigate a simulated Martian surface. The system uses a network of custom boards to detect obstacles (like craters or rocks) and automatically adjust speed to avoid collisions, while allowing us to wirelessly steer the rover and view mission data from a laptop base station.
+Our goal is to prototype a Mars Scout Rover designed to navigate a simulated Martian surface. The system uses a network of custom boards to detect obstacles (like craters or rocks) and automatically adjust speed to avoid collisions, while allowing for wireless steering of the rover and to view mission data from a laptop base station.
 
 
 ## Other Organizational Information
