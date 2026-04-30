@@ -7,7 +7,7 @@ tags:
 <center>
 <font size="8">Project X<br>
 <font size="5">Team 305<br>
-**Submission: March, 6 2026**<br>
+**Submission: April, 4 2026**<br>
 Spring - 2026<br>
 <font size="4">Arizona State University<br>
 **EGR 314**<br>
@@ -22,6 +22,9 @@ Our team is developing an investigative rover to explore a simulated planetary e
 
 The system is modular, with specialized subsystems handling mobility, hazard detection, sensing, navigation, imaging, communication, and user interaction. Subsystems communicate through a UART-based daisy-chain network, enabling coordinated operation and easy expansion. A local human–machine interface with an OLED display and physical controls provides immediate feedback and safety features. This design allows us to create a reliable exploration platform that mirrors key aspects of similar rover systems.
 
+## Summary of The Project
+
+(Picture Below)
 
 ## Team Members Datasheet links
 
