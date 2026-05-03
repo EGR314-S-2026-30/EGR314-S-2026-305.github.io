@@ -7,7 +7,7 @@ tags:
 <center>
 <font size="8">Project X<br>
 <font size="5">Team 305<br>
-**Submission: April, 4 2026**<br>
+**Submission: May, 4 2026**<br>
 Spring - 2026<br>
 <font size="4">Arizona State University<br>
 **EGR 314**<br>
@@ -27,6 +27,8 @@ The system is modular, with specialized subsystems handling mobility, hazard det
 Our project is a remotely operated Mars Scout Rover designed to simulate a planetary exploration mission on a scaled-down terrestrial environment. The rover uses a modular architecture where seven individual custom-designed boards are each handled by a different team member to manage distinct subsystems including mobility (2WD with steering), environmental sensing (temperature, humidity, and atmospheric pressure), obstacle/hazard detection, navigation and orientation via IMU, live video imaging, wireless communication, and a local OLED-based human-machine interface. All subsystems communicate through a daisy-chained UART network using a defined protocol of 16 message types, while a bidirectional Wi-Fi/Bluetooth link streams real-time telemetry and video to a laptop base station for remote control and monitoring. The chassis is primarily 3D printed for rapid prototyping, targets a total weight under 5 kg, and is designed for at least 30–60 minutes of continuous operation, with safety features including an emergency stop, fail-safes, and current-limited motor control built throughout the system.
 
 ## Final Project Picture
+
+<img width="700" height="900" alt="Screenshot 2026-05-02 170857" src="https://github.com/user-attachments/assets/730afdc1-faa1-4ef9-82a9-346dea47de14" />
 
 ## Team Members Datasheet links
 
