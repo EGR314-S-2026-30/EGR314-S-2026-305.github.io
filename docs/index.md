@@ -28,7 +28,7 @@ Our project is a remotely operated Mars Scout Rover designed to simulate a plane
 
 ## Final Project Picture
 
-<img width="700" height="900" alt="Screenshot 2026-05-02 170857" src="https://github.com/user-attachments/assets/730afdc1-faa1-4ef9-82a9-346dea47de14" />
+<img width="900" height="780" alt="Screenshot 2026-05-02 170929" src="https://github.com/user-attachments/assets/4c0acbad-1167-4f40-9d73-34c3d7b8f02c" />
 
 ## Team Members Datasheet links
 
