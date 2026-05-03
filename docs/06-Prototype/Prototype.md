@@ -7,7 +7,10 @@ The initial prototype was designed as a distributed embedded system consisting o
 All boards were connected using ribbon cables and communicated via UART (RX/TX), allowing data transfer between subsystems without a central controller.
 
 ## Prototype Setup
-![Prototype System](./images/prototype.jpg)
+<img width="3024" height="4032" alt="IMG_0783" src="https://github.com/user-attachments/assets/abed6802-afb8-4d17-8a05-0863d14faf40" />
+
+
+
 ---
 
 ## System Architecture
