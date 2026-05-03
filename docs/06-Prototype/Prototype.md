@@ -9,10 +9,6 @@ All boards were connected using ribbon cables and communicated via UART (RX/TX),
 ## Prototype Setup
 <img width="3024" height="4032" alt="IMG_0783" src="https://github.com/user-attachments/assets/abed6802-afb8-4d17-8a05-0863d14faf40" />
 
-
-
----
-
 ## System Architecture
 
 The prototype included the following subsystems:
@@ -27,8 +23,6 @@ The prototype included the following subsystems:
 
 Each subsystem operated independently while sharing data across the system.
 
----
-
 ## Communication
 
 UART was used for communication between boards:
@@ -38,15 +32,11 @@ UART was used for communication between boards:
 
 Ribbon cables were used for flexible connections during testing and integration.
 
----
-
 ## Power Distribution
 
 All boards were powered from a shared source, with local regulation to 5V and 3.3V on each subsystem.
 
 Power stability became a key issue during integration, especially with multiple active boards.
-
----
 
 ## Challenges
 
@@ -66,16 +56,12 @@ Power stability became a key issue during integration, especially with multiple 
 - Voltage drops across the system  
 - Unstable behavior under load  
 
----
-
 ## Key Takeaways
 
 - Reliable communication requires structured design  
 - Power distribution is critical in multi-board systems  
 - Hardware and firmware debugging must be done together  
 - System integration introduces complexity beyond individual subsystems  
-
----
 
 ## Transition to Final Design
 
