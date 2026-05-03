@@ -1,4 +1,3 @@
-[Uploading 314 Team 305 Block Diagram (1)…]()
 ---
 title: Block Diagram, Protocol, and Message Structure
 ---
