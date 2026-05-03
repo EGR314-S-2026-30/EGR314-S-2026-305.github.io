@@ -1154,7 +1154,6 @@
 <p>All boards were connected using ribbon cables and communicated via UART (RX/TX), allowing data transfer between subsystems without a central controller.</p>
 <h2 id="prototype-setup">Prototype Setup</h2>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/abed6802-afb8-4d17-8a05-0863d14faf40" data-desc-position="bottom"><img width="3024" height="4032" alt="IMG_0783" src="https://github.com/user-attachments/assets/abed6802-afb8-4d17-8a05-0863d14faf40"></a></p>
-<hr>
 <h2 id="system-architecture">System Architecture</h2>
 <p>The prototype included the following subsystems:</p>
 <ul>
@@ -1167,7 +1166,6 @@
 <li>Power Distribution</li>
 </ul>
 <p>Each subsystem operated independently while sharing data across the system.</p>
-<hr>
 <h2 id="communication">Communication</h2>
 <p>UART was used for communication between boards:</p>
 <ul>
@@ -1175,11 +1173,9 @@
 <li>Common ground shared across all boards  </li>
 </ul>
 <p>Ribbon cables were used for flexible connections during testing and integration.</p>
-<hr>
 <h2 id="power-distribution">Power Distribution</h2>
 <p>All boards were powered from a shared source, with local regulation to 5V and 3.3V on each subsystem.</p>
 <p>Power stability became a key issue during integration, especially with multiple active boards.</p>
-<hr>
 <h2 id="challenges">Challenges</h2>
 <p><strong>ESP32 Flashing</strong>
 - Inconsistent firmware uploads<br>
@@ -1193,7 +1189,6 @@
 <p><strong>Power</strong>
 - Voltage drops across the system<br>
 - Unstable behavior under load  </p>
-<hr>
 <h2 id="key-takeaways">Key Takeaways</h2>
 <ul>
 <li>Reliable communication requires structured design  </li>
@@ -1201,7 +1196,6 @@
 <li>Hardware and firmware debugging must be done together  </li>
 <li>System integration introduces complexity beyond individual subsystems  </li>
 </ul>
-<hr>
 <h2 id="transition-to-final-design">Transition to Final Design</h2>
 <p>These challenges led to improvements in communication structure, power stability, and overall system integration for the final design.</p>
 
