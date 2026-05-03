@@ -168,3 +168,33 @@ The team communication structure uses standardized UART messages to exchange dat
 | 1–2 | uint16_t | 16 |
 | 3 | uint8_t | System State |
 | 4 | uint8_t | Error Flag |
+
+## How the Communication Sequence Satisfies User Needs and Product Requirements
+
+The communication sequence was designed so that every major user need maps directly to one or more message types in the UART daisy-chain network.
+Remote situational awareness is satisfied through continuous periodic transmission of Message Types 8–12, which stream temperature, humidity, pressure, light, and distance readings to the wireless board and on to the base station — giving the operator a live picture of the rover's environment without manual requests.
+Safe navigation is handled through the relationship between the distance sensor (Type 12) and motor control (Type 1). When an obstacle is detected within threshold, the data propagates through the chain and can trigger an automatic slow or stop, satisfying the hazard avoidance requirement. The HMI board simultaneously updates the OLED display via Type 6 to alert the operator.
+Operator control reliability is supported by the two-way structure of the system. Motor commands arrive from the base station as Type 1 packets, and Motor Status Reports (Type 2) flow back confirming execution — giving the operator confidence the rover is responding correctly.
+System health is covered by Types 13–16. The System Status Report (Type 13) carries battery voltage and uptime, the Error Code Report (Type 14) lets any subsystem flag a fault, and the Heartbeat (Type 16) lets the base station detect a dropout and trigger a fail-safe — satisfying the safety and power management requirements.
+Finally, the local HMI satisfies the need for on-rover feedback independent of the wireless link. Even if the wireless connection is lost, the OLED continues receiving updates through the daisy-chain, ensuring the rover never operates completely without feedback.
+
+## Message Structure Design and Decision-Making Process
+
+The message structure was built around three constraints: limited UART bandwidth, the need for each board to filter only relevant messages, and keeping the system expandable.
+Every message begins with a fixed uint16_t type field. Each board reads these first two bytes to decide whether to act on the message or pass it along. A 16-bit field gives room for future expansion without restructuring the protocol. An addressed source-destination scheme was considered but rejected — in a daisy-chain topology where all boards see all traffic, it added complexity without a real benefit.
+Payload sizes were kept small intentionally. Most sensor messages carry just a 2-byte type header and a 4-byte float, keeping each message focused on a single data source. This meant boards could be developed and tested independently, which was important with seven team members working on separate boards.
+The camera packet (Type 3) was the most complex decision. Streaming video over UART requires chunking frames into 50-byte segments with a Frame ID and Packet Index so the receiver can reassemble them in order. The 50-byte size was chosen to avoid blocking the bus for too long while still making meaningful progress per transmission.
+The Heartbeat (Type 16) and Debug message (Type 15) were both added during development rather than planned from the start — the heartbeat to distinguish genuine faults from low-activity periods, and the debug message to let boards broadcast readable strings to the base station during integration testing without needing a separate debugger on each board.
+
+## Top 5 Software Design Changes Since the Software Proposal
+
+1. Broadcast Filtering Replaced Addressed Messaging
+The original proposal used source-destination address fields on every message. During integration, maintaining address tables across seven independently developed boards created version-control headaches — a change on one board required updates everywhere. The team switched to a broadcast model where every board sees all traffic and filters by message type only. This simplified firmware across all boards and made adding new subsystems as easy as defining a new message type.
+2. Heartbeat Message Added
+The proposal had no keep-alive mechanism. During bench testing, the base station had no way to confirm the network was still active during low-activity periods, triggering false disconnection warnings. The team added Message Type 16, a 500ms periodic heartbeat from the HMI board carrying system state and an error flag. The base station now treats absence of this signal as the definitive sign of a failure, eliminating the false warnings entirely.
+3. Motor Status Changed from Event-Driven to Continuous
+Originally the motor board only transmitted a status message when something changed. This left the base station unable to confirm rover state after a brief dropout or fresh connection. The team changed Message Type 2 to transmit continuously at 10Hz regardless of state changes, ensuring the operator always has an accurate motion picture within 100ms of connecting.
+4. Environmental Sensors Split into Individual Message Types
+The proposal combined all environmental readings — temperature, humidity, pressure, and light — into one message to reduce bus traffic. In practice, these sensors lived on different boards with different owners and sampling rates, so one board would have had to collect data from the others before transmitting. The team split them into Types 8–11, each sent independently by its own board. This restored full subsystem independence and made each board's firmware simpler to test.
+5. Camera Transmission Changed to Chunked Packets
+The proposal assumed the camera board would send complete JPEG frames as single large UART messages. Testing showed these large bursts blocked the bus long enough to delay time-sensitive messages like motor commands and obstacle alerts. The team redesigned transmission as 50-byte chunks (Type 3) interleaved with other traffic, with Frame ID and Packet Index fields for reassembly. This kept safety-critical messages flowing without interruption during active video streaming.
