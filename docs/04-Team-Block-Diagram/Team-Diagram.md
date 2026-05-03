@@ -1,3 +1,4 @@
+[Uploading 314 Team 305 Block Diagram (1)…]()
 ---
 title: Block Diagram, Protocol, and Message Structure
 ---
@@ -7,8 +8,6 @@ title: Block Diagram, Protocol, and Message Structure
 <img width="3557" height="1945" alt="314 Team 305 Block Diagram" src="https://github.com/user-attachments/assets/579e0b3f-c2d1-482f-935f-5d62dbccee10" />
 
 Our team’s block diagram was designed using a modular subsystem architecture where each major function (motor control, environmental sensing, navigation, obstacle detection, imaging, wireless communication, and human-machine interface) is implemented on its own board with a dedicated microcontroller and power regulation. Each subsystem is connected through a daisy-chained UART network, allowing each board to manage its own sensors or actuators while relaying data across the system. This structure meets the project requirements by enabling reliable communication, mobility control, sensor feedback, and system monitoring while allowing the rover to remain modular and easily expandable. The source file can be found [here]
-
-
 
 ## Part 2: Team Communication
 ![image2](https://github.com/EGR314-S-2026-30/EGR314-S-2026-305.github.io/blob/main/docs/04-Team-Block-Diagram/314%20Team%20Communication.png?raw=true)
