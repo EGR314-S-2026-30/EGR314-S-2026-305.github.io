@@ -24,7 +24,9 @@ The system is modular, with specialized subsystems handling mobility, hazard det
 
 ## Summary of The Project
 
-(Picture Below)
+(Summary Here)
+
+<img width="880" height="1178" alt="Screenshot 2026-05-02 170857" src="https://github.com/user-attachments/assets/730afdc1-faa1-4ef9-82a9-346dea47de14" />
 
 ## Team Members Datasheet links
 
