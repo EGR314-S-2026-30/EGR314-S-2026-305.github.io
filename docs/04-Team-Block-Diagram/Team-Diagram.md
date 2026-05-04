@@ -252,3 +252,4 @@ The items below are grounded in the **UML-related figures above**: Figure 1 show
 
 5. **Camera transmission changed to chunked packets.**  
    The proposal assumed one large UART frame per JPEG. On the shared ring in **Figures 1–2**, those bursts stalled **Type 1** / **Type 12** traffic long enough to violate hazard-avoidance and control responsiveness. The team redesigned **Type 3** as **50-byte** chunks with **Frame ID** and **Packet Index** (Part 3) so image data interleaves with other messages. **Figure 3** calls out “camera chunks” on the uplink to reflect that interleaving; the communication diagram (**Figure 2**) remains the high-level view of the camera subsystem feeding the same gateway as motor and sensor data.
+
