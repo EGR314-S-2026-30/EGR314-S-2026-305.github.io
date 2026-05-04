@@ -2,21 +2,58 @@
 title: Project-Version 2.0
 ---
 
-### Project Version 2.0
 ## Overview
+
 Team 305's Mars Scout Rover successfully demonstrated a modular, multi-board architecture capable of real-time environmental sensing, wireless telemetry, obstacle detection, and live video streaming over a UART daisy-chain network. While the system met its core requirements, the development process revealed several areas where a second version could be meaningfully improved in terms of reliability, functionality, debuggability, and protocol design. This page outlines what a Version 2.0 of the rover would look like and why each improvement would make the system stronger.
 
+## Diagrams supporting Version 2.0
+
+The plans below assume the **same modular topology** shown in **Figure 1** (subsystem boundaries and UART ring). Version 2.0 changes *behavior* and *payloads* more than the high-level drawing, but new motors, sensors, and a separate video path would be added to this structure.
+
+<img width="1200" height="657" alt="Team 305 block diagram — structural baseline for V2" src="https://github.com/user-attachments/assets/579e0b3f-c2d1-482f-935f-5d62dbccee10" />
+
+**Figure 1 (baseline).** Seven-board modular rover; Version 2.0 extends this view with 4WD channels, extra hazard sensors, optional arm MCU, and optional parallel video uplink.
+
+**Figure 2** (communication / message flow among subsystems) and **Figure 3** (UML sequence for control, telemetry, HMI, and heartbeat) live on the full protocol page. They explain why V1.0 already moved to **broadcast + message-type filtering**, **chunked camera packets (Type 3)**, and **Type 16 heartbeat** — constraints that motivate the V2.0 protocol upgrades described later on this page.
+
+![Team communication diagram — message-centric view for V2 planning](https://github.com/EGR314-S-2026-30/EGR314-S-2026-305.github.io/blob/main/docs/04-Team-Block-Diagram/314%20Team%20Communication.png?raw=true)
+
+For the complete message tables, Mermaid sequence diagram, and **Top 5 software changes since the proposal**, see **[Block diagram, protocol, and message structure](../04-Team-Block-Diagram/Team-Diagram.md)**.
+
+The sketch below is **not** implemented firmware; it illustrates a possible **V2.0 header** (length + CRC + priority) layered on the same daisy-chain idea as Figure 2.
+
+``` mermaid
+flowchart LR
+  subgraph V2_header["Proposed V2 frame header (bytes)"]
+    T["Type uint16"]
+    L["Len uint8"]
+    P["Priority uint8"]
+    TS["Timestamp uint32"]
+    C["CRC16"]
+  end
+  T --> L --> P --> TS --> C
+```
+
 ## What Would Be Improved and Why
+
 ### 1. Mechanical and Structural Reliability
+
 The Version 1.0 chassis was primarily 3D printed for rapid prototyping, which served its purpose during development but introduced some limitations in structural rigidity and component mounting consistency. In Version 2.0, critical load-bearing components — particularly the wheel mounts, motor brackets, and sensor housing — would be redesigned with tighter tolerances and printed in a more durable material such as PETG or carbon-fiber-reinforced PLA. The overall chassis layout would also be revisited to reduce cable routing complexity, since the current daisy-chain wiring between seven separate boards created a dense and difficult-to-service interior. A more deliberate internal layout with dedicated wire channels and labeled connectors would reduce integration time and make field repairs far more manageable.
+
 ### 2. Upgrading from 2WD to 4WD
+
 The current rover uses 2WD with steering, which was identified in the project requirements as a baseline with 4WD listed as a stretch goal. Version 2.0 would implement full 4WD with independent motor control on all four wheels. This would significantly improve the rover's ability to handle uneven terrain, recover from getting stuck, and maintain consistent speed across surfaces with variable friction. The motor control board firmware would need to be expanded to manage four motor channels rather than two, and the Message Type 1 and Type 2 payloads would need to be updated to carry speed, direction, and current readings for all four motors.
+
 ### 3. Improved Hazard Detection
+
 The current obstacle detection system uses a single distance sensor facing forward. Version 2.0 would add sensors on the rear and both sides of the rover, giving it 360-degree hazard awareness. This would prevent collisions during reverse maneuvers and allow the rover to detect obstacles approaching from the sides during turns. Each additional sensor could either be added as a new message type or folded into an expanded Type 12 payload carrying multiple distance readings with directional identifiers, depending on how much the protocol is revised.
+
 ### 4. Camera and Imaging Upgrade
+
 The current imaging system streams video at a low frame rate over UART, which was the most technically constrained subsystem in Version 1.0. In Version 2.0, the camera board would be redesigned around a dedicated video streaming module with its own Wi-Fi connection to the base station, bypassing the UART network entirely for video data. This would free up significant bus bandwidth for sensor and control messages, eliminate the frame-chunking complexity of Message Type 3, and allow the rover to stream at a usable frame rate without risk of blocking time-sensitive traffic. A secondary arm-mounted or pan-tilt camera could also be added to give the operator better visibility for close-up terrain inspection.
 
 ### New Functions That Would Be Necessary
+
 Version 2.0 would introduce several new functional capabilities not present in the current design:
 Autonomous Waypoint Navigation — Rather than relying entirely on manual remote control, Version 2.0 would give the rover the ability to navigate to a set of GPS or grid-based waypoints autonomously. The navigation board would be expanded to process IMU data, wheel odometry, and obstacle sensor inputs together to plan and execute paths without continuous operator input. This mirrors real planetary rover operation and would make the system significantly more capable in large or complex environments.
 Sample Collection Arm — Several concept designs explored during the ideation phase included a robotic sampling arm, but it was not carried into Version 1.0. Version 2.0 would revisit this feature with a two or three joint arm capable of picking up and depositing small objects. This would require a new dedicated actuator board added to the daisy-chain, new message types for arm joint position commands and status reports, and updates to the HMI board to support arm control inputs.
@@ -24,12 +61,14 @@ Data Logging to On-Board Storage — Currently all telemetry is streamed wireles
 Battery Monitoring and Low-Power Modes — The current system tracks battery voltage through the System Status Report (Type 13) but does not take any automated action based on it. Version 2.0 would implement tiered low-power responses — reducing sensor sampling rates and camera frame rate as battery voltage drops, and triggering an automatic return-to-home behavior when voltage reaches a critical threshold. This would extend operational life and prevent abrupt shutdowns mid-mission.
 
 ### How Debuggability Would Be Improved
+
 Debugging across seven separate boards during Version 1.0 development was one of the most time-consuming aspects of the project. The Debug Message (Type 15) helped, but it was added late and not consistently implemented across all boards. Version 2.0 would address this in several ways.
 Every board would implement Type 15 debug output from the start, with a standardized format that includes a board ID, a severity level (info, warning, error), and a message string. The base station software would be updated to display a live filtered debug console where the operator can view messages from specific boards without being overwhelmed by traffic from others.
 Each board would also expose a dedicated hardware debug header — a UART or USB port separate from the daisy-chain — allowing a developer to connect directly to any individual board without disrupting the rest of the network. This was missing in Version 1.0 and forced developers to rely entirely on the shared bus for diagnostics, which made isolating faults on a specific board much harder.
 Finally, the System Error Code Report (Type 14) would be expanded to include a timestamp field and a more detailed error code taxonomy, so faults can be correlated across boards and tracked over time rather than appearing as isolated one-time events.
 
 ### Protocol Design Improvements
+
 The Version 1.0 UART daisy-chain protocol served the project well but has several limitations that Version 2.0 would address.
 Variable-Length Messages with a Length Field — All current messages use fixed-size payloads, which works well for simple scalar sensor readings but becomes wasteful for messages with optional fields or for future message types that may carry more complex data. Version 2.0 would add a length byte to the message header so each board knows exactly how many bytes to read before the next message begins, reducing the risk of framing errors and making the protocol more flexible.
 Checksum or CRC Validation — The current protocol has no error detection. A corrupted byte on the bus would be silently passed along and potentially acted upon. Version 2.0 would append a CRC-16 checksum to every message, allowing any board to verify integrity before processing. Corrupted messages would be discarded and optionally flagged via Type 14, giving the system a measurable error rate that can be monitored over time.
