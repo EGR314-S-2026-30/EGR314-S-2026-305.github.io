@@ -90,7 +90,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#project-version-20" class="md-skip">
+        <a href="#overview" class="md-skip">
           Skip to content
         </a>
       
@@ -950,18 +950,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#project-version-20" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Project Version 2.0
+      Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#diagrams-supporting-version-20" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      Diagrams supporting Version 2.0
     </span>
   </a>
   
@@ -1138,18 +1138,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
       
         <li class="md-nav__item">
-  <a href="#project-version-20" class="md-nav__link">
+  <a href="#overview" class="md-nav__link">
     <span class="md-ellipsis">
-      Project Version 2.0
+      Overview
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#overview" class="md-nav__link">
+  <a href="#diagrams-supporting-version-20" class="md-nav__link">
     <span class="md-ellipsis">
-      Overview
+      Diagrams supporting Version 2.0
     </span>
   </a>
   
@@ -1258,9 +1258,25 @@
 
   <h1>Project-Version 2.0</h1>
 
-<h3 id="project-version-20">Project Version 2.0</h3>
 <h2 id="overview">Overview</h2>
 <p>Team 305's Mars Scout Rover successfully demonstrated a modular, multi-board architecture capable of real-time environmental sensing, wireless telemetry, obstacle detection, and live video streaming over a UART daisy-chain network. While the system met its core requirements, the development process revealed several areas where a second version could be meaningfully improved in terms of reliability, functionality, debuggability, and protocol design. This page outlines what a Version 2.0 of the rover would look like and why each improvement would make the system stronger.</p>
+<h2 id="diagrams-supporting-version-20">Diagrams supporting Version 2.0</h2>
+<p>The plans below assume the <strong>same modular topology</strong> shown in <strong>Figure 1</strong> (subsystem boundaries and UART ring). Version 2.0 changes <em>behavior</em> and <em>payloads</em> more than the high-level drawing, but new motors, sensors, and a separate video path would be added to this structure.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/user-attachments/assets/579e0b3f-c2d1-482f-935f-5d62dbccee10" data-desc-position="bottom"><img width="1200" height="657" alt="Team 305 block diagram — structural baseline for V2" src="https://github.com/user-attachments/assets/579e0b3f-c2d1-482f-935f-5d62dbccee10"></a></p>
+<p><strong>Figure 1 (baseline).</strong> Seven-board modular rover; Version 2.0 extends this view with 4WD channels, extra hazard sensors, optional arm MCU, and optional parallel video uplink.</p>
+<p><strong>Figure 2</strong> (communication / message flow among subsystems) and <strong>Figure 3</strong> (UML sequence for control, telemetry, HMI, and heartbeat) live on the full protocol page. They explain why V1.0 already moved to <strong>broadcast + message-type filtering</strong>, <strong>chunked camera packets (Type 3)</strong>, and <strong>Type 16 heartbeat</strong> — constraints that motivate the V2.0 protocol upgrades described later on this page.</p>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="https://github.com/EGR314-S-2026-30/EGR314-S-2026-305.github.io/blob/main/docs/04-Team-Block-Diagram/314%20Team%20Communication.png?raw=true" data-desc-position="bottom"><img alt="Team communication diagram — message-centric view for V2 planning" src="https://github.com/EGR314-S-2026-30/EGR314-S-2026-305.github.io/blob/main/docs/04-Team-Block-Diagram/314%20Team%20Communication.png?raw=true"></a></p>
+<p>For the complete message tables, Mermaid sequence diagram, and <strong>Top 5 software changes since the proposal</strong>, see <strong><a href="../../04-Team-Block-Diagram/Team-Diagram/">Block diagram, protocol, and message structure</a></strong>.</p>
+<p>The sketch below is <strong>not</strong> implemented firmware; it illustrates a possible <strong>V2.0 header</strong> (length + CRC + priority) layered on the same daisy-chain idea as Figure 2.</p>
+<pre class="mermaid"><code>flowchart LR
+  subgraph V2_header["Proposed V2 frame header (bytes)"]
+    T["Type uint16"]
+    L["Len uint8"]
+    P["Priority uint8"]
+    TS["Timestamp uint32"]
+    C["CRC16"]
+  end
+  T --&gt; L --&gt; P --&gt; TS --&gt; C</code></pre>
 <h2 id="what-would-be-improved-and-why">What Would Be Improved and Why</h2>
 <h3 id="1-mechanical-and-structural-reliability">1. Mechanical and Structural Reliability</h3>
 <p>The Version 1.0 chassis was primarily 3D printed for rapid prototyping, which served its purpose during development but introduced some limitations in structural rigidity and component mounting consistency. In Version 2.0, critical load-bearing components — particularly the wheel mounts, motor brackets, and sensor housing — would be redesigned with tighter tolerances and printed in a more durable material such as PETG or carbon-fiber-reinforced PLA. The overall chassis layout would also be revisited to reduce cable routing complexity, since the current daisy-chain wiring between seven separate boards created a dense and difficult-to-service interior. A more deliberate internal layout with dedicated wire channels and labeled connectors would reduce integration time and make field repairs far more manageable.</p>
