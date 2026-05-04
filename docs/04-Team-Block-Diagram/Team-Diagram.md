@@ -6,15 +6,58 @@ title: Block Diagram, Protocol, and Message Structure
 
 <img width="3557" height="1945" alt="314 Team 305 Block Diagram" src="https://github.com/user-attachments/assets/579e0b3f-c2d1-482f-935f-5d62dbccee10" />
 
-Our team’s block diagram was designed using a modular subsystem architecture where each major function (motor control, environmental sensing, navigation, obstacle detection, imaging, wireless communication, and human-machine interface) is implemented on its own board with a dedicated microcontroller and power regulation. Each subsystem is connected through a daisy-chained UART network, allowing each board to manage its own sensors or actuators while relaying data across the system. This structure meets the project requirements by enabling reliable communication, mobility control, sensor feedback, and system monitoring while allowing the rover to remain modular and easily expandable. The source file can be found [here]
+**Figure 1 — Team block diagram (structural / subsystem view).** Each major function lives on its own board; the UART ring ties them together.
+
+Our team’s block diagram was designed using a modular subsystem architecture where each major function (motor control, environmental sensing, navigation, obstacle detection, imaging, wireless communication, and human-machine interface) is implemented on its own board with a dedicated microcontroller and power regulation. Each subsystem is connected through a daisy-chained UART network, allowing each board to manage its own sensors or actuators while relaying data across the system. This structure meets the project requirements by enabling reliable communication, mobility control, sensor feedback, and system monitoring while allowing the rover to remain modular and easily expandable. The Draw.io source for this figure is in the repository as [`314 Team 305 Block Diagram`](https://github.com/EGR314-S-2026-30/EGR314-S-2026-305.github.io/blob/main/docs/04-Team-Block-Diagram/314%20Team%20305%20Block%20Diagram).
 
 ## Part 2: Team Communication
-![image2](https://github.com/EGR314-S-2026-30/EGR314-S-2026-305.github.io/blob/main/docs/04-Team-Block-Diagram/314%20Team%20Communication.png?raw=true)
 
-The team communication structure uses standardized UART messages to exchange data between subsystems. Sensor boards send periodic updates, the camera subsystem sends frame data and status messages, and the human-machine interface sends display commands and receives status updates. The data travels through the daisy chained network so each subsystem can read the data it needs and pass the message to the next board. The wireless communication board serves as the gateway between the rover and users, transmitting data and receiving control commands. The source file can be found [here](https://github.com/EGR314-S-2026-30/EGR314-S-2026-305.github.io/releases/download/block_diagram_source_files/Team.Communication.drawio).
+![Team communication diagram: UART message paths between subsystems](https://github.com/EGR314-S-2026-30/EGR314-S-2026-305.github.io/blob/main/docs/04-Team-Block-Diagram/314%20Team%20Communication.png?raw=true)
+
+**Figure 2 — Team communication diagram (UML-style communication view).** This figure complements Figure 1 by emphasizing which subsystems exchange which categories of messages.
+
+The team communication structure uses standardized UART messages to exchange data between subsystems. Sensor boards send periodic updates, the camera subsystem sends frame data and status messages, and the human-machine interface sends display commands and receives status updates. The data travels through the daisy chained network so each subsystem can read the data it needs and pass the message to the next board. The wireless communication board serves as the gateway between the rover and users, transmitting data and receiving control commands. The Draw.io source for Figure 2 is available as [`Team.Communication.drawio`](https://github.com/EGR314-S-2026-30/EGR314-S-2026-305.github.io/releases/download/block_diagram_source_files/Team.Communication.drawio) (release asset).
+
+## UML sequence diagram (representative communication sequence)
+
+The diagram below is a **UML sequence diagram** for a typical operator session. It is consistent with Figures 1–2: control and telemetry use the message types summarized later in this page (for example, Type 1 / Type 2 for motor command and status, Type 6 for the local display, Type 16 for heartbeat).
+
+``` mermaid
+sequenceDiagram
+    autonumber
+    actor Operator as Operator
+    participant BS as Laptop base station
+    participant W as Wireless board (gateway)
+    participant C as UART daisy-chain (all boards)
+    participant M as Motor board
+    participant H as HMI board
+
+    Note over Operator,H: Downlink control path
+    Operator->>BS: Drive commands
+    BS->>W: Type 1 motor command
+    W->>C: Broadcast on UART ring
+    C->>M: Type 1 received / filtered
+    M->>M: Apply PWM and direction
+
+    Note over Operator,H: Uplink telemetry and status
+    M->>C: Type 2 motor status (10 Hz)
+    C->>W: Messages relayed through chain
+    W->>BS: Telemetry and camera chunks (e.g. Type 3)
+    BS->>Operator: Live dashboard and alerts
+
+    Note over Operator,H: Local feedback (works without wireless)
+    C->>H: Type 6 display update
+    H->>H: Update OLED
+
+    Note over Operator,H: Keep-alive and fault visibility
+    H->>C: Type 16 heartbeat
+    C->>W: Heartbeat reaches gateway
+    W->>BS: Link health monitoring
+```
+
+**Figure 3 — UML sequence diagram (representative end-to-end exchange).**
 
 ## Part 3: Message Type Table
-[Uploading 314.Team.305.Block.Diagram.drawio…]()
 
 | Message Type (uint16_t) | Description |
 |--------------------------|-------------|
@@ -172,6 +215,8 @@ The team communication structure uses standardized UART messages to exchange dat
 
 ## How the Communication Sequence Satisfies User Needs and Product Requirements
 
+The following discussion refers to **Figure 1** (where each subsystem lives), **Figure 2** (how messages move between those subsystems), and **Figure 3** (time-ordered exchanges for control, telemetry, local HMI, and heartbeat). Together they show how protocol behavior implements the product requirements.
+
 The communication sequence was designed so that every major user need maps directly to one or more message types in the UART daisy-chain network.
 Remote situational awareness is satisfied through continuous periodic transmission of Message Types 8–12, which stream temperature, humidity, pressure, light, and distance readings to the wireless board and on to the base station — giving the operator a live picture of the rover's environment without manual requests.
 Safe navigation is handled through the relationship between the distance sensor (Type 12) and motor control (Type 1). When an obstacle is detected within threshold, the data propagates through the chain and can trigger an automatic slow or stop, satisfying the hazard avoidance requirement. The HMI board simultaneously updates the OLED display via Type 6 to alert the operator.
@@ -181,6 +226,8 @@ Finally, the local HMI satisfies the need for on-rover feedback independent of t
 
 ## Message Structure Design and Decision-Making Process
 
+The decisions below align the on-wire layout with **Figures 1–3**: fixed headers so any board on the ring can parse quickly, small payloads so the timelines in **Figure 3** stay responsive, and chunked camera data so one subsystem cannot monopolize the bus implied by **Figure 2**.
+
 The message structure was built around three constraints: limited UART bandwidth, the need for each board to filter only relevant messages, and keeping the system expandable.
 Every message begins with a fixed uint16_t type field. Each board reads these first two bytes to decide whether to act on the message or pass it along. A 16-bit field gives room for future expansion without restructuring the protocol. An addressed source-destination scheme was considered but rejected — in a daisy-chain topology where all boards see all traffic, it added complexity without a real benefit.
 Payload sizes were kept small intentionally. Most sensor messages carry just a 2-byte type header and a 4-byte float, keeping each message focused on a single data source. This meant boards could be developed and tested independently, which was important with seven team members working on separate boards.
@@ -189,13 +236,19 @@ The Heartbeat (Type 16) and Debug message (Type 15) were both added during devel
 
 ## Top 5 Software Design Changes Since the Software Proposal
 
-1. Broadcast Filtering Replaced Addressed Messaging
-The original proposal used source-destination address fields on every message. During integration, maintaining address tables across seven independently developed boards created version-control headaches — a change on one board required updates everywhere. The team switched to a broadcast model where every board sees all traffic and filters by message type only. This simplified firmware across all boards and made adding new subsystems as easy as defining a new message type.
-2. Heartbeat Message Added
-The proposal had no keep-alive mechanism. During bench testing, the base station had no way to confirm the network was still active during low-activity periods, triggering false disconnection warnings. The team added Message Type 16, a 500ms periodic heartbeat from the HMI board carrying system state and an error flag. The base station now treats absence of this signal as the definitive sign of a failure, eliminating the false warnings entirely.
-3. Motor Status Changed from Event-Driven to Continuous
-Originally the motor board only transmitted a status message when something changed. This left the base station unable to confirm rover state after a brief dropout or fresh connection. The team changed Message Type 2 to transmit continuously at 10Hz regardless of state changes, ensuring the operator always has an accurate motion picture within 100ms of connecting.
-4. Environmental Sensors Split into Individual Message Types
-The proposal combined all environmental readings — temperature, humidity, pressure, and light — into one message to reduce bus traffic. In practice, these sensors lived on different boards with different owners and sampling rates, so one board would have had to collect data from the others before transmitting. The team split them into Types 8–11, each sent independently by its own board. This restored full subsystem independence and made each board's firmware simpler to test.
-5. Camera Transmission Changed to Chunked Packets
-The proposal assumed the camera board would send complete JPEG frames as single large UART messages. Testing showed these large bursts blocked the bus long enough to delay time-sensitive messages like motor commands and obstacle alerts. The team redesigned transmission as 50-byte chunks (Type 3) interleaved with other traffic, with Frame ID and Packet Index fields for reassembly. This kept safety-critical messages flowing without interruption during active video streaming.
+The items below are grounded in the **UML-related figures above**: Figure 1 shows modular boards on one UART ring; Figure 2 shows message-oriented connectivity; Figure 3 shows how control, telemetry, display, and heartbeat traffic interleave in time. The **message type tables** in Part 3 document the final wire format after each change.
+
+1. **Broadcast filtering replaced addressed messaging.**  
+   **Figure 2** shows every subsystem on the same logical bus; the original proposal instead used source–destination address fields on every packet. During integration, maintaining address tables across seven independently developed boards created version-control headaches — a change on one board required coordinated updates everywhere. The team switched to a broadcast model where each board sees all traffic and filters by the leading `uint16_t` message type only. As **Figure 1** still shows one ring, the structural diagram did not change, but the communication view in **Figure 2** and the lifeline interactions in **Figure 3** now assume type-based filtering rather than per-link addressing. This simplified firmware and made adding a subsystem a matter of defining a new type in the tables below.
+
+2. **Heartbeat message added.**  
+   The early software proposal had no keep-alive. During bench testing, the base station could not distinguish a quiet but healthy bus from a failed link, which produced false disconnection warnings. The team added **Message Type 16**, a periodic heartbeat (see Part 3), originating from the HMI path and visible on the gateway lifeline in **Figure 3**. The base station now treats sustained loss of Type 16 as the definitive failure signal. This change does not alter the block topology in **Figure 1**, but it adds a sustained vertical flow of small packets in the sequence view so health checks stay orthogonal to bursty camera traffic.
+
+3. **Motor status changed from event-driven to continuous.**  
+   Originally the motor board emitted **Type 2** only when values changed. After a short dropout or a fresh connection, **Figure 3**’s uplink could therefore show long gaps with no motor confirmation even though the rover was moving. The team changed **Type 2** to a fixed **10 Hz** stream so the operator always receives motion state within about 100 ms of reconnecting. That steady cadence is what the “Uplink telemetry and status” segment in **Figure 3** is meant to suggest; **Figure 2** still depicts the motor board as the actuator path for mobility requirements.
+
+4. **Environmental sensors split into individual message types.**  
+   The proposal packed temperature, humidity, pressure, and light into one composite environmental packet to save bandwidth. In hardware, those sensors sat on different boards with different sampling rates and owners, so a single “collector” board would have had to poll neighbors before transmitting — contradicting the independence implied by **Figure 1**. The team split the stream into **Types 8–11**, each produced by its own board and forwarded on the same ring shown in **Figure 2**. The sequence diagram (**Figure 3**) stays representative rather than enumerating every sensor message, but the tables in Part 3 are the authoritative list of those parallel periodic streams to the wireless gateway.
+
+5. **Camera transmission changed to chunked packets.**  
+   The proposal assumed one large UART frame per JPEG. On the shared ring in **Figures 1–2**, those bursts stalled **Type 1** / **Type 12** traffic long enough to violate hazard-avoidance and control responsiveness. The team redesigned **Type 3** as **50-byte** chunks with **Frame ID** and **Packet Index** (Part 3) so image data interleaves with other messages. **Figure 3** calls out “camera chunks” on the uplink to reflect that interleaving; the communication diagram (**Figure 2**) remains the high-level view of the camera subsystem feeding the same gateway as motor and sensor data.
