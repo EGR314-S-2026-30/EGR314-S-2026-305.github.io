@@ -12,7 +12,7 @@ All boards were connected using ribbon cables and communicated via UART which al
 
 ## Innovation showcase poster
 
-**JPG (in repository):** the poster image below is served from `docs/06-Prototype/assets/innovation-showcase-poster.jpg`. Replace that file if you update the poster design.
+**JPG (in repository):** the poster image below is served from `docs/06-Prototype/assets/innovation-showcase-poster.jpg`. 
 
 [![Innovation showcase poster](assets/innovation-showcase-poster.jpg)](assets/innovation-showcase-poster.jpg)
 
